@@ -8,10 +8,10 @@ import Footer from '../components/Footer.astro';
   <Header />
   
   <main>
-    <section class="py-20 bg-gradient-to-br from-parchment to-white">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16">
-          <h1 class="text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
+    <section class="py-20 bg-gradient-to-br from-institutional-grey via-warm-white to-parchment relative">
+  <!-- European professional overlay -->
+  <div class="absolute inset-0 bg-gradient-to-r from-european-blue/3 via-transparent to-innovation-indigo/3"></div>
+  <div class="relative">
             Request EU AI Act Assessment
           </h1>
           <p class="text-xl text-advisory-grey max-w-3xl mx-auto">
@@ -28,7 +28,7 @@ import Footer from '../components/Footer.astro';
           </div>
         </div>
 
-        <div class="bg-white rounded-2xl shadow-xl border border-slate-200">
+        <div class="bg-gradient-to-br from-white via-warm-white to-parchment/30 rounded-2xl shadow-xl border border-slate-200/60 backdrop-blur-sm">
           <div class="p-8">
             <form data-netlify="true" name="contact" method="POST" class="space-y-6">
               <input type="hidden" name="form-name" value="contact" />
@@ -153,7 +153,7 @@ import Footer from '../components/Footer.astro';
 
         <!-- Alternative Contact Methods -->
         <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div class="text-center p-6 bg-white rounded-xl shadow-lg border border-slate-200">
+          <div class="text-center p-6 bg-gradient-to-br from-white to-warm-white rounded-xl shadow-lg border border-slate-200/60 hover:shadow-xl transition-all duration-300">
             <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mx-auto mb-4">
               <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
