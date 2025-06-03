@@ -8,10 +8,10 @@ import Footer from '../components/Footer.astro';
   <Header />
   
   <main>
-    <section class="py-20 bg-gradient-to-br from-institutional-grey via-warm-white to-parchment relative">
-  <!-- European professional overlay -->
-  <div class="absolute inset-0 bg-gradient-to-r from-european-blue/3 via-transparent to-innovation-indigo/3"></div>
-  <div class="relative">
+    <section class="py-20 bg-gradient-to-br from-parchment to-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h1 class="text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
             Request EU AI Act Assessment
           </h1>
           <p class="text-xl text-advisory-grey max-w-3xl mx-auto">
@@ -28,7 +28,7 @@ import Footer from '../components/Footer.astro';
           </div>
         </div>
 
-        <div class="bg-gradient-to-br from-white via-warm-white to-parchment/30 rounded-2xl shadow-xl border border-slate-200/60 backdrop-blur-sm">
+        <div class="bg-white rounded-2xl shadow-xl border border-slate-200">
           <div class="p-8">
             <form data-netlify="true" name="contact" method="POST" class="space-y-6">
               <input type="hidden" name="form-name" value="contact" />
@@ -98,6 +98,70 @@ import Footer from '../components/Footer.astro';
               </div>
 
               <div>
+                <label for="aiSystems" class="block text-sm font-medium text-slate-700 mb-2">Current AI Systems</label>
+                <div class="space-y-2">
+                  <label class="flex items-center">
+                    <input type="checkbox" name="aiSystems" value="Customer Service Systems" class="h-4 w-4 text-european-blue focus:ring-european-blue border-slate-300 rounded">
+                    <span class="ml-2 text-sm text-slate-700">Customer Service Systems</span>
+                  </label>
+                  <label class="flex items-center">
+                    <input type="checkbox" name="aiSystems" value="Predictive Analytics" class="h-4 w-4 text-european-blue focus:ring-european-blue border-slate-300 rounded">
+                    <span class="ml-2 text-sm text-slate-700">Predictive Analytics</span>
+                  </label>
+                  <label class="flex items-center">
+                    <input type="checkbox" name="aiSystems" value="Recommendation Systems" class="h-4 w-4 text-european-blue focus:ring-european-blue border-slate-300 rounded">
+                    <span class="ml-2 text-sm text-slate-700">Recommendation Systems</span>
+                  </label>
+                  <label class="flex items-center">
+                    <input type="checkbox" name="aiSystems" value="Automated Decision Making" class="h-4 w-4 text-european-blue focus:ring-european-blue border-slate-300 rounded">
+                    <span class="ml-2 text-sm text-slate-700">Automated Decision Making</span>
+                  </label>
+                  <label class="flex items-center">
+                    <input type="checkbox" name="aiSystems" value="Computer Vision" class="h-4 w-4 text-european-blue focus:ring-european-blue border-slate-300 rounded">
+                    <span class="ml-2 text-sm text-slate-700">Computer Vision / Image Recognition</span>
+                  </label>
+                  <label class="flex items-center">
+                    <input type="checkbox" name="aiSystems" value="Natural Language Processing" class="h-4 w-4 text-european-blue focus:ring-european-blue border-slate-300 rounded">
+                    <span class="ml-2 text-sm text-slate-700">Natural Language Processing</span>
+                  </label>
+                  <label class="flex items-center">
+                    <input type="checkbox" name="aiSystems" value="Other" class="h-4 w-4 text-european-blue focus:ring-european-blue border-slate-300 rounded">
+                    <span class="ml-2 text-sm text-slate-700">Other (please specify in message)</span>
+                  </label>
+                </div>
+              </div>
+
+              <div>
+                <label for="companySize" class="block text-sm font-medium text-slate-700 mb-2">Organisation Size</label>
+                <select id="companySize" name="companySize" required 
+                        class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-european-blue focus:border-european-blue transition-colours">
+                  <option value="">Select organisation size</option>
+                  <option value="1-50">1-50 employees</option>
+                  <option value="51-250">51-250 employees</option>
+                  <option value="251-1000">251-1000 employees</option>
+                  <option value="1001-5000">1001-5000 employees</option>
+                  <option value="5000+">5000+ employees</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="industry" class="block text-sm font-medium text-slate-700 mb-2">Industry Sector</label>
+                <select id="industry" name="industry" required 
+                        class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-european-blue focus:border-european-blue transition-colours">
+                  <option value="">Select industry</option>
+                  <option value="Financial Services">Financial Services</option>
+                  <option value="Healthcare">Healthcare</option>
+                  <option value="Technology">Technology</option>
+                  <option value="Manufacturing">Manufacturing</option>
+                  <option value="Retail">Retail</option>
+                  <option value="Education">Education</option>
+                  <option value="Government">Government</option>
+                  <option value="Professional Services">Professional Services</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+
+              <div>
                 <label for="message" class="block text-sm font-medium text-slate-700 mb-2">Additional Information</label>
                 <textarea id="message" name="message" rows="4" 
                           placeholder="Please describe your specific compliance concerns, current AI governance framework, or immediate challenges requiring attention..."
@@ -153,7 +217,7 @@ import Footer from '../components/Footer.astro';
 
         <!-- Alternative Contact Methods -->
         <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div class="text-center p-6 bg-gradient-to-br from-white to-warm-white rounded-xl shadow-lg border border-slate-200/60 hover:shadow-xl transition-all duration-300">
+          <div class="text-center p-6 bg-white rounded-xl shadow-lg border border-slate-200">
             <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mx-auto mb-4">
               <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />

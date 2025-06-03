@@ -13,16 +13,9 @@ export default {
         'advisory-grey': '#525252',
         'caution-amber': '#b45309',
         'parchment': '#fefcf3',
-        'institutional-grey': '#f1f5f9',
-        'warm-white': '#fafbfc',
-        'slate-warm': '#f8fafc',
       },
       transitionProperty: {
         'colours': 'color, background-color, border-color',
-      },
-      backgroundImage: {
-        'european-gradient': 'linear-gradient(135deg, #fefcf3 0%, #f8fafc 50%, #f1f5f9 100%)',
-        'institutional': 'linear-gradient(to bottom right, #f8fafc, #f1f5f9)',
       },
     },
   },

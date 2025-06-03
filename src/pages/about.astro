@@ -4,84 +4,267 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 ---
 
-<Layout title="About AILEX - AI Governance Expertise" description="Matthew Grant, Founder of AILEX Consulting. Expert regulatory affairs guidance for EU AI Act compliance and strategic AI governance.">
+<Layout title="About AILEX Consulting - AI Governance & Regulatory Affairs" description="Learn about AILEX Consulting's approach to AI governance and regulatory affairs. Expert guidance for EU AI Act compliance and strategic implementation.">
   <Header />
   
   <main>
-    <!-- About Hero Section -->
-    <section class="pt-20 pb-16 bg-gradient-to-br from-institutional-grey via-parchment to-warm-white relative">
-      <div class="absolute inset-0 bg-gradient-to-r from-european-blue/3 to-innovation-indigo/3"></div>
-      <div class="relative">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <section class="py-20 bg-gradient-to-br from-parchment to-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
           <h1 class="text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
             About AILEX Consulting
           </h1>
-          <p class="text-xl text-advisory-grey max-w-3xl mx-auto">
-            Expert regulatory affairs guidance for organisations navigating EU AI Act compliance 
-            and strategic AI governance requirements.
+          <p class="text-xl text-advisory-grey">
+            Expert guidance for organisations navigating AI governance requirements 
+            combined with regulatory affairs mastery.
           </p>
         </div>
-      </div>
-    </section>
 
-    <!-- Founder Section -->
-    <section class="py-20 bg-gradient-to-b from-warm-white to-institutional-grey relative">
-      <div class="absolute inset-0 bg-gradient-to-br from-slate-50/30 to-parchment/30"></div>
-      <div class="relative">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="text-center mb-12">
-            <h2 class="text-3xl font-bold text-slate-900 mb-4">Matthew Grant, Founder</h2>
-            <p class="text-lg text-advisory-grey">Regulatory Affairs & AI Governance Specialist</p>
+        <div class="bg-white rounded-2xl shadow-xl p-8 mb-12 border border-slate-200">
+          <div class="flex items-center justify-center mb-8">
+            <div class="w-24 h-24 bg-gradient-to-br from-innovation-indigo to-european-blue rounded-full flex items-center justify-center">
+              <div class="ailex-logo text-2xl text-white font-bold">
+                <span class="ai-element">AI</span><span class="lex-element">LEX</span>
+              </div>
+            </div>
           </div>
-          
-          <div class="bg-gradient-to-br from-white via-warm-white to-parchment/50 rounded-2xl shadow-xl border border-slate-200/60 p-8">
-            <div class="prose prose-lg max-w-none text-advisory-grey">
-              <p class="text-xl leading-relaxed mb-6">
-                Matthew brings extensive experience in regulatory compliance and strategic AI implementation, 
-                specialising in the complex intersection of technology innovation and European regulatory frameworks.
-              </p>
-              
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
-                <div>
-                  <h3 class="text-lg font-semibold text-slate-900 mb-3">Expertise</h3>
-                  <ul class="space-y-2 text-advisory-grey">
-                    <li>• EU AI Act Implementation</li>
-                    <li>• Regulatory Compliance Strategy</li>
-                    <li>• AI Governance Framework Development</li>
-                    <li>• Cross-Industry Risk Assessment</li>
-                  </ul>
+
+          <div class="text-center mb-8">
+            <p class="text-lg text-advisory-grey italic">Scientia et Lex - Knowledge and Law</p>
+          </div>
+
+          <div class="prose prose-lg max-w-none text-advisory-grey">
+            <p class="mb-6">
+              AILEX Consulting embodies the convergence of artificial intelligence capabilities 
+              with regulatory expertise, specifically tailored for the sophisticated European 
+              professional services market. Our approach bridges technological innovation with 
+              legal requirements, ensuring organisations achieve compliance whilst maximising 
+              strategic advantage.
+            </p>
+
+            <p class="mb-6">
+              The firm's positioning as the definitive European authority on AI governance 
+              reflects extensive experience across diverse industry sectors combined with 
+              deep understanding of regulatory frameworks. This cross-pollination of insights 
+              enables systematic best practice sharing without the constraints of internal politics.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+          <!-- Our Approach -->
+          <div class="bg-white rounded-xl shadow-lg p-8 border border-slate-200">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6">Our Approach</h2>
+            <div class="space-y-4">
+              <div class="flex items-start space-x-3">
+                <div class="w-6 h-6 bg-european-blue/10 rounded-full flex items-center justify-center mt-1">
+                  <svg class="w-3 h-3 text-european-blue" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                  </svg>
                 </div>
-                
                 <div>
-                  <h3 class="text-lg font-semibold text-slate-900 mb-3">Approach</h3>
-                  <ul class="space-y-2 text-advisory-grey">
-                    <li>• Evidence-Based Analysis</li>
-                    <li>• Systematic Implementation</li>
-                    <li>• Proactive Compliance Preparation</li>
-                    <li>• Measurable Outcomes Focus</li>
-                  </ul>
+                  <h3 class="font-semibold text-slate-900">Proactive Compliance</h3>
+                  <p class="text-sm text-advisory-grey">Preparation rather than reactive remediation</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start space-x-3">
+                <div class="w-6 h-6 bg-innovation-indigo/10 rounded-full flex items-center justify-center mt-1">
+                  <svg class="w-3 h-3 text-innovation-indigo" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-slate-900">Systematic Methodologies</h3>
+                  <p class="text-sm text-advisory-grey">Evidence-based frameworks ensuring consistent outcomes</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start space-x-3">
+                <div class="w-6 h-6 bg-compliance-green/10 rounded-full flex items-center justify-center mt-1">
+                  <svg class="w-3 h-3 text-compliance-green" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-slate-900">Cross-Industry Insight</h3>
+                  <p class="text-sm text-advisory-grey">Best practice sharing from diverse sectoral experience</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Market Position -->
+          <div class="bg-white rounded-xl shadow-lg p-8 border border-slate-200">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6">Market Position</h2>
+            <div class="space-y-4">
+              <div class="border-l-4 border-european-blue pl-4">
+                <h3 class="font-semibold text-slate-900 mb-1">Premium Specialist</h3>
+                <p class="text-sm text-advisory-grey">
+                  Serving C-suite executives requiring sophisticated regulatory guidance
+                </p>
+              </div>
+              
+              <div class="border-l-4 border-innovation-indigo pl-4">
+                <h3 class="font-semibold text-slate-900 mb-1">Pan-European Authority</h3>
+                <p class="text-sm text-advisory-grey">
+                  Particular strength in EU regulatory frameworks and institutional requirements
+                </p>
+              </div>
+              
+              <div class="border-l-4 border-compliance-green pl-4">
+                <h3 class="font-semibold text-slate-900 mb-1">Strategic Partnership</h3>
+                <p class="text-sm text-advisory-grey">
+                  Long-term relationships focusing on sustainable competitive advantage
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Professional Credentials -->
+        <div class="bg-white rounded-xl shadow-lg p-8 border border-slate-200 mb-12">
+          <h2 class="text-2xl font-bold text-slate-900 mb-6 text-center">Professional Foundation</h2>
+          
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="text-center">
+              <div class="w-16 h-16 bg-european-blue/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg class="w-8 h-8 text-european-blue" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+              </div>
+              <h3 class="text-lg font-semibold text-slate-900 mb-2">Regulatory Expertise</h3>
+              <p class="text-sm text-advisory-grey">
+                Comprehensive EU AI Act mastery combined with practical implementation experience
+              </p>
+            </div>
+            
+            <div class="text-center">
+              <div class="w-16 h-16 bg-innovation-indigo/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg class="w-8 h-8 text-innovation-indigo" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <h3 class="text-lg font-semibold text-slate-900 mb-2">Technical Acumen</h3>
+              <p class="text-sm text-advisory-grey">
+                Deep understanding of AI technologies combined with business strategy development
+              </p>
+            </div>
+            
+            <div class="text-center">
+              <div class="w-16 h-16 bg-compliance-green/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg class="w-8 h-8 text-compliance-green" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z" clip-rule="evenodd" />
+                </svg>
+              </div>
+              <h3 class="text-lg font-semibold text-slate-900 mb-2">Implementation Experience</h3>
+              <p class="text-sm text-advisory-grey">
+                Proven methodologies ensuring consistent outcomes across diverse organisational contexts
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service Philosophy -->
+        <div class="bg-gradient-to-br from-european-blue to-innovation-indigo rounded-xl shadow-lg p-8 text-white mb-12">
+          <div class="text-center">
+            <h2 class="text-2xl font-bold mb-6">Service Philosophy</h2>
+            <blockquote class="text-lg italic mb-6">
+              "Regulatory compliance need not constrain innovation. Through systematic preparation 
+              combined with strategic thinking, organisations achieve both regulatory certainty 
+              and competitive advantage."
+            </blockquote>
+            <p class="text-blue-100">
+              Our approach emphasises preparation over reaction, enabling organisations to view 
+              regulatory requirements as strategic opportunities rather than operational burdens.
+            </p>
+          </div>
+        </div>
+
+        <!-- Why Choose AILEX -->
+        <div class="bg-white rounded-xl shadow-lg p-8 border border-slate-200">
+          <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center">Why Choose AILEX</h2>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="space-y-6">
+              <div class="flex items-start space-x-4">
+                <div class="w-8 h-8 bg-european-blue/10 rounded-lg flex items-center justify-center mt-1">
+                  <svg class="w-4 h-4 text-european-blue" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="text-lg font-semibold text-slate-900 mb-2">Cost-Effective Expertise</h3>
+                  <p class="text-advisory-grey">
+                    Access to senior AI expertise without the £378,000 annual commitment 
+                    of full-time CAIO hiring, providing maximum flexibility aligned with business needs.
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-start space-x-4">
+                <div class="w-8 h-8 bg-innovation-indigo/10 rounded-lg flex items-center justify-center mt-1">
+                  <svg class="w-4 h-4 text-innovation-indigo" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="text-lg font-semibold text-slate-900 mb-2">Outsider's Objectivity</h3>
+                  <p class="text-advisory-grey">
+                    Cross-industry experience enabling novel ideas and best practice sharing 
+                    without internal political constraints or short-term pressures.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="space-y-6">
+              <div class="flex items-start space-x-4">
+                <div class="w-8 h-8 bg-compliance-green/10 rounded-lg flex items-center justify-center mt-1">
+                  <svg class="w-4 h-4 text-compliance-green" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="text-lg font-semibold text-slate-900 mb-2">First-Mover Advantage</h3>
+                  <p class="text-advisory-grey">
+                    Pre-enforcement positioning before competitive intensity peaks in August 2025, 
+                    establishing market leadership through regulatory preparedness.
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-start space-x-4">
+                <div class="w-8 h-8 bg-caution-amber/10 rounded-lg flex items-center justify-center mt-1">
+                  <svg class="w-4 h-4 text-caution-amber" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="text-lg font-semibold text-slate-900 mb-2">Systematic Delivery</h3>
+                  <p class="text-advisory-grey">
+                    Proven methodologies developed through axiomatic design principles, 
+                    ensuring consistent outcomes and scalable approaches across engagements.
+                  </p>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- Company Information -->
-    <section class="py-20 bg-gradient-to-br from-warm-white via-parchment to-institutional-grey">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 class="text-3xl font-bold text-slate-900 mb-8">
-          <em>Scientia et Lex</em>
-        </h2>
-        <p class="text-lg text-advisory-grey mb-8">Knowledge and Law</p>
-        
-        <div class="bg-gradient-to-br from-white to-warm-white rounded-xl p-8 shadow-lg border border-slate-200/60">
-          <p class="text-advisory-grey">
-            AILEX Consulting Ltd provides expert regulatory affairs guidance during the critical 
-            period leading to EU AI Act enforcement. Our systematic approach ensures organisations 
-            achieve compliance whilst maintaining operational efficiency and competitive advantage.
+        <!-- Contact CTA -->
+        <div class="text-center mt-16">
+          <h2 class="text-2xl font-bold text-slate-900 mb-4">Ready to Begin?</h2>
+          <p class="text-advisory-grey mb-8 max-w-2xl mx-auto">
+            Discover how AILEX can support your organisation's AI governance requirements 
+            through expert regulatory guidance and strategic implementation.
           </p>
+          <a href="/contact" class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-european-blue hover:bg-innovation-indigo transition-colours shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200">
+            Request Consultation
+            <svg class="ml-2 -mr-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+            </svg>
+          </a>
         </div>
       </div>
     </section>
