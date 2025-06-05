@@ -1,230 +1,288 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
 ---
 
-<Layout title="AI Governance Services - AILEX Consulting" description="Comprehensive EU AI Act compliance services including readiness assessment, governance frameworks, and implementation support.">
+<Layout title="AI Governance Services - AILEX Consulting" description="Comprehensive AI governance and EU AI Act compliance services. Expert guidance for regulatory preparation and strategic implementation.">
   <Header />
   
   <main>
-    <!-- Services Hero -->
-    <section class="pt-20 pb-16 bg-gradient-to-br from-institutional-grey via-parchment to-warm-white relative">
-      <div class="absolute inset-0 bg-gradient-to-r from-european-blue/3 to-innovation-indigo/3"></div>
-      <div class="relative">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <!-- Hero Section -->
+    <section class="pt-20 pb-16 bg-gradient-to-br from-parchment to-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
           <h1 class="text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
-            AI Governance Services
+            Professional AI Governance Services
           </h1>
-          <p class="text-xl text-advisory-grey">
-            Comprehensive support for EU AI Act compliance and strategic AI implementation
+          <p class="text-xl text-advisory-grey max-w-3xl mx-auto">
+            Comprehensive service delivery addressing every aspect of EU AI Act preparation 
+            combined with strategic implementation guidance
           </p>
         </div>
       </div>
     </section>
 
-    <!-- Current Service -->
-    <section class="py-20 bg-gradient-to-b from-warm-white to-institutional-grey relative">
-      <div class="absolute inset-0 bg-gradient-to-br from-slate-50/30 to-parchment/30"></div>
-      <div class="relative">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="text-center mb-12">
-            <h2 class="text-3xl font-bold text-slate-900 mb-4">Available Now</h2>
-          </div>
+    <!-- Services Grid -->
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           
           <!-- AI Act Readiness Assessment -->
-          <div class="bg-gradient-to-br from-white via-warm-white to-parchment/50 rounded-xl shadow-lg border border-slate-200/60 p-8 mb-12">
-            <div class="flex items-center justify-between mb-6">
-              <h3 class="text-2xl font-semibold text-slate-900">AI Act Readiness Assessment</h3>
-              <div class="bg-compliance-green/10 px-3 py-1 rounded-full">
-                <span class="text-compliance-green text-sm font-medium">Available</span>
-              </div>
+          <div class="bg-white rounded-xl shadow-lg border border-slate-200 p-8 hover:shadow-xl transition-shadow">
+            <div class="w-12 h-12 bg-european-blue/10 rounded-lg flex items-center justify-center mb-6">
+              <svg class="w-6 h-6 text-european-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
             </div>
-            
+            <h3 class="text-xl font-semibold text-slate-900 mb-3">AI Act Readiness Assessment</h3>
             <p class="text-advisory-grey mb-6">
-              Comprehensive evaluation of your organisation's AI systems against EU AI Act requirements. 
-              Identify compliance gaps and receive a priority action roadmap for August 2025 enforcement.
+              Comprehensive evaluation of organisational AI systems against 
+              EU AI Act requirements combined with regulatory gap analysis.
             </p>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-              <div>
-                <h4 class="font-semibold text-slate-900 mb-3">Assessment Includes:</h4>
-                <ul class="space-y-2 text-sm text-advisory-grey">
-                  <li class="flex items-center">
-                    <svg class="w-4 h-4 text-compliance-green mr-2" fill="currentColor" viewBox="0 0 20 20">
-                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                    </svg>
-                    AI system inventory and classification
-                  </li>
-                  <li class="flex items-center">
-                    <svg class="w-4 h-4 text-compliance-green mr-2" fill="currentColor" viewBox="0 0 20 20">
-                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                    </svg>
-                    Risk level determination
-                  </li>
-                  <li class="flex items-center">
-                    <svg class="w-4 h-4 text-compliance-green mr-2" fill="currentColor" viewBox="0 0 20 20">
-                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                    </svg>
-                    Compliance gap analysis
-                  </li>
-                  <li class="flex items-center">
-                    <svg class="w-4 h-4 text-compliance-green mr-2" fill="currentColor" viewBox="0 0 20 20">
-                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                    </svg>
-                    Priority action roadmap
-                  </li>
-                </ul>
-              </div>
-              
-              <div>
-                <h4 class="font-semibold text-slate-900 mb-3">Deliverables:</h4>
-                <ul class="space-y-2 text-sm text-advisory-grey">
-                  <li class="flex items-center">
-                    <svg class="w-4 h-4 text-innovation-indigo mr-2" fill="currentColor" viewBox="0 0 20 20">
-                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                    </svg>
-                    Comprehensive assessment report
-                  </li>
-                  <li class="flex items-center">
-                    <svg class="w-4 h-4 text-innovation-indigo mr-2" fill="currentColor" viewBox="0 0 20 20">
-                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                    </svg>
-                    Implementation timeline
-                  </li>
-                  <li class="flex items-center">
-                    <svg class="w-4 h-4 text-innovation-indigo mr-2" fill="currentColor" viewBox="0 0 20 20">
-                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                    </svg>
-                    Cost-benefit analysis
-                  </li>
-                  <li class="flex items-center">
-                    <svg class="w-4 h-4 text-innovation-indigo mr-2" fill="currentColor" viewBox="0 0 20 20">
-                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                    </svg>
-                    Follow-up consultation
-                  </li>
-                </ul>
-              </div>
+            <ul class="space-y-2 text-sm text-advisory-grey mb-6">
+              <li class="flex items-center">
+                <svg class="w-4 h-4 text-compliance-green mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+                Risk classification analysis
+              </li>
+              <li class="flex items-center">
+                <svg class="w-4 h-4 text-compliance-green mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+                Compliance gap identification
+              </li>
+              <li class="flex items-center">
+                <svg class="w-4 h-4 text-compliance-green mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+                Implementation roadmap
+              </li>
+            </ul>
+            <div class="text-sm text-slate-500 mb-4">From £5,000</div>
+            <a href="/services/ai-act-readiness" class="block w-full text-center bg-european-blue text-white py-2 px-4 rounded-lg hover:bg-innovation-indigo transition-colours">
+              Learn More
+            </a>
+          </div>
+
+          <!-- Pre-Enforcement Preparation -->
+          <div class="bg-white rounded-xl shadow-lg border border-slate-200 p-8 hover:shadow-xl transition-shadow">
+            <div class="w-12 h-12 bg-innovation-indigo/10 rounded-lg flex items-center justify-center mb-6">
+              <svg class="w-6 h-6 text-innovation-indigo" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+              </svg>
             </div>
-            
-            <div class="flex items-center justify-between">
-              <div>
-                <span class="text-2xl font-bold text-slate-900">From £5,000</span>
-                <span class="text-advisory-grey ml-2">• 2-3 week delivery</span>
-              </div>
-              <a href="/contact" class="bg-european-blue text-white px-6 py-3 rounded-lg hover:bg-innovation-indigo transition-colours font-medium">
-                Request Assessment
-              </a>
+            <h3 class="text-xl font-semibold text-slate-900 mb-3">Pre-Enforcement Preparation</h3>
+            <p class="text-advisory-grey mb-6">
+              Strategic implementation framework preparing organisations for 
+              August 2025 enforcement combined with governance system development.
+            </p>
+            <ul class="space-y-2 text-sm text-advisory-grey mb-6">
+              <li class="flex items-center">
+                <svg class="w-4 h-4 text-compliance-green mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+                Governance framework development
+              </li>
+              <li class="flex items-center">
+                <svg class="w-4 h-4 text-compliance-green mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+                Documentation standards
+              </li>
+              <li class="flex items-center">
+                <svg class="w-4 h-4 text-compliance-green mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+                Process systematisation
+              </li>
+            </ul>
+            <div class="text-sm text-slate-500 mb-4">From £12,000</div>
+            <a href="/services/compliance-preparation" class="block w-full text-center bg-innovation-indigo text-white py-2 px-4 rounded-lg hover:bg-european-blue transition-colours">
+              Learn More
+            </a>
+          </div>
+
+          <!-- Strategic Planning -->
+          <div class="bg-white rounded-xl shadow-lg border border-slate-200 p-8 hover:shadow-xl transition-shadow">
+            <div class="w-12 h-12 bg-compliance-green/10 rounded-lg flex items-center justify-center mb-6">
+              <svg class="w-6 h-6 text-compliance-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+              </svg>
             </div>
+            <h3 class="text-xl font-semibold text-slate-900 mb-3">Strategic AI Governance</h3>
+            <p class="text-advisory-grey mb-6">
+              Comprehensive AI strategy development aligned with regulatory requirements 
+              combined with business objective integration.
+            </p>
+            <ul class="space-y-2 text-sm text-advisory-grey mb-6">
+              <li class="flex items-center">
+                <svg class="w-4 h-4 text-compliance-green mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+                Strategic roadmap development
+              </li>
+              <li class="flex items-center">
+                <svg class="w-4 h-4 text-compliance-green mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+                Market opportunity analysis
+              </li>
+              <li class="flex items-center">
+                <svg class="w-4 h-4 text-compliance-green mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+                Competitive positioning
+              </li>
+            </ul>
+            <div class="text-sm text-slate-500 mb-4">£8,000-15,000/month</div>
+            <a href="/services/strategic-planning" class="block w-full text-center bg-compliance-green text-white py-2 px-4 rounded-lg hover:bg-emerald-700 transition-colours">
+              Learn More
+            </a>
+          </div>
+
+          <!-- Implementation Support -->
+          <div class="bg-white rounded-xl shadow-lg border border-slate-200 p-8 hover:shadow-xl transition-shadow">
+            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+              <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-slate-900 mb-3">Implementation Support</h3>
+            <p class="text-advisory-grey mb-6">
+              Hands-on guidance for deploying AI systems whilst maintaining EU AI Act 
+              compliance throughout implementation phases.
+            </p>
+            <ul class="space-y-2 text-sm text-advisory-grey mb-6">
+              <li class="flex items-center">
+                <svg class="w-4 h-4 text-compliance-green mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+                Pilot programme design
+              </li>
+              <li class="flex items-center">
+                <svg class="w-4 h-4 text-compliance-green mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+                Scaling methodologies
+              </li>
+              <li class="flex items-center">
+                <svg class="w-4 h-4 text-compliance-green mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+                Quality assurance
+              </li>
+            </ul>
+            <div class="text-sm text-slate-500 mb-4">£10,000-20,000/month</div>
+            <a href="/services/implementation" class="block w-full text-center bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colours">
+              Learn More
+            </a>
+          </div>
+
+          <!-- Professional Development -->
+          <div class="bg-white rounded-xl shadow-lg border border-slate-200 p-8 hover:shadow-xl transition-shadow">
+            <div class="w-12 h-12 bg-caution-amber/10 rounded-lg flex items-center justify-center mb-6">
+              <svg class="w-6 h-6 text-caution-amber" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-slate-900 mb-3">Professional Development</h3>
+            <p class="text-advisory-grey mb-6">
+              Comprehensive training programmes ensuring teams meet Article 4 literacy requirements 
+              combined with certification pathways.
+            </p>
+            <ul class="space-y-2 text-sm text-advisory-grey mb-6">
+              <li class="flex items-center">
+                <svg class="w-4 h-4 text-compliance-green mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+                Executive AI education
+              </li>
+              <li class="flex items-center">
+                <svg class="w-4 h-4 text-compliance-green mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+                Technical team development
+              </li>
+              <li class="flex items-center">
+                <svg class="w-4 h-4 text-compliance-green mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+                Professional certification
+              </li>
+            </ul>
+            <div class="text-sm text-slate-500 mb-4">£5,000-12,000/programme</div>
+            <a href="/services/professional-development" class="block w-full text-center bg-caution-amber text-white py-2 px-4 rounded-lg hover:bg-amber-700 transition-colours">
+              Learn More
+            </a>
+          </div>
+
+          <!-- Value Demonstration -->
+          <div class="bg-white rounded-xl shadow-lg border border-slate-200 p-8 hover:shadow-xl transition-shadow">
+            <div class="w-12 h-12 bg-rose-100 rounded-lg flex items-center justify-center mb-6">
+              <svg class="w-6 h-6 text-rose-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-slate-900 mb-3">Value Demonstration</h3>
+            <p class="text-advisory-grey mb-6">
+              Quantitative analysis combined with value demonstration frameworks 
+              for AI investments and compliance efforts.
+            </p>
+            <ul class="space-y-2 text-sm text-advisory-grey mb-6">
+              <li class="flex items-center">
+                <svg class="w-4 h-4 text-compliance-green mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+                Value measurement frameworks
+              </li>
+              <li class="flex items-center">
+                <svg class="w-4 h-4 text-compliance-green mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+                Performance tracking
+              </li>
+              <li class="flex items-center">
+                <svg class="w-4 h-4 text-compliance-green mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+                Business case development
+              </li>
+            </ul>
+            <div class="text-sm text-slate-500 mb-4">£6,000-10,000/month</div>
+            <a href="/contact" class="block w-full text-center bg-rose-600 text-white py-2 px-4 rounded-lg hover:bg-rose-700 transition-colours">
+              Request Consultation
+            </a>
           </div>
         </div>
       </div>
     </section>
-  </main>
 
-  <Footer />
-</Layout>
----
-import Layout from '../../layouts/Layout.astro';
-import Header from '../../components/Header.astro';
-import Footer from '../../components/Footer.astro';
----
-
-<Layout title="AI Act Readiness Assessment - AILEX Consulting" description="Comprehensive EU AI Act readiness assessment identifying compliance gaps and implementation priorities.">
-  <Header />
-  
-  <main>
-    <section class="py-20 bg-gradient-to-br from-parchment to-white">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16">
-          <h1 class="text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
-            AI Act Readiness Assessment
-          </h1>
-          <p class="text-xl text-advisory-grey max-w-3xl mx-auto">
-            Comprehensive evaluation of organisational AI systems against EU AI Act requirements. 
-            Essential foundation for compliance preparation.
-          </p>
-        </div>
-
-        <div class="bg-white rounded-2xl shadow-xl border border-slate-200 p-8 mb-12">
-          <h2 class="text-2xl font-bold text-slate-900 mb-6">Assessment Methodology</h2>
-          <div class="space-y-6">
-            <div class="flex items-start">
-              <div class="w-8 h-8 bg-european-blue/10 rounded-lg flex items-center justify-center mr-4 mt-1">
-                <span class="text-european-blue font-bold text-sm">1</span>
-              </div>
-              <div>
-                <h3 class="font-semibold text-slate-900 mb-2">AI System Inventory</h3>
-                <p class="text-advisory-grey">Complete cataloguing of AI systems within your organisation combined with risk classification analysis.</p>
-              </div>
-            </div>
-            
-            <div class="flex items-start">
-              <div class="w-8 h-8 bg-european-blue/10 rounded-lg flex items-center justify-center mr-4 mt-1">
-                <span class="text-european-blue font-bold text-sm">2</span>
-              </div>
-              <div>
-                <h3 class="font-semibold text-slate-900 mb-2">Compliance Gap Analysis</h3>
-                <p class="text-advisory-grey">Detailed evaluation of current practices against EU AI Act requirements identifying critical compliance gaps.</p>
-              </div>
-            </div>
-            
-            <div class="flex items-start">
-              <div class="w-8 h-8 bg-european-blue/10 rounded-lg flex items-center justify-center mr-4 mt-1">
-                <span class="text-european-blue font-bold text-sm">3</span>
-              </div>
-              <div>
-                <h3 class="font-semibold text-slate-900 mb-2">Implementation Roadmap</h3>
-                <p class="text-advisory-grey">Priority action plan aligned with August 2025 enforcement timeline ensuring systematic compliance preparation.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="text-center">
-          <a href="/contact" class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-european-blue hover:bg-innovation-indigo transition-colours shadow-lg">
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-br from-european-blue to-innovation-indigo">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl lg:text-4xl font-bold text-white mb-8">
+          Ready to Begin Your AI Governance Journey?
+        </h2>
+        <p class="text-xl text-blue-100 mb-12 max-w-3xl mx-auto">
+          Expert guidance for EU AI Act compliance combined with strategic implementation 
+          support. Begin your assessment today.
+        </p>
+        
+        <div class="flex flex-col sm:flex-row gap-6 justify-center">
+          <a href="/contact" class="inline-flex items-center justify-center px-8 py-4 border border-transparent text-lg font-medium rounded-lg text-european-blue bg-white hover:bg-blue-50 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
             Request Assessment
+            <svg class="ml-2 -mr-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+            </svg>
           </a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <Footer />
-</Layout>
----
-import Layout from '../../layouts/Layout.astro';
-import Header from '../../components/Header.astro';
-import Footer from '../../components/Footer.astro';
----
-
-<Layout title="Pre-Enforcement Preparation - AILEX Consulting" description="Strategic compliance preparation for EU AI Act enforcement commencing August 2025.">
-  <Header />
-  
-  <main>
-    <section class="py-20 bg-gradient-to-br from-parchment to-white">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16">
-          <h1 class="text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
-            Pre-Enforcement Preparation
-          </h1>
-          <p class="text-xl text-advisory-grey max-w-3xl mx-auto">
-            Strategic implementation framework preparing organisations for August 2025 enforcement. 
-            Available following successful readiness assessment.
-          </p>
-        </div>
-
-        <div class="bg-amber-50 border border-amber-200 rounded-lg p-6 mb-8">
-          <p class="text-amber-800">
-            <strong>Prerequisites:</strong> This service becomes available following completion of AI Act Readiness Assessment 
-            to ensure strategic alignment with organisational requirements.
-          </p>
-        </div>
-
-        <div class="text-center">
-          <a href="/contact" class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-european-blue hover:bg-innovation-indigo transition-colours shadow-lg">
-            Discuss Requirements
+          
+          <a href="/eu-ai-act" class="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-lg font-medium rounded-lg text-white hover:bg-white hover:text-european-blue transition-all duration-200">
+            View Timeline
+            <svg class="ml-2 -mr-1 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
           </a>
         </div>
       </div>
