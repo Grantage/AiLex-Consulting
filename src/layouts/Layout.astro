@@ -4,7 +4,7 @@ export interface Props {
   description?: string;
 }
 
-const { title, description = "EU AI Act compliance and strategic AI governance. Expert regulatory affairs guidance for organisations navigating AI governance requirements." } = Astro.props;
+const { title, description = "Systematic AI governance for European growth companies. Regulatory mastery combined with commercial insight, ensuring EU AI Act compliance accelerates competitive positioning." } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -17,7 +17,7 @@ const { title, description = "EU AI Act compliance and strategic AI governance. 
     <title>{title}</title>
     
     <!-- SEO Meta Tags -->
-    <meta name="keywords" content="EU AI Act, AI governance, regulatory affairs, AI compliance, CAIO, AI strategy" />
+    <meta name="keywords" content="AI governance, EU AI Act, regulatory affairs, PE portfolio companies, systematic compliance" />
     <meta name="author" content="AILEX Consulting Ltd" />
     
     <!-- Open Graph -->
@@ -26,27 +26,28 @@ const { title, description = "EU AI Act compliance and strategic AI governance. 
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://ailexconsulting.com" />
     
-    <!-- European Accessibility Compliance -->
+    <!-- European Standards -->
     <meta name="accessibility" content="EN 301 549 compliant" />
     
-    <!-- Fonts -->
+    <!-- Professional Typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <style>
-      /* European Brand Identity System Implementation */
       :root {
         --european-blue: #1e3a8a;
         --innovation-indigo: #4f46e5;
         --compliance-green: #047857;
         --advisory-grey: #525252;
-        --caution-amber: #b45309;
+        --institutional-grey: #64748b;
+        --success-green: #16a34a;
         --parchment: #fefcf3;
+        --platinum: #f8fafc;
       }
       
       .ailex-logo {
-        font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        font-family: 'Inter', system-ui, sans-serif;
         font-weight: 500;
         letter-spacing: 0.15em;
       }
@@ -59,29 +60,17 @@ const { title, description = "EU AI Act compliance and strategic AI governance. 
         color: var(--european-blue);
       }
 
-      /* Simple scrollbar styling */
-      ::-webkit-scrollbar {
-        width: 8px;
-      }
-      
-      ::-webkit-scrollbar-track {
-        background: #f1f5f9;
-      }
-      
-      ::-webkit-scrollbar-thumb {
-        background: var(--european-blue);
-        border-radius: 4px;
-      }
-      
-      ::-webkit-scrollbar-thumb:hover {
-        background: var(--innovation-indigo);
+      .professional-typography {
+        font-family: 'Inter', system-ui, sans-serif;
+        line-height: 1.7;
+        letter-spacing: 0.01em;
       }
     </style>
   </head>
-  <body class="font-inter text-advisory-grey bg-parchment">
+  <body class="font-inter text-advisory-grey bg-parchment professional-typography">
     <slot />
     
-    <!-- Contact Form Handler -->
+    <!-- Form Enhancement -->
     <script>
       document.addEventListener('DOMContentLoaded', function() {
         const forms = document.querySelectorAll('form[data-netlify]');
@@ -89,7 +78,7 @@ const { title, description = "EU AI Act compliance and strategic AI governance. 
           form.addEventListener('submit', function(e) {
             const submitBtn = form.querySelector('button[type="submit"]');
             if (submitBtn) {
-              submitBtn.textContent = 'Submitting...';
+              submitBtn.textContent = 'Processing request...';
               submitBtn.disabled = true;
             }
           });
