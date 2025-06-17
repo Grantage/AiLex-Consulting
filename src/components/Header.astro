@@ -1,80 +1,404 @@
 ---
+// Header component with updated navigation and brand positioning
 ---
 
-<header class="bg-parchment border-b border-slate-200 sticky top-0 z-50 backdrop-blur-md bg-parchment/95">
-  <!-- Professional Credentials Bar -->
-  <div class="bg-platinum border-b border-slate-100">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="py-2 text-center">
-        <div class="text-xs text-institutional-grey">
-          <span>Regulatory Affairs Specialist</span>
-          <span class="mx-2">•</span>
-          <span>European AI Governance Expert</span>
-          <span class="mx-2">•</span>
-          <span>PE Portfolio Advisory</span>
-          <span class="mx-2">•</span>
-          <span>Multi-Jurisdictional Compliance</span>
-        </div>
-      </div>
-    </div>
-  </div>
+<header class="site-header">
+	<div class="container">
+		<div class="header-content">
+			<!-- Logo with dual-colour implementation -->
+			<div class="logo">
+				<a href="/" class="logo-link">
+					<span class="ai-element">AI</span><span class="lex-element">LEX</span>
+					<span class="tagline">AI Governance & Regulatory Affairs</span>
+				</a>
+			</div>
 
-  <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex justify-between items-center h-16">
-      <!-- Enhanced Logo -->
-      <div class="flex items-center">
-        <a href="/" class="flex items-center space-x-2">
-          <div class="w-10 h-10 bg-gradient-to-br from-innovation-indigo to-european-blue rounded-lg flex items-center justify-center relative">
-            <span class="text-white font-bold text-sm">A</span>
-            <div class="absolute inset-0 rounded-lg border border-european-blue/20"></div>
-          </div>
-          <div class="ailex-logo text-xl">
-            <span class="text-innovation-indigo">AI</span><span class="text-slate-300">LEX</span>
-          </div>
-        </a>
-      </div>
+			<!-- Navigation -->
+			<nav class="main-nav">
+				<ul class="nav-list">
+					<li class="nav-item dropdown">
+						<a href="/services" class="nav-link">Services</a>
+						<div class="dropdown-menu">
+							<a href="/services/emergency-assessment" class="dropdown-link">
+								<strong>Emergency AI Act Assessment</strong>
+								<span>£9,500 | 6 Days</span>
+							</a>
+							<a href="/services/rapid-implementation" class="dropdown-link">
+								<strong>Rapid Compliance Implementation</strong>
+								<span>£28,000 | 8 Weeks</span>
+							</a>
+							<a href="/services/fractional-caio" class="dropdown-link">
+								<strong>Fractional Chief AI Officer</strong>
+								<span>£5,000-15,000/month</span>
+							</a>
+							<a href="/services/portfolio-frameworks" class="dropdown-link">
+								<strong>Portfolio-Wide Frameworks</strong>
+								<span>£75,000-250,000</span>
+							</a>
+						</div>
+					</li>
+					<li class="nav-item">
+						<a href="/eu-ai-act" class="nav-link">EU AI Act</a>
+					</li>
+					<li class="nav-item">
+						<a href="/portfolio-advisory" class="nav-link">Portfolio Advisory</a>
+					</li>
+					<li class="nav-item">
+						<a href="/case-studies" class="nav-link">Case Studies</a>
+					</li>
+					<li class="nav-item">
+						<a href="/about" class="nav-link">About</a>
+					</li>
+					<li class="nav-item">
+						<a href="/contact" class="nav-link">Contact</a>
+					</li>
+				</ul>
+			</nav>
 
-      <!-- Professional Navigation -->
-      <div class="hidden md:block">
-        <div class="ml-10 flex items-baseline space-x-8">
-          <a href="/strategic-governance" class="text-advisory-grey hover:text-european-blue transition-colors font-medium">Strategic Governance</a>
-          <a href="/portfolio-advisory" class="text-advisory-grey hover:text-european-blue transition-colors font-medium">Portfolio Advisory</a>
-          <a href="/regulatory-mastery" class="text-advisory-grey hover:text-european-blue transition-colors font-medium">Regulatory Mastery</a>
-          <a href="/about" class="text-advisory-grey hover:text-european-blue transition-colors font-medium">About</a>
-          <a href="/contact" class="bg-european-blue text-white px-4 py-2 rounded-lg hover:bg-innovation-indigo transition-colors font-medium">Strategic Review</a>
-        </div>
-      </div>
+			<!-- CTA Button -->
+			<div class="header-cta">
+				<a href="/services/emergency-assessment" class="cta-button">
+					Emergency Assessment
+				</a>
+			</div>
 
-      <!-- Mobile menu button -->
-      <div class="md:hidden">
-        <button id="mobile-menu-button" class="text-advisory-grey hover:text-european-blue">
-          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-        </button>
-      </div>
-    </div>
+			<!-- Mobile Menu Toggle -->
+			<button class="mobile-toggle" aria-label="Toggle menu">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+		</div>
+	</div>
 
-    <!-- Mobile Navigation -->
-    <div id="mobile-menu" class="md:hidden hidden">
-      <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-parchment border-t border-slate-100">
-        <a href="/strategic-governance" class="block px-3 py-2 text-advisory-grey hover:text-european-blue">Strategic Governance</a>
-        <a href="/portfolio-advisory" class="block px-3 py-2 text-advisory-grey hover:text-european-blue">Portfolio Advisory</a>
-        <a href="/regulatory-mastery" class="block px-3 py-2 text-advisory-grey hover:text-european-blue">Regulatory Mastery</a>
-        <a href="/about" class="block px-3 py-2 text-advisory-grey hover:text-european-blue">About</a>
-        <a href="/contact" class="block px-3 py-2 text-advisory-grey hover:text-european-blue">Strategic Review</a>
-      </div>
-    </div>
-  </nav>
+	<!-- Mobile Navigation -->
+	<nav class="mobile-nav">
+		<div class="mobile-nav-content">
+			<ul class="mobile-nav-list">
+				<li class="mobile-nav-item">
+					<a href="/services/emergency-assessment" class="mobile-nav-link">Emergency Assessment</a>
+				</li>
+				<li class="mobile-nav-item">
+					<a href="/services/rapid-implementation" class="mobile-nav-link">Rapid Implementation</a>
+				</li>
+				<li class="mobile-nav-item">
+					<a href="/services/fractional-caio" class="mobile-nav-link">Fractional CAIO</a>
+				</li>
+				<li class="mobile-nav-item">
+					<a href="/eu-ai-act" class="mobile-nav-link">EU AI Act</a>
+				</li>
+				<li class="mobile-nav-item">
+					<a href="/portfolio-advisory" class="mobile-nav-link">Portfolio Advisory</a>
+				</li>
+				<li class="mobile-nav-item">
+					<a href="/case-studies" class="mobile-nav-link">Case Studies</a>
+				</li>
+				<li class="mobile-nav-item">
+					<a href="/about" class="mobile-nav-link">About</a>
+				</li>
+				<li class="mobile-nav-item">
+					<a href="/contact" class="mobile-nav-link">Contact</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
 </header>
 
+<style>
+	/* Header Styles */
+	.site-header {
+		background: white;
+		border-bottom: 1px solid #e5e7eb;
+		position: sticky;
+		top: 0;
+		z-index: 1000;
+		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+	}
+
+	.container {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 0 20px;
+	}
+
+	.header-content {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 16px 0;
+	}
+
+	/* Logo Styles */
+	.logo-link {
+		text-decoration: none;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.logo {
+		display: flex;
+		align-items: center;
+	}
+
+	.ai-element {
+		color: #4f46e5; /* Innovation Indigo */
+		font-weight: 500;
+		font-size: 1.75rem;
+		letter-spacing: 0.15em;
+	}
+
+	.lex-element {
+		color: #1e3a8a; /* European Blue */
+		font-weight: 500;
+		font-size: 1.75rem;
+		letter-spacing: 0.15em;
+	}
+
+	.tagline {
+		color: #525252;
+		font-size: 0.75rem;
+		font-weight: 400;
+		margin-top: 2px;
+		letter-spacing: 0.05em;
+	}
+
+	/* Navigation Styles */
+	.main-nav {
+		display: flex;
+		align-items: center;
+	}
+
+	.nav-list {
+		display: flex;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		gap: 32px;
+	}
+
+	.nav-link {
+		color: #525252;
+		text-decoration: none;
+		font-weight: 500;
+		font-size: 0.95rem;
+		transition: color 0.3s;
+		padding: 8px 0;
+	}
+
+	.nav-link:hover {
+		color: #1e3a8a;
+	}
+
+	/* Dropdown Styles */
+	.dropdown {
+		position: relative;
+	}
+
+	.dropdown-menu {
+		position: absolute;
+		top: 100%;
+		left: 0;
+		background: white;
+		border: 1px solid #e5e7eb;
+		border-radius: 8px;
+		box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+		padding: 16px;
+		min-width: 280px;
+		opacity: 0;
+		visibility: hidden;
+		transform: translateY(-10px);
+		transition: all 0.3s;
+		z-index: 100;
+	}
+
+	.dropdown:hover .dropdown-menu {
+		opacity: 1;
+		visibility: visible;
+		transform: translateY(0);
+	}
+
+	.dropdown-link {
+		display: flex;
+		flex-direction: column;
+		padding: 12px 0;
+		text-decoration: none;
+		border-bottom: 1px solid #f3f4f6;
+		transition: background 0.3s;
+	}
+
+	.dropdown-link:last-child {
+		border-bottom: none;
+	}
+
+	.dropdown-link:hover {
+		background: #f8fafc;
+		padding-left: 8px;
+	}
+
+	.dropdown-link strong {
+		color: #1e3a8a;
+		font-size: 0.95rem;
+		margin-bottom: 4px;
+	}
+
+	.dropdown-link span {
+		color: #4f46e5;
+		font-size: 0.85rem;
+		font-weight: 600;
+	}
+
+	/* Header CTA */
+	.header-cta {
+		display: flex;
+		align-items: center;
+	}
+
+	.cta-button {
+		background: #b45309; /* Caution Amber */
+		color: white;
+		padding: 12px 24px;
+		border-radius: 6px;
+		text-decoration: none;
+		font-weight: 600;
+		font-size: 0.9rem;
+		transition: all 0.3s;
+		position: relative;
+		overflow: hidden;
+	}
+
+	.cta-button:before {
+		content: "⚡";
+		margin-right: 8px;
+	}
+
+	.cta-button:hover {
+		background: #d97706;
+		transform: translateY(-1px);
+		box-shadow: 0 4px 8px rgba(180, 83, 9, 0.3);
+	}
+
+	/* Mobile Toggle */
+	.mobile-toggle {
+		display: none;
+		flex-direction: column;
+		background: none;
+		border: none;
+		cursor: pointer;
+		padding: 8px;
+		gap: 4px;
+	}
+
+	.mobile-toggle span {
+		width: 24px;
+		height: 2px;
+		background: #525252;
+		transition: all 0.3s;
+	}
+
+	/* Mobile Navigation */
+	.mobile-nav {
+		display: none;
+		background: white;
+		border-top: 1px solid #e5e7eb;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	}
+
+	.mobile-nav.active {
+		display: block;
+	}
+
+	.mobile-nav-content {
+		padding: 20px;
+	}
+
+	.mobile-nav-list {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	.mobile-nav-item {
+		border-bottom: 1px solid #f3f4f6;
+	}
+
+	.mobile-nav-item:last-child {
+		border-bottom: none;
+	}
+
+	.mobile-nav-link {
+		display: block;
+		padding: 16px 0;
+		color: #525252;
+		text-decoration: none;
+		font-weight: 500;
+		transition: color 0.3s;
+	}
+
+	.mobile-nav-link:hover {
+		color: #1e3a8a;
+	}
+
+	/* Responsive Design */
+	@media (max-width: 768px) {
+		.main-nav,
+		.header-cta {
+			display: none;
+		}
+
+		.mobile-toggle {
+			display: flex;
+		}
+
+		.logo {
+			flex: 1;
+		}
+
+		.ai-element,
+		.lex-element {
+			font-size: 1.5rem;
+		}
+
+		.tagline {
+			font-size: 0.7rem;
+		}
+	}
+
+	@media (max-width: 480px) {
+		.header-content {
+			padding: 12px 0;
+		}
+
+		.ai-element,
+		.lex-element {
+			font-size: 1.25rem;
+		}
+
+		.tagline {
+			font-size: 0.65rem;
+		}
+	}
+</style>
+
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const button = document.getElementById('mobile-menu-button');
-    const menu = document.getElementById('mobile-menu');
-    
-    button?.addEventListener('click', function() {
-      menu?.classList.toggle('hidden');
-    });
-  });
+	// Mobile menu functionality
+	document.addEventListener('DOMContentLoaded', function() {
+		const mobileToggle = document.querySelector('.mobile-toggle');
+		const mobileNav = document.querySelector('.mobile-nav');
+		
+		if (mobileToggle && mobileNav) {
+			mobileToggle.addEventListener('click', function() {
+				mobileNav.classList.toggle('active');
+				mobileToggle.classList.toggle('active');
+			});
+
+			// Close mobile menu when clicking on links
+			const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+			mobileLinks.forEach(link => {
+				link.addEventListener('click', function() {
+					mobileNav.classList.remove('active');
+					mobileToggle.classList.remove('active');
+				});
+			});
+		}
+	});
 </script>
