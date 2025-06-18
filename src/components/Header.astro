@@ -1,11 +1,11 @@
 ---
-// Header component with updated navigation and brand positioning
+// AiLex Header with dual-colour branding and full navigation
 ---
 
 <header class="site-header">
 	<div class="container">
 		<div class="header-content">
-			<!-- Logo with dual-colour implementation -->
+			<!-- AiLex Logo with Dual-Colour Brand Identity -->
 			<div class="logo">
 				<a href="/" class="logo-link">
 					<span class="ai-element">AI</span><span class="lex-element">LEX</span>
@@ -13,32 +13,14 @@
 				</a>
 			</div>
 
-			<!-- Navigation -->
+			<!-- Main Navigation -->
 			<nav class="main-nav">
 				<ul class="nav-list">
-					<li class="nav-item dropdown">
+					<li class="nav-item">
 						<a href="/services" class="nav-link">Services</a>
-						<div class="dropdown-menu">
-							<a href="/services/emergency-assessment" class="dropdown-link">
-								<strong>Emergency AI Act Assessment</strong>
-								<span>£9,500 | 6 Days</span>
-							</a>
-							<a href="/services/rapid-implementation" class="dropdown-link">
-								<strong>Rapid Compliance Implementation</strong>
-								<span>£28,000 | 8 Weeks</span>
-							</a>
-							<a href="/services/fractional-caio" class="dropdown-link">
-								<strong>Fractional Chief AI Officer</strong>
-								<span>£5,000-15,000/month</span>
-							</a>
-							<a href="/services/portfolio-frameworks" class="dropdown-link">
-								<strong>Portfolio-Wide Frameworks</strong>
-								<span>£75,000-250,000</span>
-							</a>
-						</div>
 					</li>
 					<li class="nav-item">
-						<a href="/eu-ai-act" class="nav-link">EU AI Act</a>
+						<a href="/about" class="nav-link">About</a>
 					</li>
 					<li class="nav-item">
 						<a href="/portfolio-advisory" class="nav-link">Portfolio Advisory</a>
@@ -47,17 +29,14 @@
 						<a href="/case-studies" class="nav-link">Case Studies</a>
 					</li>
 					<li class="nav-item">
-						<a href="/about" class="nav-link">About</a>
-					</li>
-					<li class="nav-item">
 						<a href="/contact" class="nav-link">Contact</a>
 					</li>
 				</ul>
 			</nav>
 
-			<!-- CTA Button -->
+			<!-- Emergency Assessment CTA -->
 			<div class="header-cta">
-				<a href="/services/emergency-assessment" class="cta-button">
+				<a href="/contact?service=emergency-assessment" class="cta-button">
 					Emergency Assessment
 				</a>
 			</div>
@@ -76,16 +55,10 @@
 		<div class="mobile-nav-content">
 			<ul class="mobile-nav-list">
 				<li class="mobile-nav-item">
-					<a href="/services/emergency-assessment" class="mobile-nav-link">Emergency Assessment</a>
+					<a href="/services" class="mobile-nav-link">Services</a>
 				</li>
 				<li class="mobile-nav-item">
-					<a href="/services/rapid-implementation" class="mobile-nav-link">Rapid Implementation</a>
-				</li>
-				<li class="mobile-nav-item">
-					<a href="/services/fractional-caio" class="mobile-nav-link">Fractional CAIO</a>
-				</li>
-				<li class="mobile-nav-item">
-					<a href="/eu-ai-act" class="mobile-nav-link">EU AI Act</a>
+					<a href="/about" class="mobile-nav-link">About</a>
 				</li>
 				<li class="mobile-nav-item">
 					<a href="/portfolio-advisory" class="mobile-nav-link">Portfolio Advisory</a>
@@ -94,10 +67,10 @@
 					<a href="/case-studies" class="mobile-nav-link">Case Studies</a>
 				</li>
 				<li class="mobile-nav-item">
-					<a href="/about" class="mobile-nav-link">About</a>
+					<a href="/contact" class="mobile-nav-link">Contact</a>
 				</li>
 				<li class="mobile-nav-item">
-					<a href="/contact" class="mobile-nav-link">Contact</a>
+					<a href="/contact?service=emergency-assessment" class="mobile-nav-link urgent">Emergency Assessment</a>
 				</li>
 			</ul>
 		</div>
@@ -105,7 +78,7 @@
 </header>
 
 <style>
-	/* Header Styles */
+	/* Header Foundation */
 	.site-header {
 		background: white;
 		border-bottom: 1px solid #e5e7eb;
@@ -128,16 +101,11 @@
 		padding: 16px 0;
 	}
 
-	/* Logo Styles */
+	/* AiLex Dual-Colour Logo */
 	.logo-link {
 		text-decoration: none;
 		display: flex;
 		flex-direction: column;
-	}
-
-	.logo {
-		display: flex;
-		align-items: center;
 	}
 
 	.ai-element {
@@ -145,6 +113,7 @@
 		font-weight: 500;
 		font-size: 1.75rem;
 		letter-spacing: 0.15em;
+		display: inline;
 	}
 
 	.lex-element {
@@ -152,6 +121,7 @@
 		font-weight: 500;
 		font-size: 1.75rem;
 		letter-spacing: 0.15em;
+		display: inline;
 	}
 
 	.tagline {
@@ -162,7 +132,7 @@
 		letter-spacing: 0.05em;
 	}
 
-	/* Navigation Styles */
+	/* Navigation */
 	.main-nav {
 		display: flex;
 		align-items: center;
@@ -189,65 +159,7 @@
 		color: #1e3a8a;
 	}
 
-	/* Dropdown Styles */
-	.dropdown {
-		position: relative;
-	}
-
-	.dropdown-menu {
-		position: absolute;
-		top: 100%;
-		left: 0;
-		background: white;
-		border: 1px solid #e5e7eb;
-		border-radius: 8px;
-		box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-		padding: 16px;
-		min-width: 280px;
-		opacity: 0;
-		visibility: hidden;
-		transform: translateY(-10px);
-		transition: all 0.3s;
-		z-index: 100;
-	}
-
-	.dropdown:hover .dropdown-menu {
-		opacity: 1;
-		visibility: visible;
-		transform: translateY(0);
-	}
-
-	.dropdown-link {
-		display: flex;
-		flex-direction: column;
-		padding: 12px 0;
-		text-decoration: none;
-		border-bottom: 1px solid #f3f4f6;
-		transition: background 0.3s;
-	}
-
-	.dropdown-link:last-child {
-		border-bottom: none;
-	}
-
-	.dropdown-link:hover {
-		background: #f8fafc;
-		padding-left: 8px;
-	}
-
-	.dropdown-link strong {
-		color: #1e3a8a;
-		font-size: 0.95rem;
-		margin-bottom: 4px;
-	}
-
-	.dropdown-link span {
-		color: #4f46e5;
-		font-size: 0.85rem;
-		font-weight: 600;
-	}
-
-	/* Header CTA */
+	/* Emergency CTA */
 	.header-cta {
 		display: flex;
 		align-items: center;
@@ -263,7 +175,6 @@
 		font-size: 0.9rem;
 		transition: all 0.3s;
 		position: relative;
-		overflow: hidden;
 	}
 
 	.cta-button:before {
@@ -338,6 +249,15 @@
 		color: #1e3a8a;
 	}
 
+	.mobile-nav-link.urgent {
+		background: #fef3c7;
+		color: #92400e;
+		padding: 16px 12px;
+		border-radius: 6px;
+		margin-top: 8px;
+		font-weight: 600;
+	}
+
 	/* Responsive Design */
 	@media (max-width: 768px) {
 		.main-nav,
@@ -347,10 +267,6 @@
 
 		.mobile-toggle {
 			display: flex;
-		}
-
-		.logo {
-			flex: 1;
 		}
 
 		.ai-element,
