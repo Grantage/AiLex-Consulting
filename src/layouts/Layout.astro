@@ -1,4 +1,7 @@
 ---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
 export interface Props {
   title: string;
   description?: string;
@@ -65,10 +68,27 @@ const { title, description = "Systematic AI governance for European growth compa
         line-height: 1.7;
         letter-spacing: 0.01em;
       }
+
+      /* Ensure proper page structure */
+      body {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      main {
+        flex: 1;
+      }
     </style>
   </head>
   <body class="font-inter text-advisory-grey bg-parchment professional-typography">
-    <slot />
+    <Header />
+    
+    <main>
+      <slot />
+    </main>
+    
+    <Footer />
     
     <!-- Form Enhancement -->
     <script>
