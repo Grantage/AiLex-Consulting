@@ -1,320 +1,95 @@
 ---
-// AiLex Header with dual-colour branding and full navigation
+// No props needed for now - we'll add dynamic features later
 ---
 
-<header class="site-header">
-	<div class="container">
-		<div class="header-content">
-			<!-- AiLex Logo with Dual-Colour Brand Identity -->
-			<div class="logo">
-				<a href="/" class="logo-link">
-					<span class="ai-element">AI</span><span class="lex-element">LEX</span>
-					<span class="tagline">AI Governance & Regulatory Affairs</span>
-				</a>
-			</div>
+<header class="bg-blue-900 text-white shadow-lg sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center py-4">
+      <!-- Logo and Brand -->
+      <div class="flex items-center space-x-3">
+        <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center">
+          <span class="text-blue-900 font-bold text-xl">A</span>
+        </div>
+        <div>
+          <h1 class="text-xl font-bold">AiLex Consulting</h1>
+          <p class="text-blue-200 text-xs">AI-Enhanced Compliance Analysis</p>
+        </div>
+      </div>
 
-			<!-- Main Navigation -->
-			<nav class="main-nav">
-				<ul class="nav-list">
-					<li class="nav-item">
-						<a href="/services" class="nav-link">Services</a>
-					</li>
-					<li class="nav-item">
-						<a href="/about" class="nav-link">About</a>
-					</li>
-					<li class="nav-item">
-						<a href="/portfolio-advisory" class="nav-link">Portfolio Advisory</a>
-					</li>
-					<li class="nav-item">
-						<a href="/case-studies" class="nav-link">Case Studies</a>
-					</li>
-					<li class="nav-item">
-						<a href="/contact" class="nav-link">Contact</a>
-					</li>
-				</ul>
-			</nav>
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex items-center space-x-8">
+        <a href="/emergency-assessment" class="text-white hover:text-blue-200 font-medium transition-colors">
+          Emergency Assessment
+        </a>
+        <a href="/sme-compliance" class="text-white hover:text-blue-200 font-medium transition-colors">
+          SME Solutions
+        </a>
+        <a href="/methodology" class="text-white hover:text-blue-200 font-medium transition-colors">
+          Methodology
+        </a>
+        <a href="/resources" class="text-white hover:text-blue-200 font-medium transition-colors">
+          Resources
+        </a>
+        <a href="/about" class="text-white hover:text-blue-200 font-medium transition-colors">
+          About
+        </a>
+      </nav>
 
-			<!-- Emergency Assessment CTA -->
-			<div class="header-cta">
-				<a href="/contact?service=emergency-assessment" class="cta-button">
-					Emergency Assessment
-				</a>
-			</div>
+      <!-- Primary CTA Button -->
+      <div class="hidden md:block">
+        <a 
+          href="/emergency-assessment" 
+          class="bg-amber-500 hover:bg-amber-600 text-blue-900 px-6 py-3 rounded-lg font-semibold transition-colors shadow-lg"
+          onclick="trackConversion('cta_click', {location: 'header'})"
+        >
+          Get Assessment - £9,500
+        </a>
+      </div>
 
-			<!-- Mobile Menu Toggle -->
-			<button class="mobile-toggle" aria-label="Toggle menu">
-				<span></span>
-				<span></span>
-				<span></span>
-			</button>
-		</div>
-	</div>
+      <!-- Mobile Menu Button -->
+      <button 
+        class="md:hidden text-white p-2"
+        onclick="toggleMobileMenu()"
+        aria-label="Toggle menu"
+      >
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
 
-	<!-- Mobile Navigation -->
-	<nav class="mobile-nav">
-		<div class="mobile-nav-content">
-			<ul class="mobile-nav-list">
-				<li class="mobile-nav-item">
-					<a href="/services" class="mobile-nav-link">Services</a>
-				</li>
-				<li class="mobile-nav-item">
-					<a href="/about" class="mobile-nav-link">About</a>
-				</li>
-				<li class="mobile-nav-item">
-					<a href="/portfolio-advisory" class="mobile-nav-link">Portfolio Advisory</a>
-				</li>
-				<li class="mobile-nav-item">
-					<a href="/case-studies" class="mobile-nav-link">Case Studies</a>
-				</li>
-				<li class="mobile-nav-item">
-					<a href="/contact" class="mobile-nav-link">Contact</a>
-				</li>
-				<li class="mobile-nav-item">
-					<a href="/contact?service=emergency-assessment" class="mobile-nav-link urgent">Emergency Assessment</a>
-				</li>
-			</ul>
-		</div>
-	</nav>
+    <!-- Mobile Navigation -->
+    <div id="mobile-menu" class="md:hidden hidden pb-4">
+      <div class="flex flex-col space-y-3">
+        <a href="/emergency-assessment" class="text-white hover:text-blue-200 font-medium py-2">
+          Emergency Assessment
+        </a>
+        <a href="/sme-compliance" class="text-white hover:text-blue-200 font-medium py-2">
+          SME Solutions
+        </a>
+        <a href="/methodology" class="text-white hover:text-blue-200 font-medium py-2">
+          Methodology
+        </a>
+        <a href="/resources" class="text-white hover:text-blue-200 font-medium py-2">
+          Resources
+        </a>
+        <a href="/about" class="text-white hover:text-blue-200 font-medium py-2">
+          About
+        </a>
+        <a 
+          href="/emergency-assessment" 
+          class="bg-amber-500 hover:bg-amber-600 text-blue-900 px-4 py-3 rounded-lg font-semibold text-center mt-4"
+        >
+          Get Assessment - £9,500
+        </a>
+      </div>
+    </div>
+  </div>
 </header>
 
-<style>
-	/* Header Foundation */
-	.site-header {
-		background: white;
-		border-bottom: 1px solid #e5e7eb;
-		position: sticky;
-		top: 0;
-		z-index: 1000;
-		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-	}
-
-	.container {
-		max-width: 1200px;
-		margin: 0 auto;
-		padding: 0 20px;
-	}
-
-	.header-content {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		padding: 16px 0;
-	}
-
-	/* AiLex Dual-Colour Logo */
-	.logo-link {
-		text-decoration: none;
-		display: flex;
-		flex-direction: column;
-	}
-
-	.ai-element {
-		color: #4f46e5; /* Innovation Indigo */
-		font-weight: 500;
-		font-size: 1.75rem;
-		letter-spacing: 0.15em;
-		display: inline;
-	}
-
-	.lex-element {
-		color: #1e3a8a; /* European Blue */
-		font-weight: 500;
-		font-size: 1.75rem;
-		letter-spacing: 0.15em;
-		display: inline;
-	}
-
-	.tagline {
-		color: #525252;
-		font-size: 0.75rem;
-		font-weight: 400;
-		margin-top: 2px;
-		letter-spacing: 0.05em;
-	}
-
-	/* Navigation */
-	.main-nav {
-		display: flex;
-		align-items: center;
-	}
-
-	.nav-list {
-		display: flex;
-		list-style: none;
-		margin: 0;
-		padding: 0;
-		gap: 32px;
-	}
-
-	.nav-link {
-		color: #525252;
-		text-decoration: none;
-		font-weight: 500;
-		font-size: 0.95rem;
-		transition: color 0.3s;
-		padding: 8px 0;
-	}
-
-	.nav-link:hover {
-		color: #1e3a8a;
-	}
-
-	/* Emergency CTA */
-	.header-cta {
-		display: flex;
-		align-items: center;
-	}
-
-	.cta-button {
-		background: #b45309; /* Caution Amber */
-		color: white;
-		padding: 12px 24px;
-		border-radius: 6px;
-		text-decoration: none;
-		font-weight: 600;
-		font-size: 0.9rem;
-		transition: all 0.3s;
-		position: relative;
-	}
-
-	.cta-button:before {
-		content: "⚡";
-		margin-right: 8px;
-	}
-
-	.cta-button:hover {
-		background: #d97706;
-		transform: translateY(-1px);
-		box-shadow: 0 4px 8px rgba(180, 83, 9, 0.3);
-	}
-
-	/* Mobile Toggle */
-	.mobile-toggle {
-		display: none;
-		flex-direction: column;
-		background: none;
-		border: none;
-		cursor: pointer;
-		padding: 8px;
-		gap: 4px;
-	}
-
-	.mobile-toggle span {
-		width: 24px;
-		height: 2px;
-		background: #525252;
-		transition: all 0.3s;
-	}
-
-	/* Mobile Navigation */
-	.mobile-nav {
-		display: none;
-		background: white;
-		border-top: 1px solid #e5e7eb;
-		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-	}
-
-	.mobile-nav.active {
-		display: block;
-	}
-
-	.mobile-nav-content {
-		padding: 20px;
-	}
-
-	.mobile-nav-list {
-		list-style: none;
-		margin: 0;
-		padding: 0;
-	}
-
-	.mobile-nav-item {
-		border-bottom: 1px solid #f3f4f6;
-	}
-
-	.mobile-nav-item:last-child {
-		border-bottom: none;
-	}
-
-	.mobile-nav-link {
-		display: block;
-		padding: 16px 0;
-		color: #525252;
-		text-decoration: none;
-		font-weight: 500;
-		transition: color 0.3s;
-	}
-
-	.mobile-nav-link:hover {
-		color: #1e3a8a;
-	}
-
-	.mobile-nav-link.urgent {
-		background: #fef3c7;
-		color: #92400e;
-		padding: 16px 12px;
-		border-radius: 6px;
-		margin-top: 8px;
-		font-weight: 600;
-	}
-
-	/* Responsive Design */
-	@media (max-width: 768px) {
-		.main-nav,
-		.header-cta {
-			display: none;
-		}
-
-		.mobile-toggle {
-			display: flex;
-		}
-
-		.ai-element,
-		.lex-element {
-			font-size: 1.5rem;
-		}
-
-		.tagline {
-			font-size: 0.7rem;
-		}
-	}
-
-	@media (max-width: 480px) {
-		.header-content {
-			padding: 12px 0;
-		}
-
-		.ai-element,
-		.lex-element {
-			font-size: 1.25rem;
-		}
-
-		.tagline {
-			font-size: 0.65rem;
-		}
-	}
-</style>
-
 <script>
-	// Mobile menu functionality
-	document.addEventListener('DOMContentLoaded', function() {
-		const mobileToggle = document.querySelector('.mobile-toggle');
-		const mobileNav = document.querySelector('.mobile-nav');
-		
-		if (mobileToggle && mobileNav) {
-			mobileToggle.addEventListener('click', function() {
-				mobileNav.classList.toggle('active');
-				mobileToggle.classList.toggle('active');
-			});
-
-			// Close mobile menu when clicking on links
-			const mobileLinks = document.querySelectorAll('.mobile-nav-link');
-			mobileLinks.forEach(link => {
-				link.addEventListener('click', function() {
-					mobileNav.classList.remove('active');
-					mobileToggle.classList.remove('active');
-				});
-			});
-		}
-	});
+  function toggleMobileMenu() {
+    const menu = document.getElementById('mobile-menu');
+    menu.classList.toggle('hidden');
+  }
 </script>
