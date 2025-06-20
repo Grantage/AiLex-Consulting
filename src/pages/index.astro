@@ -283,8 +283,8 @@ import Footer from '../components/Footer.astro';
       document.getElementById('penalty-result').classList.remove('hidden');
       
       // Track the calculation
-      if (typeof trackConversion !== 'undefined') {
-        trackConversion('penalty_calculated', {revenue: revenue});
+      if (typeof window.trackConversion !== 'undefined') {
+        window.trackConversion('penalty_calculated', {revenue: revenue});
       }
     } else {
       alert('Please enter a valid revenue amount');
