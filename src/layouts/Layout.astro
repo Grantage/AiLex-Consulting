@@ -1,134 +1,33 @@
 ---
+// src/layouts/Layout.astro
 export interface Props {
   title: string;
   description?: string;
-  canonicalURL?: string;
-  ogImage?: string;
 }
 
-const { 
-  title, 
-  description = "EU AI Act compliance in 6 days through AI-enhanced systematic analysis. Emergency assessments for UK SMEs avoiding €35M penalties.",
-  canonicalURL = Astro.url.href,
-  ogImage = "/og-image.jpg"
-} = Astro.props;
+const { title, description = "AiLex Consulting - EU AI Act Compliance Experts" } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="description" content={description} />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <meta name="generator" content={Astro.generator} />
-  
-  <!-- Custom Styles -->
-<style>
-  body {
-    background-color: #fffef7;
-    background-image: 
-      radial-gradient(circle at 1px 1px, rgba(139,69,19,0.05) 1px, transparent 0);
-    background-size: 20px 20px;
-  }
-  
-  .font-inter {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  }
-  
-  /* Apply parchment to all main content areas */
-  main {
-    background-color: #fffef7;
-    background-image: 
-      radial-gradient(circle at 1px 1px, rgba(139,69,19,0.05) 1px, transparent 0);
-    background-size: 20px 20px;
-  }
-  
-  /* Ensure white sections stand out against parchment */
-  .bg-white {
-    background-color: #ffffff !important;
-    background-image: none !important;
-  }
-  
-  /* Ensure blue header/footer stand out against parchment */
-  .bg-blue-900 {
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  }
-  
-  /* Make gray sections slightly warmer on parchment */
-  .bg-gray-50 {
-    background-color: #faf9f5 !important;
-  }
-</style>
-  
-  <!-- SEO Meta Tags -->
   <title>{title}</title>
-  <link rel="canonical" href={canonicalURL} />
   
-  <!-- Open Graph -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content={title} />
-  <meta property="og:description" content={description} />
-  <meta property="og:url" content={canonicalURL} />
-  <meta property="og:image" content={ogImage} />
-  
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content={title} />
-  <meta name="twitter:description" content={description} />
-  <meta name="twitter:image" content={ogImage} />
-  
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  
-  <!-- Analytics - Google Analytics 4 -->
-  <script type="text/partytown" async src="https://www.googletagmanager.com/gtag/js?id=G-SK6FVPTQZF"></script>
-  <script type="text/partytown">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SK6FVPTQZF"></script>
+  <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-SK6FVPTQZF');
   </script>
 </head>
-
-<body class="bg-amber-50 text-gray-900 font-inter antialiased">
-  <div class="min-h-screen flex flex-col">
-    <slot />
-  </div>
-  
-  <!-- Conversion Tracking Scripts -->
-  <script>
-    // GPAI Deadline Countdown
-    function updateCountdown() {
-      const deadline = new Date('2025-08-02'); // GPAI compliance deadline
-      const now = new Date();
-      const timeLeft = deadline - now;
-      
-      if (timeLeft > 0) {
-        const weeks = Math.floor(timeLeft / (1000 * 60 * 60 * 24 * 7));
-        const days = Math.floor((timeLeft % (1000 * 60 * 60 * 24 * 7)) / (1000 * 60 * 60 * 24));
-        
-        const countdownElements = document.querySelectorAll('[data-countdown]');
-        countdownElements.forEach(el => {
-          el.textContent = `${weeks} weeks, ${days} days`;
-        });
-      }
-    }
-    
-    // Update countdown on page load
-    updateCountdown();
-    
-    // Track conversion events
-    function trackConversion(event, value = {}) {
-      if (typeof gtag !== 'undefined') {
-        gtag('event', event, value);
-      }
-    }
-    
-    // Expose for use in components
-    window.trackConversion = trackConversion;
-  </script>
+<body>
+  <slot />
 </body>
 </html>
