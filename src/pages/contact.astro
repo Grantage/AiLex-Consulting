@@ -1,78 +1,427 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 ---
 
-<Layout title="Contact AiLex Consulting">
-	<main>
-		<div class="container">
-			<h1>Contact AiLex Consulting</h1>
-			<p>Professional AI Governance Consultation</p>
-			
-			<div class="contact-info">
-				<h2>Get in Touch</h2>
-				<p><strong>Email:</strong> <a href="mailto:matthew@ailexconsulting.com">matthew@ailexconsulting.com</a></p>
-				<p><strong>Emergency Assessments:</strong> <a href="mailto:urgent@ailexconsulting.com">urgent@ailexconsulting.com</a></p>
-				<p><strong>LinkedIn:</strong> <a href="https://linkedin.com/company/ailex-consulting">AiLex Consulting</a></p>
-			</div>
+<Layout 
+  title="Contact AiLex Consulting - EU AI Act Compliance Consultation"
+  description="Book your free EU AI Act compliance consultation. Emergency assessments, SME solutions, and fractional CAIO services. Get expert guidance today."
+>
+  <Header />
+  
+  <main>
+    <!-- Contact Hero -->
+    <section class="bg-gradient-to-br from-blue-50 to-green-50 py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+            Let's Discuss Your 
+            <span class="text-blue-600">AI Compliance Needs</span>
+          </h1>
+          <p class="text-xl md:text-2xl text-gray-700 mb-8 max-w-4xl mx-auto">
+            Free consultation to understand your situation and recommend the right compliance approach
+          </p>
+          <div class="bg-red-100 border border-red-300 rounded-xl p-4 max-w-2xl mx-auto">
+            <p class="text-red-800 font-semibold">
+              ⚠️ GPAI Deadline: <span data-countdown>Loading...</span> Remaining
+            </p>
+            <p class="text-red-700 text-sm mt-1">
+              Book urgent consultation for immediate compliance guidance
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-			<div class="services-contact">
-				<h2>Request Service</h2>
-				<ul>
-					<li><strong>Emergency AI Act Assessment</strong> - £9,500 | 6 Days</li>
-					<li><strong>Rapid Compliance Implementation</strong> - £28,000 | 8 Weeks</li>
-					<li><strong>Fractional Chief AI Officer</strong> - £5,000-15,000/month</li>
-				</ul>
-			</div>
-		</div>
-	</main>
+    <!-- Contact Options -->
+    <section class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            How Would You Like to Connect?
+          </h2>
+          <p class="text-xl text-gray-600">
+            Choose the option that works best for your timeline and needs
+          </p>
+        </div>
 
-	<style>
-		.container {
-			max-width: 800px;
-			margin: 0 auto;
-			padding: 40px 20px;
-		}
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          <!-- Emergency Consultation -->
+          <div class="bg-red-50 rounded-2xl p-8 border-2 border-red-200 text-center">
+            <div class="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-6">
+              <span class="text-white text-2xl">🚨</span>
+            </div>
+            <h3 class="text-2xl font-bold text-red-600 mb-4">Emergency Consultation</h3>
+            <p class="text-gray-700 mb-6">
+              Urgent GPAI compliance issues requiring immediate attention and guidance.
+            </p>
+            <ul class="text-left space-y-2 mb-6 text-gray-700">
+              <li class="flex items-start">
+                <span class="text-red-500 mr-2 mt-1">•</span>
+                <span>Same-day response</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-red-500 mr-2 mt-1">•</span>
+                <span>Emergency assessment scoping</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-red-500 mr-2 mt-1">•</span>
+                <span>Immediate compliance actions</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-red-500 mr-2 mt-1">•</span>
+                <span>Fast-track project initiation</span>
+              </li>
+            </ul>
+            <a 
+              href="mailto:consult@ailexconsulting.com?subject=URGENT%3A%20AI%20Compliance%20Emergency&body=I%20need%20urgent%20assistance%20with%20EU%20AI%20Act%20compliance.%0A%0ACompany%3A%0ARevenue%3A%0AAI%20Usage%3A%0ATimeline%3A%0A%0APlease%20call%20me%20urgently."
+              class="block w-full bg-red-600 hover:bg-red-700 text-white py-3 rounded-lg font-semibold transition-colors mb-4"
+              onclick="trackConversion('emergency_contact')"
+            >
+              Email for Urgent Call-back
+            </a>
+            <p class="text-sm text-gray-600">Or call: +44 XXX XXX XXXX</p>
+          </div>
 
-		h1 {
-			color: #1e3a8a;
-			font-size: 2.5rem;
-			margin-bottom: 20px;
-		}
+          <!-- Standard Consultation -->
+          <div class="bg-blue-50 rounded-2xl p-8 border-2 border-blue-200 text-center">
+            <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
+              <span class="text-white text-2xl">📅</span>
+            </div>
+            <h3 class="text-2xl font-bold text-blue-600 mb-4">Standard Consultation</h3>
+            <p class="text-gray-700 mb-6">
+              30-minute structured consultation to discuss your compliance needs and options.
+            </p>
+            <ul class="text-left space-y-2 mb-6 text-gray-700">
+              <li class="flex items-start">
+                <span class="text-blue-500 mr-2 mt-1">•</span>
+                <span>Compliance requirement review</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-blue-500 mr-2 mt-1">•</span>
+                <span>Service recommendation</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-blue-500 mr-2 mt-1">•</span>
+                <span>Timeline and pricing discussion</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-blue-500 mr-2 mt-1">•</span>
+                <span>No obligation assessment</span>
+              </li>
+            </ul>
+            <div class="bg-blue-100 border border-blue-300 rounded-lg p-4 mb-4">
+              <p class="text-blue-800 text-sm mb-2">Book 30-minute consultation:</p>
+              <p class="text-blue-600 text-sm">Calendly integration placeholder</p>
+            </div>
+            <a 
+              href="mailto:consult@ailexconsulting.com?subject=Consultation%20Request%20-%20EU%20AI%20Act%20Compliance&body=I%27d%20like%20to%20book%20a%20consultation%20to%20discuss%20EU%20AI%20Act%20compliance.%0A%0ACompany%3A%0ARevenue%3A%0AAI%20Usage%3A%0APreferred%20time%3A%0A%0ASpecific%20questions%3A"
+              class="block w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-semibold transition-colors"
+              onclick="trackConversion('standard_consultation')"
+            >
+              Request Consultation
+            </a>
+          </div>
 
-		.contact-info, .services-contact {
-			background: white;
-			padding: 30px;
-			border-radius: 8px;
-			box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-			margin-bottom: 30px;
-		}
+          <!-- General Inquiry -->
+          <div class="bg-green-50 rounded-2xl p-8 border-2 border-green-200 text-center">
+            <div class="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
+              <span class="text-white text-2xl">💬</span>
+            </div>
+            <h3 class="text-2xl font-bold text-green-600 mb-4">General Inquiry</h3>
+            <p class="text-gray-700 mb-6">
+              Questions about our services, methodology, or EU AI Act requirements.
+            </p>
+            <ul class="text-left space-y-2 mb-6 text-gray-700">
+              <li class="flex items-start">
+                <span class="text-green-500 mr-2 mt-1">•</span>
+                <span>Service information</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-green-500 mr-2 mt-1">•</span>
+                <span>Methodology questions</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-green-500 mr-2 mt-1">•</span>
+                <span>Resource requests</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-green-500 mr-2 mt-1">•</span>
+                <span>Partnership discussions</span>
+              </li>
+            </ul>
+            <a 
+              href="mailto:consult@ailexconsulting.com?subject=General%20Inquiry%20-%20AiLex%20Consulting&body=I%20have%20a%20question%20about%20AiLex%20Consulting%20services.%0A%0AName%3A%0ACompany%3A%0A%0AQuestion%3A"
+              class="block w-full bg-green-600 hover:bg-green-700 text-white py-3 rounded-lg font-semibold transition-colors"
+              onclick="trackConversion('general_inquiry')"
+            >
+              Send Inquiry
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-		h2 {
-			color: #1e3a8a;
-			margin-bottom: 20px;
-		}
+    <!-- Contact Form -->
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Or Fill Out This Form
+          </h2>
+          <p class="text-xl text-gray-600">
+            We'll respond within 24 hours with next steps
+          </p>
+        </div>
 
-		a {
-			color: #4f46e5;
-			text-decoration: none;
-		}
+        <div class="bg-white rounded-2xl shadow-xl p-8">
+          <form id="contact-form" class="space-y-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label for="name" class="block text-sm font-medium text-gray-700 mb-2">
+                  Full Name *
+                </label>
+                <input 
+                  type="text" 
+                  id="name" 
+                  name="name"
+                  required
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  placeholder="Your full name"
+                />
+              </div>
+              <div>
+                <label for="email" class="block text-sm font-medium text-gray-700 mb-2">
+                  Business Email *
+                </label>
+                <input 
+                  type="email" 
+                  id="email" 
+                  name="email"
+                  required
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  placeholder="your.email@company.com"
+                />
+              </div>
+            </div>
 
-		a:hover {
-			text-decoration: underline;
-		}
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label for="company" class="block text-sm font-medium text-gray-700 mb-2">
+                  Company Name *
+                </label>
+                <input 
+                  type="text" 
+                  id="company" 
+                  name="company"
+                  required
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  placeholder="Your company name"
+                />
+              </div>
+              <div>
+                <label for="revenue" class="block text-sm font-medium text-gray-700 mb-2">
+                  Annual Revenue (£M)
+                </label>
+                <select 
+                  id="revenue" 
+                  name="revenue"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                >
+                  <option value="">Select range</option>
+                  <option value="under-5">Under £5M</option>
+                  <option value="5-10">£5M - £10M</option>
+                  <option value="10-25">£10M - £25M</option>
+                  <option value="25-50">£25M - £50M</option>
+                  <option value="50-100">£50M - £100M</option>
+                  <option value="over-100">Over £100M</option>
+                </select>
+              </div>
+            </div>
 
-		ul {
-			list-style: none;
-			padding: 0;
-		}
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label for="ai-usage" class="block text-sm font-medium text-gray-700 mb-2">
+                  Current AI Usage *
+                </label>
+                <select 
+                  id="ai-usage" 
+                  name="ai-usage"
+                  required
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                >
+                  <option value="">Select your situation</option>
+                  <option value="basic">Basic AI tools (ChatGPT, etc.)</option>
+                  <option value="integrated">AI integrated in products/services</option>
+                  <option value="custom">Custom AI systems/models</option>
+                  <option value="gpai">Using General Purpose AI models</option>
+                  <option value="developing">Developing AI solutions</option>
+                  <option value="planning">Planning AI implementation</option>
+                </select>
+              </div>
+              <div>
+                <label for="urgency" class="block text-sm font-medium text-gray-700 mb-2">
+                  Timeline *
+                </label>
+                <select 
+                  id="urgency" 
+                  name="urgency"
+                  required
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                >
+                  <option value="">Select timeline</option>
+                  <option value="urgent">Urgent (within 2 weeks)</option>
+                  <option value="soon">Soon (within 1 month)</option>
+                  <option value="planned">Planned (within 3 months)</option>
+                  <option value="exploring">Exploring options</option>
+                </select>
+              </div>
+            </div>
 
-		li {
-			padding: 10px 0;
-			border-bottom: 1px solid #e5e7eb;
-		}
+            <div>
+              <label for="service-interest" class="block text-sm font-medium text-gray-700 mb-2">
+                Service Interest
+              </label>
+              <select 
+                id="service-interest" 
+                name="service-interest"
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              >
+                <option value="">Select service</option>
+                <option value="emergency-assessment">Emergency Assessment (£9,500)</option>
+                <option value="sme-implementation">SME Implementation Support</option>
+                <option value="fractional-caio">Fractional CAIO Services</option>
+                <option value="consultation-only">Consultation only</option>
+                <option value="unsure">Not sure - need guidance</option>
+              </select>
+            </div>
 
-		li:last-child {
-			border-bottom: none;
-		}
-	</style>
+            <div>
+              <label for="message" class="block text-sm font-medium text-gray-700 mb-2">
+                Tell Us About Your Situation
+              </label>
+              <textarea 
+                id="message" 
+                name="message"
+                rows="4"
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                placeholder="Describe your current AI usage, compliance concerns, or specific questions..."
+              ></textarea>
+            </div>
+
+            <div class="bg-blue-50 rounded-lg p-4">
+              <p class="text-sm text-blue-800 mb-2">
+                <strong>What happens next?</strong>
+              </p>
+              <ul class="text-sm text-blue-700 space-y-1">
+                <li>• We'll review your submission within 24 hours</li>
+                <li>• Matthew will personally respond with initial guidance</li>
+                <li>• We'll schedule a consultation if appropriate</li>
+                <li>• No obligation - just professional compliance guidance</li>
+              </ul>
+            </div>
+
+            <button 
+              type="submit"
+              class="w-full bg-blue-600 hover:bg-blue-700 text-white py-4 rounded-lg font-bold text-lg transition-colors shadow-lg"
+            >
+              Send Message & Request Consultation
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Direct Contact Info -->
+    <section class="py-16 bg-blue-900 text-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">
+            Direct Contact Information
+          </h2>
+          <p class="text-xl text-blue-200">
+            Prefer direct contact? Reach out using any of these methods
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="text-center">
+            <div class="w-16 h-16 bg-blue-700 rounded-full flex items-center justify-center mx-auto mb-4">
+              <span class="text-2xl">📧</span>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Email</h3>
+            <p class="text-blue-200 mb-4">For all inquiries and consultations</p>
+            <a 
+              href="mailto:consult@ailexconsulting.com" 
+              class="text-amber-400 hover:text-amber-300 font-semibold text-lg"
+            >
+              consult@ailexconsulting.com
+            </a>
+          </div>
+
+          <div class="text-center">
+            <div class="w-16 h-16 bg-blue-700 rounded-full flex items-center justify-center mx-auto mb-4">
+              <span class="text-2xl">📞</span>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Phone</h3>
+            <p class="text-blue-200 mb-4">For urgent compliance matters</p>
+            <p class="text-amber-400 font-semibold text-lg">
+              Urgent Call-back
+            </p>
+            <p class="text-blue-300 text-sm mt-1">
+              (Email for fastest response)
+            </p>
+          </div>
+
+          <div class="text-center">
+            <div class="w-16 h-16 bg-blue-700 rounded-full flex items-center justify-center mx-auto mb-4">
+              <span class="text-2xl">📍</span>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Location</h3>
+            <p class="text-blue-200 mb-4">Serving UK SMEs nationwide</p>
+            <p class="text-amber-400 font-semibold text-lg">London, UK</p>
+            <p class="text-blue-300 text-sm mt-1">
+              Remote consultations available
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const contactForm = document.getElementById('contact-form');
+      
+      if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          
+          // Get form data
+          const formData = new FormData(contactForm);
+          const data = Object.fromEntries(formData);
+          
+          // Track conversion
+          if (typeof window.trackConversion !== 'undefined') {
+            window.trackConversion('contact_form_submitted', data);
+          }
+          
+          // For now, show success message
+          alert('Thank you for your submission! We\'ll respond within 24 hours with next steps for your EU AI Act compliance needs.');
+          
+          // Reset form
+          contactForm.reset();
+          
+          // In real implementation, this would:
+          // 1. Send form data to your backend
+          // 2. Trigger email automation
+          // 3. Add to CRM system
+          // 4. Redirect to thank you page
+        });
+      }
+    });
+  </script>
+  
+  <Footer />
 </Layout>
