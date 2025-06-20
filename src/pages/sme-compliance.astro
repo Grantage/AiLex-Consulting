@@ -1,0 +1,513 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout 
+  title="SME EU AI Act Compliance Solutions | AiLex Consulting"
+  description="Complete EU AI Act compliance for UK SMEs. No internal compliance team needed. From £9,500 assessment to full implementation support."
+>
+  <Header />
+  
+  <main>
+    <!-- SME-Focused Hero -->
+    <section class="bg-gradient-to-br from-blue-50 to-green-50 py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+            EU AI Act Compliance for 
+            <span class="text-blue-600">UK SMEs</span>
+          </h1>
+          <p class="text-xl md:text-2xl text-gray-700 mb-8 max-w-4xl mx-auto">
+            No internal compliance team required. We handle the complexity, you focus on your business.
+          </p>
+        </div>
+
+        <!-- SME Challenge Recognition -->
+        <div class="bg-white rounded-xl shadow-lg p-8 max-w-4xl mx-auto mb-12">
+          <h2 class="text-2xl font-bold text-center mb-8 text-gray-900">
+            The SME AI Compliance Challenge
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="text-center">
+              <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span class="text-3xl">⚖️</span>
+              </div>
+              <h3 class="font-semibold text-lg mb-2">Complex Regulations</h3>
+              <p class="text-gray-600 text-sm">99 articles, 180 pages of technical requirements</p>
+            </div>
+            <div class="text-center">
+              <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span class="text-3xl">👥</span>
+              </div>
+              <h3 class="font-semibold text-lg mb-2">Limited Resources</h3>
+              <p class="text-gray-600 text-sm">No dedicated compliance teams or legal expertise</p>
+            </div>
+            <div class="text-center">
+              <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span class="text-3xl">⏰</span>
+              </div>
+              <h3 class="font-semibold text-lg mb-2">Urgent Deadlines</h3>
+              <p class="text-gray-600 text-sm">GPAI requirements active, penalties up to €35M</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Solution Preview -->
+        <div class="text-center">
+          <h2 class="text-3xl font-bold mb-6 text-gray-900">
+            Done-For-You Compliance Solution
+          </h2>
+          <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+            From emergency assessment to full implementation - we handle everything while you maintain focus on growing your business.
+          </p>
+          <a 
+            href="#sme-pathway" 
+            class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-10 py-4 rounded-xl font-bold text-lg transition-colors shadow-xl"
+          >
+            See Your Compliance Pathway
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SME ROI Calculator -->
+    <section class="py-16 bg-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Investment vs Risk Calculator
+          </h2>
+          <p class="text-xl text-gray-600">
+            See how our SME compliance solution protects your business
+          </p>
+        </div>
+
+        <div class="bg-gradient-to-r from-blue-50 to-green-50 rounded-xl p-8 max-w-4xl mx-auto">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Calculator Input -->
+            <div>
+              <h3 class="text-2xl font-semibold mb-6">Your Business Details</h3>
+              <div class="space-y-4">
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-2">
+                    Annual Revenue (£M)
+                  </label>
+                  <input 
+                    type="number" 
+                    id="sme-revenue-input"
+                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    placeholder="e.g. 8"
+                    min="1"
+                    step="0.5"
+                  />
+                </div>
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-2">
+                    Current AI Usage
+                  </label>
+                  <select 
+                    id="sme-ai-usage"
+                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  >
+                    <option value="">Select your situation</option>
+                    <option value="basic">Basic AI tools (ChatGPT, etc.)</option>
+                    <option value="integrated">AI integrated in products/services</option>
+                    <option value="custom">Custom AI systems/models</option>
+                    <option value="gpai">Using General Purpose AI models</option>
+                  </select>
+                </div>
+                <button 
+                  id="sme-calculate-button"
+                  class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-semibold transition-colors"
+                >
+                  Calculate Your Compliance Investment
+                </button>
+              </div>
+            </div>
+
+            <!-- Results Display -->
+            <div id="sme-results" class="bg-white rounded-lg p-6" style="display: none;">
+              <h3 class="text-2xl font-semibold mb-4 text-green-600">Your Compliance Plan</h3>
+              <div class="space-y-4">
+                <div class="flex justify-between items-center py-2 border-b">
+                  <span>Maximum Penalty Risk:</span>
+                  <span id="sme-penalty-risk" class="font-bold text-red-600"></span>
+                </div>
+                <div class="flex justify-between items-center py-2 border-b">
+                  <span>Emergency Assessment:</span>
+                  <span class="font-semibold">£9,500</span>
+                </div>
+                <div class="flex justify-between items-center py-2 border-b">
+                  <span>Implementation Support:</span>
+                  <span id="sme-implementation-cost" class="font-semibold"></span>
+                </div>
+                <div class="flex justify-between items-center py-2 border-b">
+                  <span>Total Investment:</span>
+                  <span id="sme-total-cost" class="font-bold text-blue-600"></span>
+                </div>
+                <div class="bg-green-50 p-4 rounded-lg mt-4">
+                  <p class="text-green-800 font-semibold text-center">
+                    Risk Protection Ratio: <span id="sme-protection-ratio" class="text-xl"></span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SME Compliance Pathway -->
+    <section id="sme-pathway" class="py-16 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Your Complete Compliance Journey
+          </h2>
+          <p class="text-xl text-gray-600">
+            Three-phase approach designed specifically for SME resource constraints
+          </p>
+        </div>
+
+        <div class="space-y-8">
+          <!-- Phase 1: Emergency Assessment -->
+          <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+            <div class="bg-red-600 text-white p-6">
+              <div class="flex items-center justify-between">
+                <h3 class="text-2xl font-bold">Phase 1: Emergency Assessment</h3>
+                <div class="text-right">
+                  <p class="text-3xl font-bold">£9,500</p>
+                  <p class="text-red-200">6 days delivery</p>
+                </div>
+              </div>
+            </div>
+            <div class="p-8">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                  <h4 class="text-xl font-semibold mb-4">What We Do:</h4>
+                  <ul class="space-y-2">
+                    <li class="flex items-start">
+                      <span class="text-green-500 mr-2 mt-1">✓</span>
+                      <span>Complete AI system discovery and inventory</span>
+                    </li>
+                    <li class="flex items-start">
+                      <span class="text-green-500 mr-2 mt-1">✓</span>
+                      <span>AI-enhanced regulatory analysis of your specific situation</span>
+                    </li>
+                    <li class="flex items-start">
+                      <span class="text-green-500 mr-2 mt-1">✓</span>
+                      <span>Risk classification and priority assessment</span>
+                    </li>
+                    <li class="flex items-start">
+                      <span class="text-green-500 mr-2 mt-1">✓</span>
+                      <span>GPAI compliance evaluation and immediate actions</span>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="text-xl font-semibold mb-4">What You Get:</h4>
+                  <ul class="space-y-2">
+                    <li class="flex items-start">
+                      <span class="text-blue-500 mr-2 mt-1">📋</span>
+                      <span>Comprehensive assessment report</span>
+                    </li>
+                    <li class="flex items-start">
+                      <span class="text-blue-500 mr-2 mt-1">🗺️</span>
+                      <span>Prioritised compliance roadmap</span>
+                    </li>
+                    <li class="flex items-start">
+                      <span class="text-blue-500 mr-2 mt-1">⚡</span>
+                      <span>Quick wins for immediate risk reduction</span>
+                    </li>
+                    <li class="flex items-start">
+                      <span class="text-blue-500 mr-2 mt-1">💡</span>
+                      <span>Clear next steps with resource requirements</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="mt-8 text-center">
+                <a 
+                  href="/emergency-assessment" 
+                  class="inline-block bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+                >
+                  Start Emergency Assessment
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Phase 2: Implementation Support -->
+          <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+            <div class="bg-blue-600 text-white p-6">
+              <div class="flex items-center justify-between">
+                <h3 class="text-2xl font-bold">Phase 2: Implementation Support</h3>
+                <div class="text-right">
+                  <p class="text-3xl font-bold">£15,000+</p>
+                  <p class="text-blue-200">30-60 days</p>
+                </div>
+              </div>
+            </div>
+            <div class="p-8">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                  <h4 class="text-xl font-semibold mb-4">Done-For-You Services:</h4>
+                  <ul class="space-y-2">
+                    <li class="flex items-start">
+                      <span class="text-green-500 mr-2 mt-1">✓</span>
+                      <span>Documentation framework creation</span>
+                    </li>
+                    <li class="flex items-start">
+                      <span class="text-green-500 mr-2 mt-1">✓</span>
+                      <span>Process design and implementation</span>
+                    </li>
+                    <li class="flex items-start">
+                      <span class="text-green-500 mr-2 mt-1">✓</span>
+                      <span>Team training and capability building</span>
+                    </li>
+                    <li class="flex items-start">
+                      <span class="text-green-500 mr-2 mt-1">✓</span>
+                      <span>Compliance monitoring system setup</span>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="text-xl font-semibold mb-4">SME-Focused Approach:</h4>
+                  <ul class="space-y-2">
+                    <li class="flex items-start">
+                      <span class="text-purple-500 mr-2 mt-1">⚡</span>
+                      <span>No need for internal compliance hiring</span>
+                    </li>
+                    <li class="flex items-start">
+                      <span class="text-purple-500 mr-2 mt-1">💼</span>
+                      <span>Minimal disruption to daily operations</span>
+                    </li>
+                    <li class="flex items-start">
+                      <span class="text-purple-500 mr-2 mt-1">📚</span>
+                      <span>Clear handover with simple maintenance</span>
+                    </li>
+                    <li class="flex items-start">
+                      <span class="text-purple-500 mr-2 mt-1">💰</span>
+                      <span>Flexible payment terms available</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Phase 3: Ongoing Support -->
+          <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+            <div class="bg-green-600 text-white p-6">
+              <div class="flex items-center justify-between">
+                <h3 class="text-2xl font-bold">Phase 3: Fractional CAIO</h3>
+                <div class="text-right">
+                  <p class="text-3xl font-bold">£2,500</p>
+                  <p class="text-green-200">Per month</p>
+                </div>
+              </div>
+            </div>
+            <div class="p-8">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                  <h4 class="text-xl font-semibold mb-4">Ongoing Compliance:</h4>
+                  <ul class="space-y-2">
+                    <li class="flex items-start">
+                      <span class="text-green-500 mr-2 mt-1">✓</span>
+                      <span>Monthly compliance health checks</span>
+                    </li>
+                    <li class="flex items-start">
+                      <span class="text-green-500 mr-2 mt-1">✓</span>
+                      <span>Regulatory update monitoring and implementation</span>
+                    </li>
+                    <li class="flex items-start">
+                      <span class="text-green-500 mr-2 mt-1">✓</span>
+                      <span>New AI system evaluation and approval</span>
+                    </li>
+                    <li class="flex items-start">
+                      <span class="text-green-500 mr-2 mt-1">✓</span>
+                      <span>Strategic AI governance guidance</span>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="text-xl font-semibold mb-4">Value for SMEs:</h4>
+                  <ul class="space-y-2">
+                    <li class="flex items-start">
+                      <span class="text-orange-500 mr-2 mt-1">🏆</span>
+                      <span>Chief AI Officer expertise without the cost</span>
+                    </li>
+                    <li class="flex items-start">
+                      <span class="text-orange-500 mr-2 mt-1">📞</span>
+                      <span>On-demand support for AI decisions</span>
+                    </li>
+                    <li class="flex items-start">
+                      <span class="text-orange-500 mr-2 mt-1">🛡️</span>
+                      <span>Continuous protection from regulatory changes</span>
+                    </li>
+                    <li class="flex items-start">
+                      <span class="text-orange-500 mr-2 mt-1">📈</span>
+                      <span>Strategic advantage in AI adoption</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why SMEs Choose Us -->
+    <section class="py-16 bg-blue-900 text-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">
+            Why SMEs Choose AiLex Consulting
+          </h2>
+          <p class="text-xl text-blue-200 max-w-3xl mx-auto">
+            Designed specifically for businesses without internal compliance resources
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="text-center">
+            <div class="w-16 h-16 bg-blue-700 rounded-full flex items-center justify-center mx-auto mb-4">
+              <span class="text-2xl">🚀</span>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">Fast Implementation</h3>
+            <p class="text-blue-200">
+              From assessment to full compliance in 6-10 weeks, not months
+            </p>
+          </div>
+
+          <div class="text-center">
+            <div class="w-16 h-16 bg-blue-700 rounded-full flex items-center justify-center mx-auto mb-4">
+              <span class="text-2xl">💰</span>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">Cost-Effective</h3>
+            <p class="text-blue-200">
+              Fraction of the cost of hiring internal compliance teams
+            </p>
+          </div>
+
+          <div class="text-center">
+            <div class="w-16 h-16 bg-blue-700 rounded-full flex items-center justify-center mx-auto mb-4">
+              <span class="text-2xl">🎯</span>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">SME-Focused</h3>
+            <p class="text-blue-200">
+              Tailored solutions that work with limited resources and time
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-16 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+          Ready to Secure Your SME?
+        </h2>
+        <p class="text-xl text-gray-600 mb-8">
+          Start with our Emergency Assessment and let us handle the complexity of EU AI Act compliance.
+        </p>
+        <div class="space-y-4 md:space-y-0 md:space-x-4 md:flex md:justify-center">
+          <a 
+            href="/emergency-assessment" 
+            class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-10 py-4 rounded-xl font-bold text-lg transition-colors shadow-lg"
+            onclick="trackConversion('sme_final_assessment_cta')"
+          >
+            Start Emergency Assessment
+          </a>
+          <a 
+            href="/contact" 
+            class="inline-block border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-10 py-4 rounded-xl font-bold text-lg transition-colors"
+            onclick="trackConversion('sme_final_contact_cta')"
+          >
+            Book Free Consultation
+          </a>
+        </div>
+        <p class="text-gray-500 mt-6">
+          Payment terms available • No upfront commitment for consultation
+        </p>
+      </div>
+    </section>
+  </main>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const calculateButton = document.getElementById('sme-calculate-button');
+      const revenueInput = document.getElementById('sme-revenue-input');
+      const aiUsageSelect = document.getElementById('sme-ai-usage');
+      
+      if (calculateButton && revenueInput && aiUsageSelect) {
+        calculateButton.addEventListener('click', function() {
+          const revenue = parseFloat(revenueInput.value);
+          const aiUsage = aiUsageSelect.value;
+          
+          if (revenue && revenue > 0 && aiUsage) {
+            // Calculate penalty risk
+            const penaltyRisk = revenue * 1000000 * 0.07;
+            
+            // Calculate implementation cost based on AI usage complexity
+            let implementationCost;
+            switch(aiUsage) {
+              case 'basic':
+                implementationCost = 15000;
+                break;
+              case 'integrated':
+                implementationCost = 20000;
+                break;
+              case 'custom':
+                implementationCost = 25000;
+                break;
+              case 'gpai':
+                implementationCost = 30000;
+                break;
+              default:
+                implementationCost = 15000;
+            }
+            
+            const assessmentCost = 9500;
+            const totalCost = assessmentCost + implementationCost;
+            const protectionRatio = Math.round(penaltyRisk / totalCost);
+            
+            // Format amounts
+            const penaltyFormatted = '£' + penaltyRisk.toLocaleString('en-GB', {
+              minimumFractionDigits: 0,
+              maximumFractionDigits: 0
+            });
+            
+            const implementationFormatted = '£' + implementationCost.toLocaleString('en-GB');
+            const totalFormatted = '£' + totalCost.toLocaleString('en-GB');
+            
+            // Update display
+            document.getElementById('sme-penalty-risk').textContent = penaltyFormatted;
+            document.getElementById('sme-implementation-cost').textContent = implementationFormatted;
+            document.getElementById('sme-total-cost').textContent = totalFormatted;
+            document.getElementById('sme-protection-ratio').textContent = protectionRatio + ':1';
+            document.getElementById('sme-results').style.display = 'block';
+            
+            // Track calculation
+            if (typeof window.trackConversion !== 'undefined') {
+              window.trackConversion('sme_calculator_used', {
+                revenue: revenue,
+                aiUsage: aiUsage,
+                totalCost: totalCost,
+                ratio: protectionRatio
+              });
+            }
+          } else {
+            alert('Please enter your revenue and select your AI usage situation');
+          }
+        });
+      }
+    });
+  </script>
+  
+  <Footer />
+</Layout>
