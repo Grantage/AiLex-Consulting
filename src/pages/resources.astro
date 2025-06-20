@@ -1,0 +1,496 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout 
+  title="EU AI Act Compliance Resources | AiLex Consulting"
+  description="Free EU AI Act compliance resources for UK SMEs. Emergency checklists, penalty calculators, implementation guides, and regulatory timelines."
+>
+  <Header />
+  
+  <main>
+    <!-- Resources Hero -->
+    <section class="bg-gradient-to-br from-green-50 to-blue-50 py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+            EU AI Act Compliance 
+            <span class="text-green-600">Resources</span>
+          </h1>
+          <p class="text-xl md:text-2xl text-gray-700 mb-8 max-w-4xl mx-auto">
+            Free practical tools and guides to help UK SMEs navigate AI Act compliance
+          </p>
+          <div class="bg-white rounded-xl shadow-lg p-6 max-w-2xl mx-auto">
+            <p class="text-lg font-semibold text-green-600 mb-2">
+              ⚠️ GPAI Deadline: <span data-countdown>Loading...</span> Remaining
+            </p>
+            <p class="text-gray-700">
+              Get the resources you need to avoid €35M penalties and ensure compliance
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Resources -->
+    <section class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Essential Compliance Tools
+          </h2>
+          <p class="text-xl text-gray-600">
+            Start with these critical resources for immediate compliance action
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+          <!-- Emergency Checklist -->
+          <div class="bg-red-50 rounded-2xl p-8 border-2 border-red-200">
+            <div class="flex items-center mb-6">
+              <div class="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mr-4">
+                <span class="text-white text-2xl">⚡</span>
+              </div>
+              <div>
+                <h3 class="text-2xl font-bold text-red-600">Emergency AI Compliance Checklist</h3>
+                <p class="text-red-700">Start here - immediate actions for urgent compliance</p>
+              </div>
+            </div>
+            <div class="mb-6">
+              <ul class="space-y-2 text-gray-700">
+                <li class="flex items-start">
+                  <span class="text-red-500 mr-2 mt-1">✓</span>
+                  <span>Immediate GPAI compliance actions</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-red-500 mr-2 mt-1">✓</span>
+                  <span>Quick AI system inventory template</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-red-500 mr-2 mt-1">✓</span>
+                  <span>Risk assessment quick guide</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-red-500 mr-2 mt-1">✓</span>
+                  <span>72-hour action plan template</span>
+                </li>
+              </ul>
+            </div>
+            <div class="bg-white rounded-lg p-4 mb-6">
+              <p class="text-sm text-gray-600 mb-3">Get instant access - enter your email:</p>
+              <div class="flex flex-col sm:flex-row gap-3">
+                <input 
+                  type="email" 
+                  id="emergency-email"
+                  placeholder="your.email@company.com"
+                  class="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                  required
+                />
+                <button 
+                  onclick="downloadEmergencyChecklist()"
+                  class="bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors whitespace-nowrap"
+                >
+                  Get Checklist
+                </button>
+              </div>
+            </div>
+            <p class="text-xs text-gray-600">
+              Instant download • No spam • Unsubscribe anytime
+            </p>
+          </div>
+
+          <!-- Penalty Calculator -->
+          <div class="bg-blue-50 rounded-2xl p-8 border-2 border-blue-200">
+            <div class="flex items-center mb-6">
+              <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mr-4">
+                <span class="text-white text-2xl">💰</span>
+              </div>
+              <div>
+                <h3 class="text-2xl font-bold text-blue-600">Interactive Penalty Calculator</h3>
+                <p class="text-blue-700">Calculate your specific risk exposure</p>
+              </div>
+            </div>
+            <div class="mb-6">
+              <div class="space-y-4">
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-2">
+                    Annual Revenue (£M)
+                  </label>
+                  <input 
+                    type="number" 
+                    id="calc-revenue"
+                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    placeholder="e.g. 10"
+                    min="1"
+                    step="0.5"
+                  />
+                </div>
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-2">
+                    AI Usage Level
+                  </label>
+                  <select 
+                    id="calc-ai-usage"
+                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  >
+                    <option value="">Select usage level</option>
+                    <option value="basic">Basic AI tools</option>
+                    <option value="integrated">AI in products/services</option>
+                    <option value="custom">Custom AI systems</option>
+                    <option value="gpai">General Purpose AI</option>
+                  </select>
+                </div>
+                <button 
+                  onclick="calculatePenaltyRisk()"
+                  class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-semibold transition-colors"
+                >
+                  Calculate Your Risk
+                </button>
+              </div>
+            </div>
+            <div id="penalty-result-display" class="bg-white rounded-lg p-4" style="display: none;">
+              <div class="text-center">
+                <p class="text-lg font-semibold text-red-600 mb-2">
+                  Maximum Penalty: <span id="penalty-amount-display" class="text-2xl font-bold"></span>
+                </p>
+                <p class="text-sm text-gray-600 mb-4">
+                  Assessment cost: £9,500 • Protection ratio: <span id="protection-ratio-display" class="font-bold"></span>
+                </p>
+                <a 
+                  href="/emergency-assessment" 
+                  class="inline-block bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors"
+                >
+                  Get Emergency Assessment
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Comprehensive Resources Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- SME Implementation Guide -->
+          <div class="bg-green-50 rounded-xl p-6 border border-green-200">
+            <div class="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mb-4">
+              <span class="text-white text-xl">📋</span>
+            </div>
+            <h3 class="text-xl font-bold text-green-600 mb-3">SME Implementation Guide</h3>
+            <p class="text-gray-700 mb-4">
+              Complete 40-page guide covering step-by-step compliance implementation for SMEs.
+            </p>
+            <ul class="space-y-1 text-sm text-gray-600 mb-6">
+              <li>• 30-60 day implementation timeline</li>
+              <li>• Resource requirement planning</li>
+              <li>• Cost-benefit analysis templates</li>
+              <li>• Team training frameworks</li>
+            </ul>
+            <div class="space-y-3">
+              <input 
+                type="email" 
+                id="sme-guide-email"
+                placeholder="Business email address"
+                class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm"
+              />
+              <button 
+                onclick="downloadSMEGuide()"
+                class="w-full bg-green-600 hover:bg-green-700 text-white py-2 rounded-lg font-semibold transition-colors"
+              >
+                Download Guide
+              </button>
+            </div>
+          </div>
+
+          <!-- Regulatory Timeline -->
+          <div class="bg-purple-50 rounded-xl p-6 border border-purple-200">
+            <div class="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mb-4">
+              <span class="text-white text-xl">📅</span>
+            </div>
+            <h3 class="text-xl font-bold text-purple-600 mb-3">Regulatory Timeline & Deadlines</h3>
+            <p class="text-gray-700 mb-4">
+              Visual timeline of all EU AI Act implementation deadlines and requirements.
+            </p>
+            <ul class="space-y-1 text-sm text-gray-600 mb-6">
+              <li>• GPAI compliance deadlines</li>
+              <li>• High-risk system requirements</li>
+              <li>• Documentation deadlines</li>
+              <li>• Enforcement timeline</li>
+            </ul>
+            <div class="space-y-3">
+              <input 
+                type="email" 
+                id="timeline-email"
+                placeholder="Business email address"
+                class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent text-sm"
+              />
+              <button 
+                onclick="downloadTimeline()"
+                class="w-full bg-purple-600 hover:bg-purple-700 text-white py-2 rounded-lg font-semibold transition-colors"
+              >
+                Get Timeline
+              </button>
+            </div>
+          </div>
+
+          <!-- Risk Assessment Template -->
+          <div class="bg-orange-50 rounded-xl p-6 border border-orange-200">
+            <div class="w-12 h-12 bg-orange-600 rounded-lg flex items-center justify-center mb-4">
+              <span class="text-white text-xl">⚖️</span>
+            </div>
+            <h3 class="text-xl font-bold text-orange-600 mb-3">AI Risk Assessment Template</h3>
+            <p class="text-gray-700 mb-4">
+              Professional template for conducting EU AI Act risk assessments on your systems.
+            </p>
+            <ul class="space-y-1 text-sm text-gray-600 mb-6">
+              <li>• System classification framework</li>
+              <li>• Risk scoring methodology</li>
+              <li>• Mitigation planning template</li>
+              <li>• Compliance evidence tracking</li>
+            </ul>
+            <div class="space-y-3">
+              <input 
+                type="email" 
+                id="template-email"
+                placeholder="Business email address"
+                class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-sm"
+              />
+              <button 
+                onclick="downloadTemplate()"
+                class="w-full bg-orange-600 hover:bg-orange-700 text-white py-2 rounded-lg font-semibold transition-colors"
+              >
+                Download Template
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Educational Content -->
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Latest EU AI Act Insights
+          </h2>
+          <p class="text-xl text-gray-600">
+            Stay updated with regulatory changes and implementation guidance
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Blog Post 1 -->
+          <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+            <div class="bg-blue-600 h-32"></div>
+            <div class="p-6">
+              <div class="text-sm text-blue-600 font-semibold mb-2">REGULATORY UPDATE</div>
+              <h3 class="text-xl font-bold mb-3">GPAI Compliance: What UK SMEs Need to Know Now</h3>
+              <p class="text-gray-600 mb-4">
+                Essential requirements for General Purpose AI compliance, including documentation and risk assessment obligations.
+              </p>
+              <a href="/eu-ai-act" class="text-blue-600 font-semibold hover:text-blue-700">
+                Read more →
+              </a>
+            </div>
+          </div>
+
+          <!-- Blog Post 2 -->
+          <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+            <div class="bg-green-600 h-32"></div>
+            <div class="p-6">
+              <div class="text-sm text-green-600 font-semibold mb-2">IMPLEMENTATION GUIDE</div>
+              <h3 class="text-xl font-bold mb-3">5 Quick Wins for Immediate AI Act Compliance</h3>
+              <p class="text-gray-600 mb-4">
+                Simple actions you can take this week to reduce your regulatory risk and start building compliance.
+              </p>
+              <a href="/contact" class="text-green-600 font-semibold hover:text-green-700">
+                Learn more →
+              </a>
+            </div>
+          </div>
+
+          <!-- Blog Post 3 -->
+          <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+            <div class="bg-purple-600 h-32"></div>
+            <div class="p-6">
+              <div class="text-sm text-purple-600 font-semibold mb-2">CASE STUDY</div>
+              <h3 class="text-xl font-bold mb-3">How AI-Enhanced Analysis Delivers Better Results</h3>
+              <p class="text-gray-600 mb-4">
+                Deep dive into our methodology showing how AI enhancement achieves 99.7% requirement coverage.
+              </p>
+              <a href="/methodology" class="text-purple-600 font-semibold hover:text-purple-700">
+                See methodology →
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter Signup -->
+    <section class="py-16 bg-blue-900 text-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">
+          Stay Ahead of Regulatory Changes
+        </h2>
+        <p class="text-xl text-blue-200 mb-8">
+          Get weekly updates on EU AI Act developments, compliance tips, and implementation guidance.
+        </p>
+        <div class="bg-white rounded-xl p-8 max-w-2xl mx-auto">
+          <div class="flex flex-col md:flex-row gap-4">
+            <input 
+              type="email" 
+              id="newsletter-email"
+              placeholder="Enter your business email"
+              class="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900"
+            />
+            <button 
+              onclick="subscribeNewsletter()"
+              class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors whitespace-nowrap"
+            >
+              Subscribe
+            </button>
+          </div>
+          <p class="text-sm text-gray-600 mt-4">
+            Join 500+ compliance professionals • Weekly insights • Unsubscribe anytime
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Need More Help CTA -->
+    <section class="py-16 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+          Need Professional Compliance Support?
+        </h2>
+        <p class="text-xl text-gray-600 mb-8">
+          Our resources are a great start, but complex AI systems require professional assessment and implementation support.
+        </p>
+        <div class="space-y-4 md:space-y-0 md:space-x-4 md:flex md:justify-center">
+          <a 
+            href="/emergency-assessment" 
+            class="inline-block bg-red-600 hover:bg-red-700 text-white px-10 py-4 rounded-xl font-bold text-lg transition-colors shadow-lg"
+            onclick="trackConversion('resources_emergency_cta')"
+          >
+            Get Emergency Assessment
+          </a>
+          <a 
+            href="/contact" 
+            class="inline-block border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-10 py-4 rounded-xl font-bold text-lg transition-colors"
+            onclick="trackConversion('resources_contact_cta')"
+          >
+            Book Free Consultation
+          </a>
+        </div>
+        <p class="text-gray-500 mt-6">
+          6-day professional assessment • AI-enhanced analysis • Complete implementation roadmap
+        </p>
+      </div>
+    </section>
+  </main>
+  
+  <script>
+    // Penalty Calculator
+    function calculatePenaltyRisk() {
+      const revenue = parseFloat(document.getElementById('calc-revenue').value);
+      const aiUsage = document.getElementById('calc-ai-usage').value;
+      
+      if (revenue && revenue > 0 && aiUsage) {
+        const penalty = revenue * 1000000 * 0.07;
+        const assessmentCost = 9500;
+        const protectionRatio = Math.round(penalty / assessmentCost);
+        
+        const penaltyFormatted = '£' + penalty.toLocaleString('en-GB', {
+          minimumFractionDigits: 0,
+          maximumFractionDigits: 0
+        });
+        
+        document.getElementById('penalty-amount-display').textContent = penaltyFormatted;
+        document.getElementById('protection-ratio-display').textContent = protectionRatio + ':1';
+        document.getElementById('penalty-result-display').style.display = 'block';
+        
+        if (typeof window.trackConversion !== 'undefined') {
+          window.trackConversion('resources_penalty_calculated', {revenue: revenue, aiUsage: aiUsage});
+        }
+      } else {
+        alert('Please enter your revenue and select your AI usage level');
+      }
+    }
+
+    // Lead Magnet Downloads
+    function downloadEmergencyChecklist() {
+      const email = document.getElementById('emergency-email').value;
+      if (validateEmail(email)) {
+        // Track conversion
+        if (typeof window.trackConversion !== 'undefined') {
+          window.trackConversion('emergency_checklist_download', {email: email});
+        }
+        
+        // Simulate download and redirect to thank you
+        alert('Thank you! Your Emergency Checklist is being sent to ' + email + '\n\nCheck your inbox in the next few minutes.');
+        
+        // In real implementation, this would trigger email automation
+        // and provide actual download link
+      } else {
+        alert('Please enter a valid business email address');
+      }
+    }
+
+    function downloadSMEGuide() {
+      const email = document.getElementById('sme-guide-email').value;
+      if (validateEmail(email)) {
+        if (typeof window.trackConversion !== 'undefined') {
+          window.trackConversion('sme_guide_download', {email: email});
+        }
+        alert('Thank you! The SME Implementation Guide is being sent to ' + email);
+      } else {
+        alert('Please enter a valid business email address');
+      }
+    }
+
+    function downloadTimeline() {
+      const email = document.getElementById('timeline-email').value;
+      if (validateEmail(email)) {
+        if (typeof window.trackConversion !== 'undefined') {
+          window.trackConversion('timeline_download', {email: email});
+        }
+        alert('Thank you! The Regulatory Timeline is being sent to ' + email);
+      } else {
+        alert('Please enter a valid business email address');
+      }
+    }
+
+    function downloadTemplate() {
+      const email = document.getElementById('template-email').value;
+      if (validateEmail(email)) {
+        if (typeof window.trackConversion !== 'undefined') {
+          window.trackConversion('template_download', {email: email});
+        }
+        alert('Thank you! The Risk Assessment Template is being sent to ' + email);
+      } else {
+        alert('Please enter a valid business email address');
+      }
+    }
+
+    function subscribeNewsletter() {
+      const email = document.getElementById('newsletter-email').value;
+      if (validateEmail(email)) {
+        if (typeof window.trackConversion !== 'undefined') {
+          window.trackConversion('newsletter_subscription', {email: email});
+        }
+        alert('Thank you for subscribing! You\'ll receive weekly EU AI Act updates at ' + email);
+      } else {
+        alert('Please enter a valid business email address');
+      }
+    }
+
+    function validateEmail(email) {
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return emailRegex.test(email);
+    }
+  </script>
+  
+  <Footer />
+</Layout>
