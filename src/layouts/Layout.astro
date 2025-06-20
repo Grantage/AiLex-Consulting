@@ -23,6 +23,25 @@ const {
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <meta name="generator" content={Astro.generator} />
   
+  <!-- Custom Styles -->
+<style>
+  body {
+    background-color: #fffef7;
+    background-image: 
+      radial-gradient(circle at 1px 1px, rgba(139,69,19,0.05) 1px, transparent 0);
+    background-size: 20px 20px;
+  }
+  
+  .font-inter {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+  
+  /* Ensure blue header/footer stand out against parchment */
+  .bg-blue-900 {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+</style>
+  
   <!-- SEO Meta Tags -->
   <title>{title}</title>
   <link rel="canonical" href={canonicalURL} />
@@ -46,16 +65,16 @@ const {
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   
   <!-- Analytics - Google Analytics 4 -->
-  <script type="text/partytown" async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+  <script type="text/partytown" async src="https://www.googletagmanager.com/gtag/js?id=G-SK6FVPTQZF"></script>
   <script type="text/partytown">
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'GA_MEASUREMENT_ID');
+    gtag('config', 'G-SK6FVPTQZF');
   </script>
 </head>
 
-<body class="bg-white text-gray-900 font-inter antialiased">
+<body class="bg-amber-50 text-gray-900 font-inter antialiased">
   <div class="min-h-screen flex flex-col">
     <slot />
   </div>
