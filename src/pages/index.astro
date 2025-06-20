@@ -43,16 +43,17 @@ import Footer from '../components/Footer.astro';
                 class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 placeholder="e.g. 10"
                 min="1"
+                step="0.1"
               />
             </div>
             <button 
-              onclick="calculatePenalty()"
+              id="calculate-button"
               class="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
             >
               Calculate Risk
             </button>
           </div>
-          <div id="penalty-result" class="mt-6 p-4 bg-red-50 rounded-lg hidden">
+          <div id="penalty-result" class="mt-6 p-4 bg-red-50 rounded-lg" style="display: none;">
             <p class="text-red-800 font-semibold text-center text-lg">
               Maximum Penalty Exposure: <span id="penalty-amount" class="text-2xl font-bold"></span>
             </p>
@@ -262,33 +263,47 @@ import Footer from '../components/Footer.astro';
     </section>
   </main>
   
-  <Footer />
-</Layout>
-
-<script>
-  function calculatePenalty() {
-    const revenueInput = document.getElementById('revenue-input');
-    const revenue = parseFloat(revenueInput.value);
-    
-    if (revenue && revenue > 0) {
-      const penalty = revenue * 1000000 * 0.07; // 7% of revenue in pounds
-      const penaltyFormatted = new Intl.NumberFormat('en-GB', {
-        style: 'currency',
-        currency: 'GBP',
-        minimumFractionDigits: 0,
-        maximumFractionDigits: 0
-      }).format(penalty);
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const calculateButton = document.getElementById('calculate-button');
+      const revenueInput = document.getElementById('revenue-input');
       
-      document.getElementById('penalty-amount').textContent = penaltyFormatted;
-      document.getElementById('penalty-result').classList.remove('hidden');
-      
-      // Track the calculation
-      if (typeof window.trackConversion !== 'undefined') {
-        window.trackConversion('penalty_calculated', {revenue: revenue});
+      if (calculateButton && revenueInput) {
+        calculateButton.addEventListener('click', function() {
+          const revenue = parseFloat(revenueInput.value);
+          
+          if (revenue && revenue > 0) {
+            // Calculate 7% penalty
+            const penalty = revenue * 1000000 * 0.07;
+            
+            // Format as currency
+            const penaltyFormatted = '£' + penalty.toLocaleString('en-GB', {
+              minimumFractionDigits: 0,
+              maximumFractionDigits: 0
+            });
+            
+            // Show result
+            document.getElementById('penalty-amount').textContent = penaltyFormatted;
+            document.getElementById('penalty-result').style.display = 'block';
+            
+            // Track the calculation
+            if (typeof window.trackConversion !== 'undefined') {
+              window.trackConversion('penalty_calculated', {revenue: revenue});
+            }
+          } else {
+            alert('Please enter a valid revenue amount (e.g., 10 for £10M)');
+          }
+        });
+        
+        // Allow Enter key to calculate
+        revenueInput.addEventListener('keypress', function(e) {
+          if (e.key === 'Enter') {
+            calculateButton.click();
+          }
+        });
       }
-    } else {
-      alert('Please enter a valid revenue amount');
-    }
-  }
-</script>
+    });
+  </script>
+  
+  <Footer />
 </Layout>
