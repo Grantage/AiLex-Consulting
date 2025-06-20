@@ -1,109 +1,96 @@
 ---
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-
 export interface Props {
   title: string;
   description?: string;
+  canonicalURL?: string;
+  ogImage?: string;
 }
 
-const { title, description = "Systematic AI governance for European growth companies. Regulatory mastery combined with commercial insight, ensuring EU AI Act compliance accelerates competitive positioning." } = Astro.props;
+const { 
+  title, 
+  description = "EU AI Act compliance in 6 days through AI-enhanced systematic analysis. Emergency assessments for UK SMEs avoiding €35M penalties.",
+  canonicalURL = Astro.url.href,
+  ogImage = "/og-image.jpg"
+} = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang="en-GB" class="scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="description" content={description} />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <title>{title}</title>
-    
-    <!-- SEO Meta Tags -->
-    <meta name="keywords" content="AI governance, EU AI Act, regulatory affairs, PE portfolio companies, systematic compliance" />
-    <meta name="author" content="AILEX Consulting Ltd" />
-    
-    <!-- Open Graph -->
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://ailexconsulting.com" />
-    
-    <!-- European Standards -->
-    <meta name="accessibility" content="EN 301 549 compliant" />
-    
-    <!-- Professional Typography -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <style>
-      :root {
-        --european-blue: #1e3a8a;
-        --innovation-indigo: #4f46e5;
-        --compliance-green: #047857;
-        --advisory-grey: #525252;
-        --institutional-grey: #64748b;
-        --success-green: #16a34a;
-        --parchment: #fefcf3;
-        --platinum: #f8fafc;
-      }
-      
-      .ailex-logo {
-        font-family: 'Inter', system-ui, sans-serif;
-        font-weight: 500;
-        letter-spacing: 0.15em;
-      }
-      
-      .ai-element {
-        color: var(--innovation-indigo);
-      }
-      
-      .lex-element {
-        color: var(--european-blue);
-      }
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content={description} />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="generator" content={Astro.generator} />
+  
+  <!-- SEO Meta Tags -->
+  <title>{title}</title>
+  <link rel="canonical" href={canonicalURL} />
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={canonicalURL} />
+  <meta property="og:image" content={ogImage} />
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={ogImage} />
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Analytics - Google Analytics 4 -->
+  <script type="text/partytown" async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+  <script type="text/partytown">
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'GA_MEASUREMENT_ID');
+  </script>
+</head>
 
-      .professional-typography {
-        font-family: 'Inter', system-ui, sans-serif;
-        line-height: 1.7;
-        letter-spacing: 0.01em;
-      }
-
-      /* Ensure proper page structure */
-      body {
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-      }
-
-      main {
-        flex: 1;
-      }
-    </style>
-  </head>
-  <body class="font-inter text-advisory-grey bg-parchment professional-typography">
-    <Header />
-    
-    <main>
-      <slot />
-    </main>
-    
-    <Footer />
-    
-    <!-- Form Enhancement -->
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const forms = document.querySelectorAll('form[data-netlify]');
-        forms.forEach(form => {
-          form.addEventListener('submit', function(e) {
-            const submitBtn = form.querySelector('button[type="submit"]');
-            if (submitBtn) {
-              submitBtn.textContent = 'Processing request...';
-              submitBtn.disabled = true;
-            }
-          });
+<body class="bg-white text-gray-900 font-inter antialiased">
+  <div class="min-h-screen flex flex-col">
+    <slot />
+  </div>
+  
+  <!-- Conversion Tracking Scripts -->
+  <script>
+    // GPAI Deadline Countdown
+    function updateCountdown() {
+      const deadline = new Date('2024-08-02'); // Adjust to actual GPAI deadline
+      const now = new Date();
+      const timeLeft = deadline - now;
+      
+      if (timeLeft > 0) {
+        const weeks = Math.floor(timeLeft / (1000 * 60 * 60 * 24 * 7));
+        const days = Math.floor((timeLeft % (1000 * 60 * 60 * 24 * 7)) / (1000 * 60 * 60 * 24));
+        
+        const countdownElements = document.querySelectorAll('[data-countdown]');
+        countdownElements.forEach(el => {
+          el.textContent = `${weeks} weeks, ${days} days`;
         });
-      });
-    </script>
-  </body>
+      }
+    }
+    
+    // Update countdown on page load
+    updateCountdown();
+    
+    // Track conversion events
+    function trackConversion(event, value = {}) {
+      if (typeof gtag !== 'undefined') {
+        gtag('event', event, value);
+      }
+    }
+    
+    // Expose for use in components
+    window.trackConversion = trackConversion;
+  </script>
+</body>
 </html>
