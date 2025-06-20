@@ -28,7 +28,7 @@ import Footer from '../components/Footer.astro';
     <!-- Our Mission -->
     <section class="py-16 bg-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           <div>
             <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               Our Mission
@@ -61,16 +61,43 @@ import Footer from '../components/Footer.astro';
               </ul>
             </div>
           </div>
-          <div class="bg-gradient-to-br from-blue-100 to-purple-100 rounded-2xl p-8">
-            <div class="text-center">
-              <div class="w-32 h-32 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                <span class="text-white text-4xl font-bold">MA</span>
+          
+          <div class="space-y-8">
+            <!-- Profile -->
+            <div class="bg-gradient-to-br from-blue-100 to-purple-100 rounded-2xl p-8">
+              <div class="text-center">
+                <div class="w-32 h-32 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <span class="text-white text-4xl font-bold">MG</span>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-2">Matthew Grant</h3>
+                <p class="text-lg text-blue-600 font-semibold mb-4">Founder & EU AI Act Specialist</p>
+                <p class="text-gray-700">
+                  Regulatory expertise meets AI innovation to deliver systematic compliance solutions for the modern business landscape.
+                </p>
               </div>
-              <h3 class="text-2xl font-bold text-gray-900 mb-2">Matthew Alexander</h3>
-              <p class="text-lg text-blue-600 font-semibold mb-4">Founder & EU AI Act Specialist</p>
-              <p class="text-gray-700">
-                Regulatory expertise meets AI innovation to deliver systematic compliance solutions for the modern business landscape.
-              </p>
+            </div>
+
+            <!-- Company Stats -->
+            <div class="bg-green-50 rounded-xl p-6">
+              <h3 class="text-xl font-semibold text-green-600 mb-4">Our Track Record</h3>
+              <div class="grid grid-cols-2 gap-4">
+                <div class="text-center">
+                  <div class="text-2xl font-bold text-green-600">99.7%</div>
+                  <p class="text-sm text-gray-600">Requirement Coverage</p>
+                </div>
+                <div class="text-center">
+                  <div class="text-2xl font-bold text-green-600">6 Days</div>
+                  <p class="text-sm text-gray-600">Assessment Delivery</p>
+                </div>
+                <div class="text-center">
+                  <div class="text-2xl font-bold text-green-600">£9.5K</div>
+                  <p class="text-sm text-gray-600">Emergency Assessment</p>
+                </div>
+                <div class="text-center">
+                  <div class="text-2xl font-bold text-green-600">AI+</div>
+                  <p class="text-sm text-gray-600">Enhanced Analysis</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
