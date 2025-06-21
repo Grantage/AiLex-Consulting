@@ -60,56 +60,90 @@ import Footer from '../components/Footer.astro';
             </div>
             
             <form name="emergency-contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="space-y-4">
-              <input type="hidden" name="form-name" value="emergency-contact" />
-              <p class="hidden">
-                <label>Don't fill this out: <input name="bot-field" /></label>
-              </p>
-              
-              <div>
-                <input 
-                  type="text" 
-                  name="name"
-                  required
-                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
-                  placeholder="Your Name"
-                />
-              </div>
-              <div>
-                <input 
-                  type="email" 
-                  name="email"
-                  required
-                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
-                  placeholder="Email Address"
-                />
-              </div>
-              <div>
-                <input 
-                  type="text" 
-                  name="company"
-                  required
-                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
-                  placeholder="Company Name"
-                />
-              </div>
-              <div>
-                <textarea 
-                  name="urgency"
-                  required
-                  rows="3"
-                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
-                  placeholder="Briefly describe your urgent compliance issue"
-                ></textarea>
-              </div>
-              
-              <button 
-                type="submit"
-                class="w-full bg-red-600 hover:bg-red-700 text-white py-3 rounded-lg font-semibold transition-colors"
-              >
-                Request Emergency Call
-              </button>
-            </form>
-          </div>
+  <input type="hidden" name="form-name" value="emergency-contact" />
+  <input type="hidden" name="form-type" value="emergency" />
+  <input type="hidden" name="service-tier" value="Emergency Contact" />
+  <input type="hidden" name="lead-source" value="Website" />
+  
+  <p class="hidden">
+    <label>Don't fill this out: <input name="bot-field" /></label>
+  </p>
+  
+  <div>
+    <input 
+      type="text" 
+      name="name"
+      required
+      class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
+      placeholder="Your Name"
+    />
+  </div>
+  
+  <div>
+    <input 
+      type="email" 
+      name="email"
+      required
+      class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
+      placeholder="Email Address"
+    />
+  </div>
+  
+  <div>
+    <input 
+      type="text" 
+      name="company"
+      required
+      class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
+      placeholder="Company Name"
+    />
+  </div>
+
+  <div>
+    <select 
+      name="job-title"
+      class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
+    >
+      <option value="">Your Role (Optional)</option>
+      <option value="CEO">CEO/Founder</option>
+      <option value="Legal Counsel">Legal Counsel</option>  
+      <option value="Compliance Officer">Compliance Officer</option>
+      <option value="CTO">CTO/Technical Lead</option>
+      <option value="Product Manager">Product Manager</option>
+      <option value="Other">Other</option>
+    </select>
+  </div>
+
+  <div>
+    <select 
+      name="urgency-level"
+      class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
+    >
+      <option value="">Urgency Level</option>
+      <option value="immediate">Immediate (Same day response needed)</option>
+      <option value="urgent">Urgent (Within 24 hours)</option>
+      <option value="high">High (Within 48 hours)</option>
+    </select>
+  </div>
+  
+  <div>
+    <textarea 
+      name="urgency"
+      required
+      rows="3"
+      class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
+      placeholder="Briefly describe your urgent compliance issue"
+    ></textarea>
+  </div>
+  
+  <button 
+    type="submit"
+    class="w-full bg-red-600 hover:bg-red-700 text-white py-3 rounded-lg font-semibold transition-colors"
+  >
+    Request Emergency Call
+  </button>
+</form>
+</div>
 
           <!-- Standard Consultation Form -->
           <div class="bg-blue-50 rounded-2xl p-8 border-2 border-blue-200">
