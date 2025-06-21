@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hidden Forms for Netlify</title>
+    <meta name="robots" content="noindex">
+</head>
+<body style="display: none;">
+    <!-- Emergency Assessment Form -->
+    <form name="emergency-assessment" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="emergency-assessment" />
+        <p class="hidden">
+            <label>Don't fill this out: <input name="bot-field" /></label>
+        </p>
+        <input type="text" name="name" />
+        <input type="email" name="email" />
+        <input type="text" name="company" />
+        <select name="revenue">
+            <option value="5-10">£5M - £10M</option>
+        </select>
+        <select name="ai-usage">
+            <option value="custom">Custom AI systems</option>
+        </select>
+        <textarea name="urgency-details"></textarea>
+    </form>
+
+    <!-- Emergency Contact Form -->
+    <form name="emergency-contact" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="emergency-contact" />
+        <p class="hidden">
+            <label>Don't fill this out: <input name="bot-field" /></label>
+        </p>
+        <input type="text" name="name" />
+        <input type="email" name="email" />
+        <input type="text" name="company" />
+        <textarea name="urgency"></textarea>
+    </form>
+
+    <!-- Standard Consultation Form -->
+    <form name="standard-consultation" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="standard-consultation" />
+        <p class="hidden">
+            <label>Don't fill this out: <input name="bot-field" /></label>
+        </p>
+        <input type="text" name="name" />
+        <input type="email" name="email" />
+        <input type="text" name="company" />
+        <select name="service">
+            <option value="emergency-assessment">Emergency Assessment</option>
+        </select>
+        <textarea name="message"></textarea>
+    </form>
+
+    <!-- General Contact Form -->
+    <form name="general-contact" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="general-contact" />
+        <p class="hidden">
+            <label>Don't fill this out: <input name="bot-field" /></label>
+        </p>
+        <input type="text" name="name" />
+        <input type="email" name="email" />
+        <input type="text" name="company" />
+        <select name="revenue">
+            <option value="5-10">£5M - £10M</option>
+        </select>
+        <select name="ai-usage">
+            <option value="custom">Custom AI systems</option>
+        </select>
+        <select name="urgency">
+            <option value="urgent">Urgent</option>
+        </select>
+        <select name="service-interest">
+            <option value="emergency-assessment">Emergency Assessment</option>
+        </select>
+        <textarea name="message"></textarea>
+    </form>
+
+    <!-- Lead Magnet Forms -->
+    <form name="lead-magnet-emergency" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="lead-magnet-emergency" />
+        <input type="hidden" name="resource" value="Emergency Checklist" />
+        <p class="hidden">
+            <label>Don't fill this out: <input name="bot-field" /></label>
+        </p>
+        <input type="text" name="name" />
+        <input type="email" name="email" />
+        <input type="text" name="company" />
+    </form>
+
+    <!-- Newsletter Subscription -->
+    <form name="newsletter-subscription" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="newsletter-subscription" />
+        <p class="hidden">
+            <label>Don't fill this out: <input name="bot-field" /></label>
+        </p>
+        <input type="text" name="name" />
+        <input type="email" name="email" />
+    </form>
+</body>
+</html>
