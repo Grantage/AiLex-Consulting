@@ -124,66 +124,88 @@ import Footer from '../components/Footer.astro';
             </div>
             
             <form name="standard-consultation" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="space-y-4">
-              <input type="hidden" name="form-name" value="standard-consultation" />
-              <p class="hidden">
-                <label>Don't fill this out: <input name="bot-field" /></label>
-              </p>
-              
-              <div>
-                <input 
-                  type="text" 
-                  name="name"
-                  required
-                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  placeholder="Your Name"
-                />
-              </div>
-              <div>
-                <input 
-                  type="email" 
-                  name="email"
-                  required
-                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  placeholder="Email Address"
-                />
-              </div>
-              <div>
-                <input 
-                  type="text" 
-                  name="company"
-                  required
-                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  placeholder="Company Name"
-                />
-              </div>
-              <div>
-                <select 
-                  name="service"
-                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                >
-                  <option value="">Select Service Interest</option>
-                  <option value="emergency-assessment">Emergency Assessment (£9,500)</option>
-                  <option value="sme-implementation">SME Implementation</option>
-                  <option value="fractional-caio">Fractional CAIO</option>
-                  <option value="consultation">Consultation Only</option>
-                </select>
-              </div>
-              <div>
-                <textarea 
-                  name="message"
-                  rows="2"
-                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  placeholder="Brief message (optional)"
-                ></textarea>
-              </div>
-              
-              <button 
-                type="submit"
-                class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-semibold transition-colors"
-              >
-                Schedule Consultation
-              </button>
-            </form>
+  <input type="hidden" name="form-name" value="standard-consultation" />
+  <input type="hidden" name="form-type" value="standard" />
+  <input type="hidden" name="lead-source" value="Website" />
+  
+  <p class="hidden">
+    <label>Don't fill this out: <input name="bot-field" /></label>
+  </p>
+  
+  <div>
+    <input 
+      type="text" 
+      name="name"
+      required
+      class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+      placeholder="Your Name"
+    />
+  </div>
+  
+  <div>
+    <input 
+      type="email" 
+      name="email"
+      required
+      class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+      placeholder="Email Address"
+    />
+  </div>
+  
+  <div>
+    <input 
+      type="text" 
+      name="company"
+      required
+      class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+      placeholder="Company Name"
+    />
+  </div>
+
+  <div>
+    <select 
+      name="job-title"
+      class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+    >
+      <option value="">Your Role (Optional)</option>
+      <option value="CEO">CEO/Founder</option>
+      <option value="Legal Counsel">Legal Counsel</option>  
+      <option value="Compliance Officer">Compliance Officer</option>
+      <option value="CTO">CTO/Technical Lead</option>
+      <option value="Product Manager">Product Manager</option>
+      <option value="Other">Other</option>
+    </select>
+  </div>
+  
+  <div>
+    <select 
+      name="service"
+      class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+    >
+      <option value="">Select Service Interest</option>
+      <option value="emergency-assessment">Emergency Assessment (£9,500)</option>
+      <option value="sme-implementation">SME Implementation</option>
+      <option value="fractional-caio">Fractional CAIO</option>
+      <option value="consultation">Consultation Only</option>
+    </select>
+  </div>
+  
+  <div>
+    <textarea 
+      name="message"
+      rows="2"
+      class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+      placeholder="Brief message (optional)"
+    ></textarea>
+  </div>
+  
+  <button 
+    type="submit"
+    class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-semibold transition-colors"
+  >
+    Schedule Consultation
+  </button>
+</form>
           </div>
         </div>
       </div>
