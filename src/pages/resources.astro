@@ -78,25 +78,47 @@ import Footer from '../components/Footer.astro';
                 </li>
               </ul>
             </div>
-            <div class="bg-white rounded-lg p-4 mb-6">
-              <p class="text-sm text-gray-600 mb-3">Get instant access - enter your email:</p>
-              <div class="flex flex-col sm:flex-row gap-3">
+            
+            <form name="lead-magnet-emergency" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="bg-white rounded-lg p-4">
+              <input type="hidden" name="form-name" value="lead-magnet-emergency" />
+              <input type="hidden" name="resource" value="Emergency Checklist" />
+              <p class="hidden">
+                <label>Don't fill this out: <input name="bot-field" /></label>
+              </p>
+              
+              <p class="text-sm text-gray-600 mb-3">Get instant access - enter your details:</p>
+              <div class="space-y-3">
+                <input 
+                  type="text" 
+                  name="name"
+                  required
+                  placeholder="Your name"
+                  class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                />
                 <input 
                   type="email" 
-                  id="emergency-email"
-                  placeholder="your.email@company.com"
-                  class="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                  name="email"
                   required
+                  placeholder="your.email@company.com"
+                  class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                />
+                <input 
+                  type="text" 
+                  name="company"
+                  required
+                  placeholder="Company name"
+                  class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
                 />
                 <button 
-                  onclick="downloadEmergencyChecklist()"
-                  class="bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors whitespace-nowrap"
+                  type="submit"
+                  class="w-full bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors"
                 >
-                  Get Checklist
+                  Get Emergency Checklist
                 </button>
               </div>
-            </div>
-            <p class="text-xs text-gray-600">
+            </form>
+            
+            <p class="text-xs text-gray-600 mt-3 text-center">
               Instant download • No spam • Unsubscribe anytime
             </p>
           </div>
@@ -186,20 +208,42 @@ import Footer from '../components/Footer.astro';
               <li>• Cost-benefit analysis templates</li>
               <li>• Team training frameworks</li>
             </ul>
-            <div class="space-y-3">
+            
+            <form name="lead-magnet-sme-guide" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="space-y-3">
+              <input type="hidden" name="form-name" value="lead-magnet-sme-guide" />
+              <input type="hidden" name="resource" value="SME Implementation Guide" />
+              <p class="hidden">
+                <label>Don't fill this out: <input name="bot-field" /></label>
+              </p>
+              
+              <input 
+                type="text" 
+                name="name"
+                required
+                placeholder="Your name"
+                class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm"
+              />
               <input 
                 type="email" 
-                id="sme-guide-email"
+                name="email"
+                required
                 placeholder="Business email address"
                 class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm"
               />
+              <input 
+                type="text" 
+                name="company"
+                required
+                placeholder="Company name"
+                class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm"
+              />
               <button 
-                onclick="downloadSMEGuide()"
+                type="submit"
                 class="w-full bg-green-600 hover:bg-green-700 text-white py-2 rounded-lg font-semibold transition-colors"
               >
                 Download Guide
               </button>
-            </div>
+            </form>
           </div>
 
           <!-- Regulatory Timeline -->
@@ -217,20 +261,42 @@ import Footer from '../components/Footer.astro';
               <li>• Documentation deadlines</li>
               <li>• Enforcement timeline</li>
             </ul>
-            <div class="space-y-3">
+            
+            <form name="lead-magnet-timeline" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="space-y-3">
+              <input type="hidden" name="form-name" value="lead-magnet-timeline" />
+              <input type="hidden" name="resource" value="Regulatory Timeline" />
+              <p class="hidden">
+                <label>Don't fill this out: <input name="bot-field" /></label>
+              </p>
+              
+              <input 
+                type="text" 
+                name="name"
+                required
+                placeholder="Your name"
+                class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent text-sm"
+              />
               <input 
                 type="email" 
-                id="timeline-email"
+                name="email"
+                required
                 placeholder="Business email address"
                 class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent text-sm"
               />
+              <input 
+                type="text" 
+                name="company"
+                required
+                placeholder="Company name"
+                class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent text-sm"
+              />
               <button 
-                onclick="downloadTimeline()"
+                type="submit"
                 class="w-full bg-purple-600 hover:bg-purple-700 text-white py-2 rounded-lg font-semibold transition-colors"
               >
                 Get Timeline
               </button>
-            </div>
+            </form>
           </div>
 
           <!-- Risk Assessment Template -->
@@ -248,20 +314,42 @@ import Footer from '../components/Footer.astro';
               <li>• Mitigation planning template</li>
               <li>• Compliance evidence tracking</li>
             </ul>
-            <div class="space-y-3">
+            
+            <form name="lead-magnet-template" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="space-y-3">
+              <input type="hidden" name="form-name" value="lead-magnet-template" />
+              <input type="hidden" name="resource" value="Risk Assessment Template" />
+              <p class="hidden">
+                <label>Don't fill this out: <input name="bot-field" /></label>
+              </p>
+              
+              <input 
+                type="text" 
+                name="name"
+                required
+                placeholder="Your name"
+                class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-sm"
+              />
               <input 
                 type="email" 
-                id="template-email"
+                name="email"
+                required
                 placeholder="Business email address"
                 class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-sm"
               />
+              <input 
+                type="text" 
+                name="company"
+                required
+                placeholder="Company name"
+                class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-sm"
+              />
               <button 
-                onclick="downloadTemplate()"
+                type="submit"
                 class="w-full bg-orange-600 hover:bg-orange-700 text-white py-2 rounded-lg font-semibold transition-colors"
               >
                 Download Template
               </button>
-            </div>
+            </form>
           </div>
         </div>
       </div>
@@ -338,23 +426,38 @@ import Footer from '../components/Footer.astro';
           Get weekly updates on EU AI Act developments, compliance tips, and implementation guidance.
         </p>
         <div class="bg-white rounded-xl p-8 max-w-2xl mx-auto">
-          <div class="flex flex-col md:flex-row gap-4">
-            <input 
-              type="email" 
-              id="newsletter-email"
-              placeholder="Enter your business email"
-              class="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900"
-            />
-            <button 
-              onclick="subscribeNewsletter()"
-              class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors whitespace-nowrap"
-            >
-              Subscribe
-            </button>
-          </div>
-          <p class="text-sm text-gray-600 mt-4">
-            Join 500+ compliance professionals • Weekly insights • Unsubscribe anytime
-          </p>
+          <form name="newsletter-subscription" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="newsletter-subscription" />
+            <p class="hidden">
+              <label>Don't fill this out: <input name="bot-field" /></label>
+            </p>
+            
+            <div class="flex flex-col md:flex-row gap-4">
+              <input 
+                type="text" 
+                name="name"
+                required
+                placeholder="Your name"
+                class="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900"
+              />
+              <input 
+                type="email" 
+                name="email"
+                required
+                placeholder="Enter your business email"
+                class="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900"
+              />
+              <button 
+                type="submit"
+                class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors whitespace-nowrap"
+              >
+                Subscribe
+              </button>
+            </div>
+            <p class="text-sm text-gray-600 mt-4">
+              Join 500+ compliance professionals • Weekly insights • Unsubscribe anytime
+            </p>
+          </form>
         </div>
       </div>
     </section>
@@ -372,14 +475,12 @@ import Footer from '../components/Footer.astro';
           <a 
             href="/emergency-assessment" 
             class="inline-block bg-red-600 hover:bg-red-700 text-white px-10 py-4 rounded-xl font-bold text-lg transition-colors shadow-lg"
-            onclick="trackConversion('resources_emergency_cta')"
           >
             Get Emergency Assessment
           </a>
           <a 
             href="/contact" 
             class="inline-block border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-10 py-4 rounded-xl font-bold text-lg transition-colors"
-            onclick="trackConversion('resources_contact_cta')"
           >
             Book Free Consultation
           </a>
@@ -392,251 +493,55 @@ import Footer from '../components/Footer.astro';
   </main>
   
   <script>
-    // Penalty Calculator
-    function calculatePenaltyRisk() {
-      const revenue = parseFloat(document.getElementById('calc-revenue').value);
-      const aiUsage = document.getElementById('calc-ai-usage').value;
+    document.addEventListener('DOMContentLoaded', function() {
       
-      if (revenue && revenue > 0 && aiUsage) {
-        const penalty = revenue * 1000000 * 0.07;
-        const assessmentCost = 9500;
-        const protectionRatio = Math.round(penalty / assessmentCost);
+      // Penalty Calculator Function
+      window.calculatePenaltyRisk = function() {
+        const revenue = parseFloat(document.getElementById('calc-revenue').value);
+        const aiUsage = document.getElementById('calc-ai-usage').value;
         
-        const penaltyFormatted = '£' + penalty.toLocaleString('en-GB', {
-          minimumFractionDigits: 0,
-          maximumFractionDigits: 0
+        if (revenue && revenue > 0 && aiUsage) {
+          const penalty = revenue * 1000000 * 0.07;
+          const assessmentCost = 9500;
+          const protectionRatio = Math.round(penalty / assessmentCost);
+          
+          const penaltyFormatted = '£' + penalty.toLocaleString('en-GB', {
+            minimumFractionDigits: 0,
+            maximumFractionDigits: 0
+          });
+          
+          document.getElementById('penalty-amount-display').textContent = penaltyFormatted;
+          document.getElementById('protection-ratio-display').textContent = protectionRatio + ':1';
+          document.getElementById('penalty-result-display').style.display = 'block';
+          
+          if (typeof window.trackConversion !== 'undefined') {
+            window.trackConversion('resources_penalty_calculated', {revenue: revenue, aiUsage: aiUsage});
+          }
+        } else {
+          alert('Please enter your revenue and select your AI usage level');
+        }
+      };
+
+      // Add Enter key support for penalty calculator
+      const calcRevenue = document.getElementById('calc-revenue');
+      const calcUsage = document.getElementById('calc-ai-usage');
+      
+      if (calcRevenue && calcUsage) {
+        calcRevenue.addEventListener('keypress', function(e) {
+          if (e.key === 'Enter' && calcUsage.value) {
+            window.calculatePenaltyRisk();
+          }
         });
         
-        document.getElementById('penalty-amount-display').textContent = penaltyFormatted;
-        document.getElementById('protection-ratio-display').textContent = protectionRatio + ':1';
-        document.getElementById('penalty-result-display').style.display = 'block';
-        
-        if (typeof window.trackConversion !== 'undefined') {
-          window.trackConversion('resources_penalty_calculated', {revenue: revenue, aiUsage: aiUsage});
-        }
-      } else {
-        alert('Please enter your revenue and select your AI usage level');
-      }
-    }
-
-    // Lead Magnet Downloads
-    function downloadEmergencyChecklist() {
-      const email = document.getElementById('emergency-email').value;
-      if (validateEmail(email)) {
-        // Track conversion
-        if (typeof window.trackConversion !== 'undefined') {
-          window.trackConversion('emergency_checklist_download', {email: email});
-        }
-        
-        // Simulate download and redirect to thank you
-        alert('Thank you! Your Emergency Checklist is being sent to ' + email + '\n\nCheck your inbox in the next few minutes.');
-        
-        // In real implementation, this would trigger email automation
-        // and provide actual download link
-      } else {
-        alert('Please enter a valid business email address');
-      }
-    }
-
-    function downloadSMEGuide() {
-      const email = document.getElementById('sme-guide-email').value;
-      if (validateEmail(email)) {
-        if (typeof window.trackConversion !== 'undefined') {
-          window.trackConversion('sme_guide_download', {email: email});
-        }
-        alert('Thank you! The SME Implementation Guide is being sent to ' + email);
-      } else {
-        alert('Please enter a valid business email address');
-      }
-    }
-
-    function downloadTimeline() {
-      const email = document.getElementById('timeline-email').value;
-      if (validateEmail(email)) {
-        if (typeof window.trackConversion !== 'undefined') {
-          window.trackConversion('timeline_download', {email: email});
-        }
-        alert('Thank you! The Regulatory Timeline is being sent to ' + email);
-      } else {
-        alert('Please enter a valid business email address');
-      }
-    }
-
-    function downloadTemplate() {
-      const email = document.getElementById('template-email').value;
-      if (validateEmail(email)) {
-        if (typeof window.trackConversion !== 'undefined') {
-          window.trackConversion('template_download', {email: email});
-        }
-        alert('Thank you! The Risk Assessment Template is being sent to ' + email);
-      } else {
-        alert('Please enter a valid business email address');
-      }
-    }
-
-    function subscribeNewsletter() {
-      const email = document.getElementById('newsletter-email').value;
-      if (validateEmail(email)) {
-        if (typeof window.trackConversion !== 'undefined') {
-          window.trackConversion('newsletter_subscription', {email: email});
-        }
-        alert('Thank you for subscribing! You\'ll receive weekly EU AI Act updates at ' + email);
-      } else {
-        alert('Please enter a valid business email address');
-      }
-    }
-
-    function validateEmail(email) {
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      return emailRegex.test(email);
-    }
-  </script>
-  
-  <Footer />
-</Layout>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    
-    // Penalty Calculator Function
-    window.calculatePenaltyRisk = function() {
-      const revenue = parseFloat(document.getElementById('calc-revenue').value);
-      const aiUsage = document.getElementById('calc-ai-usage').value;
-      
-      if (revenue && revenue > 0 && aiUsage) {
-        const penalty = revenue * 1000000 * 0.07;
-        const assessmentCost = 9500;
-        const protectionRatio = Math.round(penalty / assessmentCost);
-        
-        const penaltyFormatted = '£' + penalty.toLocaleString('en-GB', {
-          minimumFractionDigits: 0,
-          maximumFractionDigits: 0
-        });
-        
-        document.getElementById('penalty-amount-display').textContent = penaltyFormatted;
-        document.getElementById('protection-ratio-display').textContent = protectionRatio + ':1';
-        document.getElementById('penalty-result-display').style.display = 'block';
-        
-        if (typeof window.trackConversion !== 'undefined') {
-          window.trackConversion('resources_penalty_calculated', {revenue: revenue, aiUsage: aiUsage});
-        }
-      } else {
-        alert('Please enter your revenue and select your AI usage level');
-      }
-    };
-
-    // Email validation function
-    function validateEmail(email) {
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      return emailRegex.test(email);
-    }
-
-    // Lead Magnet Download Functions
-    window.downloadEmergencyChecklist = function() {
-      const email = document.getElementById('emergency-email').value;
-      if (validateEmail(email)) {
-        if (typeof window.trackConversion !== 'undefined') {
-          window.trackConversion('emergency_checklist_download', {email: email});
-        }
-        alert('Thank you! Your Emergency Checklist is being sent to ' + email + '\n\nCheck your inbox in the next few minutes.');
-        document.getElementById('emergency-email').value = '';
-      } else {
-        alert('Please enter a valid business email address');
-      }
-    };
-
-    window.downloadSMEGuide = function() {
-      const email = document.getElementById('sme-guide-email').value;
-      if (validateEmail(email)) {
-        if (typeof window.trackConversion !== 'undefined') {
-          window.trackConversion('sme_guide_download', {email: email});
-        }
-        alert('Thank you! The SME Implementation Guide is being sent to ' + email);
-        document.getElementById('sme-guide-email').value = '';
-      } else {
-        alert('Please enter a valid business email address');
-      }
-    };
-
-    window.downloadTimeline = function() {
-      const email = document.getElementById('timeline-email').value;
-      if (validateEmail(email)) {
-        if (typeof window.trackConversion !== 'undefined') {
-          window.trackConversion('timeline_download', {email: email});
-        }
-        alert('Thank you! The Regulatory Timeline is being sent to ' + email);
-        document.getElementById('timeline-email').value = '';
-      } else {
-        alert('Please enter a valid business email address');
-      }
-    };
-
-    window.downloadTemplate = function() {
-      const email = document.getElementById('template-email').value;
-      if (validateEmail(email)) {
-        if (typeof window.trackConversion !== 'undefined') {
-          window.trackConversion('template_download', {email: email});
-        }
-        alert('Thank you! The Risk Assessment Template is being sent to ' + email);
-        document.getElementById('template-email').value = '';
-      } else {
-        alert('Please enter a valid business email address');
-      }
-    };
-
-    window.subscribeNewsletter = function() {
-      const email = document.getElementById('newsletter-email').value;
-      if (validateEmail(email)) {
-        if (typeof window.trackConversion !== 'undefined') {
-          window.trackConversion('newsletter_subscription', {email: email});
-        }
-        alert('Thank you for subscribing! You\'ll receive weekly EU AI Act updates at ' + email);
-        document.getElementById('newsletter-email').value = '';
-      } else {
-        alert('Please enter a valid business email address');
-      }
-    };
-
-    // Add Enter key support for penalty calculator
-    const calcRevenue = document.getElementById('calc-revenue');
-    const calcUsage = document.getElementById('calc-ai-usage');
-    
-    if (calcRevenue && calcUsage) {
-      calcRevenue.addEventListener('keypress', function(e) {
-        if (e.key === 'Enter' && calcUsage.value) {
-          window.calculatePenaltyRisk();
-        }
-      });
-      
-      calcUsage.addEventListener('change', function() {
-        if (calcRevenue.value && calcUsage.value) {
-          // Auto-calculate when both fields are filled
-          setTimeout(() => window.calculatePenaltyRisk(), 100);
-        }
-      });
-    }
-
-    // Add Enter key support for email forms
-    const emailInputs = [
-      'emergency-email',
-      'sme-guide-email', 
-      'timeline-email',
-      'template-email',
-      'newsletter-email'
-    ];
-
-    emailInputs.forEach(inputId => {
-      const input = document.getElementById(inputId);
-      if (input) {
-        input.addEventListener('keypress', function(e) {
-          if (e.key === 'Enter') {
-            const button = input.parentElement.querySelector('button');
-            if (button) {
-              button.click();
-            }
+        calcUsage.addEventListener('change', function() {
+          if (calcRevenue.value && calcUsage.value) {
+            // Auto-calculate when both fields are filled
+            setTimeout(() => window.calculatePenaltyRisk(), 100);
           }
         });
       }
     });
-  });
-</script>
+  </script>
+  
+  <Footer />
+</Layout>
