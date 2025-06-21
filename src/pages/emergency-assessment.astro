@@ -359,116 +359,139 @@ import Footer from '../components/Footer.astro';
               </p>
             </div>
 
-            <!-- Booking Form -->
-            <div>
-              <h3 class="text-2xl font-semibold mb-6">Book Emergency Assessment</h3>
-              
-              <form name="emergency-assessment" method="POST" action="/contact/" data-netlify="true" netlify-honeypot="bot-field" class="space-y-4">
-                <input type="hidden" name="form-name" value="emergency-assessment" />
-                <p class="hidden">
-                  <label>Don't fill this out: <input name="bot-field" /></label>
-                </p>
-                
-                <div>
-                  <label class="block text-sm font-medium text-gray-700 mb-2">
-                    Full Name *
-                  </label>
-                  <input 
-                    type="text" 
-                    name="name"
-                    required
-                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="Your full name"
-                  />
-                </div>
-                
-                <div>
-                  <label class="block text-sm font-medium text-gray-700 mb-2">
-                    Business Email *
-                  </label>
-                  <input 
-                    type="email" 
-                    name="email"
-                    required
-                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="your.email@company.com"
-                  />
-                </div>
-                
-                <div>
-                  <label class="block text-sm font-medium text-gray-700 mb-2">
-                    Company Name *
-                  </label>
-                  <input 
-                    type="text" 
-                    name="company"
-                    required
-                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="Your company"
-                  />
-                </div>
-                
-                <div>
-                  <label class="block text-sm font-medium text-gray-700 mb-2">
-                    Annual Revenue (£M)
-                  </label>
-                  <select 
-                    name="revenue"
-                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  >
-                    <option value="">Select range</option>
-                    <option value="5-10">£5M - £10M</option>
-                    <option value="10-25">£10M - £25M</option>
-                    <option value="25-50">£25M - £50M</option>
-                    <option value="50-100">£50M - £100M</option>
-                    <option value="over-100">Over £100M</option>
-                  </select>
-                </div>
-                
-                <div>
-                  <label class="block text-sm font-medium text-gray-700 mb-2">
-                    Current AI Usage *
-                  </label>
-                  <select 
-                    name="ai-usage"
-                    required
-                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  >
-                    <option value="">Select your situation</option>
-                    <option value="basic">Basic AI tools</option>
-                    <option value="integrated">AI in products/services</option>
-                    <option value="custom">Custom AI systems</option>
-                    <option value="gpai">General Purpose AI</option>
-                  </select>
-                </div>
-                
-                <div>
-                  <label class="block text-sm font-medium text-gray-700 mb-2">
-                    Urgency Details
-                  </label>
-                  <textarea 
-                    name="urgency-details"
-                    rows="3"
-                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="Describe your urgent compliance needs..."
-                  ></textarea>
-                </div>
+           <!-- Booking Form -->
+<div>
+  <h3 class="text-2xl font-semibold mb-6">Book Emergency Assessment</h3>
+  
+  <form name="emergency-assessment" method="POST" action="/contact/" data-netlify="true" netlify-honeypot="bot-field" class="space-y-4">
+    <input type="hidden" name="form-name" value="emergency-assessment" />
+    <input type="hidden" name="form-type" value="emergency" />
+    <input type="hidden" name="service-tier" value="Emergency Assessment" />
+    <input type="hidden" name="lead-source" value="Website" />
+    
+    <p class="hidden">
+      <label>Don't fill this out: <input name="bot-field" /></label>
+    </p>
+    
+    <div>
+      <label class="block text-sm font-medium text-gray-700 mb-2">
+        Full Name *
+      </label>
+      <input 
+        type="text" 
+        name="name"
+        required
+        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+        placeholder="Your full name"
+      />
+    </div>
+    
+    <div>
+      <label class="block text-sm font-medium text-gray-700 mb-2">
+        Business Email *
+      </label>
+      <input 
+        type="email" 
+        name="email"
+        required
+        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+        placeholder="your.email@company.com"
+      />
+    </div>
+    
+    <div>
+      <label class="block text-sm font-medium text-gray-700 mb-2">
+        Company Name *
+      </label>
+      <input 
+        type="text" 
+        name="company"
+        required
+        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+        placeholder="Your company"
+      />
+    </div>
 
-                <div class="bg-green-50 rounded-lg p-4">
-                  <div class="text-center">
-                    <p class="text-green-600 font-semibold">✓ Next available slot within 24 hours</p>
-                    <p class="text-green-600 font-semibold">✓ Assessment can start within 48 hours</p>
-                    <p class="text-green-600 font-semibold">✓ 6-day delivery guarantee</p>
-                  </div>
-                </div>
+    <div>
+      <label class="block text-sm font-medium text-gray-700 mb-2">
+        Your Role
+      </label>
+      <select 
+        name="job-title"
+        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+      >
+        <option value="">Select your role</option>
+        <option value="CEO">CEO/Founder</option>
+        <option value="Legal Counsel">Legal Counsel</option>  
+        <option value="Compliance Officer">Compliance Officer</option>
+        <option value="CTO">CTO/Technical Lead</option>
+        <option value="Product Manager">Product Manager</option>
+        <option value="Other">Other</option>
+      </select>
+    </div>
+    
+    <div>
+      <label class="block text-sm font-medium text-gray-700 mb-2">
+        Annual Revenue (£M)
+      </label>
+      <select 
+        name="revenue"
+        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+      >
+        <option value="">Select range</option>
+        <option value="5-10">£5M - £10M</option>
+        <option value="10-25">£10M - £25M</option>
+        <option value="25-50">£25M - £50M</option>
+        <option value="50-100">£50M - £100M</option>
+        <option value="over-100">Over £100M</option>
+      </select>
+    </div>
+    
+    <div>
+      <label class="block text-sm font-medium text-gray-700 mb-2">
+        Current AI Usage *
+      </label>
+      <select 
+        name="ai-usage"
+        required
+        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+      >
+        <option value="">Select your situation</option>
+        <option value="basic">Basic AI tools</option>
+        <option value="integrated">AI in products/services</option>
+        <option value="custom">Custom AI systems</option>
+        <option value="gpai">General Purpose AI</option>
+      </select>
+    </div>
+    
+    <div>
+      <label class="block text-sm font-medium text-gray-700 mb-2">
+        Urgency Details
+      </label>
+      <textarea 
+        name="urgency-details"
+        rows="3"
+        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+        placeholder="Describe your urgent compliance needs..."
+      ></textarea>
+    </div>
 
-                <button 
-                  type="submit"
-                  class="w-full bg-blue-600 hover:bg-blue-700 text-white py-4 rounded-lg font-bold text-lg transition-colors shadow-lg"
-                >
-                  Book Emergency Assessment - £9,500
-                </button>
-              </form>
+    <div class="bg-green-50 rounded-lg p-4">
+      <div class="text-center">
+        <p class="text-green-600 font-semibold">✓ Next available slot within 24 hours</p>
+        <p class="text-green-600 font-semibold">✓ Assessment can start within 48 hours</p>
+        <p class="text-green-600 font-semibold">✓ 6-day delivery guarantee</p>
+      </div>
+    </div>
+
+    <button 
+      type="submit"
+      class="w-full bg-blue-600 hover:bg-blue-700 text-white py-4 rounded-lg font-bold text-lg transition-colors shadow-lg"
+    >
+      Book Emergency Assessment - £9,500
+    </button>
+  </form>
+</div>
             </div>
           </div>
         </div>

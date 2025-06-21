@@ -18,14 +18,7 @@ const { title, description = "AiLex Consulting - EU AI Act Compliance Experts" }
   <meta name="generator" content={Astro.generator} />
   <title>{title}</title>
   
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SK6FVPTQZF"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-SK6FVPTQZF');
-  </script>
+  <!-- Simple Analytics handled by Netlify extension - no code needed -->
 </head>
 <body>
   <slot />
