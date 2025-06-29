@@ -18,7 +18,52 @@ const { title, description = "AiLex Consulting - EU AI Act Compliance Experts" }
   <meta name="generator" content={Astro.generator} />
   <title>{title}</title>
   
-  <!-- Simple Analytics handled by Netlify extension - no code needed -->
+  <title>{title}</title>
+
+<!-- Schema Markup for AEO -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "AiLex Consulting",
+  "description": "AI Governance & EU AI Act Compliance Specialists",
+  "url": "https://ailex.consulting",
+  "telephone": "+44-XXX-XXX-XXXX",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "GB",
+    "addressRegion": "England"
+  },
+  "serviceType": [
+    "AI Governance Consulting",
+    "EU AI Act Compliance",
+    "Emergency AI Assessment",
+    "AI Risk Management"
+  ],
+  "areaServed": [
+    "United Kingdom",
+    "European Union"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "AI Governance Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Emergency AI Act Assessment",
+          "description": "6-day systematic AI compliance analysis"
+        },
+        "price": "9500",
+        "priceCurrency": "GBP"
+      }
+    ]
+  }
+}
+</script>
+
+<!-- Simple Analytics handled by Netlify extension - no code needed -->
 </head>
 <body>
   <slot />
