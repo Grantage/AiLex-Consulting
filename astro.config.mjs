@@ -7,6 +7,17 @@ export default defineConfig({
   site: 'https://ailex.consulting',
   output: 'static',
   build: {
-    inlineStylesheets: 'auto'
+    inlineStylesheets: 'always',
+    assets: '_astro'
+  },
+  vite: {
+    build: {
+      cssCodeSplit: false,
+      rollupOptions: {
+        output: {
+          manualChunks: undefined
+        }
+      }
+    }
   }
 });
