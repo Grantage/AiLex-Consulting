@@ -264,46 +264,41 @@ import Footer from '../components/Footer.astro';
   </main>
   
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const calculateButton = document.getElementById('calculate-button');
-      const revenueInput = document.getElementById('revenue-input');
-      
-      if (calculateButton && revenueInput) {
-        calculateButton.addEventListener('click', function() {
-          const revenue = parseFloat(revenueInput.value);
-          
-          if (revenue && revenue > 0) {
-            // Calculate 7% penalty
-            const penalty = revenue * 1000000 * 0.07;
-            
-            // Format as currency
-            const penaltyFormatted = '£' + penalty.toLocaleString('en-GB', {
-              minimumFractionDigits: 0,
-              maximumFractionDigits: 0
-            });
-            
-            // Show result
-            document.getElementById('penalty-amount').textContent = penaltyFormatted;
-            document.getElementById('penalty-result').style.display = 'block';
-            
-            // Track the calculation
-            if (typeof window.trackConversion !== 'undefined') {
-              window.trackConversion('penalty_calculated', {revenue: revenue});
-            }
-          } else {
-            alert('Please enter a valid revenue amount (e.g., 10 for £10M)');
-          }
-        });
+  // Defer calculator setup to improve FID
+  setTimeout(function() {
+    const calculateButton = document.getElementById('calculate-button');
+    const revenueInput = document.getElementById('revenue-input');
+    
+    if (calculateButton && revenueInput) {
+      calculateButton.addEventListener('click', function() {
+        const revenue = parseFloat(revenueInput.value);
         
-        // Allow Enter key to calculate
-        revenueInput.addEventListener('keypress', function(e) {
-          if (e.key === 'Enter') {
-            calculateButton.click();
+        if (revenue && revenue > 0) {
+          const penalty = revenue * 1000000 * 0.07;
+          const penaltyFormatted = '£' + penalty.toLocaleString('en-GB', {
+            minimumFractionDigits: 0,
+            maximumFractionDigits: 0
+          });
+          
+          document.getElementById('penalty-amount').textContent = penaltyFormatted;
+          document.getElementById('penalty-result').style.display = 'block';
+          
+          if (typeof window.trackConversion !== 'undefined') {
+            window.trackConversion('penalty_calculated', {revenue: revenue});
           }
-        });
-      }
-    });
-  </script>
+        } else {
+          alert('Please enter a valid revenue amount (e.g., 10 for £10M)');
+        }
+      });
+      
+      revenueInput.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+          calculateButton.click();
+        }
+      });
+    }
+  }, 100);
+</script>
   
   <Footer />
 </Layout>
