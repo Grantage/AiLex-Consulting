@@ -5,536 +5,205 @@ import Footer from '../components/Footer.astro';
 ---
 
 <Layout 
-  title="Emergency EU AI Act Assessment | AiLex: European Authority | 6-Day Analysis"
-  description="European Authority providing urgent EU AI Act compliance assessment in 6 days. AI-enhanced systematic analysis achieving 99.7% regulatory coverage. GPAI deadline: 8 weeks remaining. Book now £9,500."
+  title="Emergency EU AI Act Assessment | AiLex Consulting | 6-Day Analysis"
+  description="Systematic EU AI Act compliance assessment in 6 days. AI-enhanced analysis achieving 99.7% regulatory coverage. GPAI deadline approaching. £9,500."
 >
   <Header />
   
   <main>
-    <!-- NEW: Urgent Authority Header -->
+    <!-- Urgent Regulatory Notice -->
     <section class="bg-red-600 text-white py-3">
       <div class="max-w-7xl mx-auto px-4 text-center">
-        <p class="font-semibold">⚠️ GPAI Model Obligations: 8 weeks until enforcement • €35M penalty exposure</p>
+        <p class="font-semibold">⚠️ GPAI Model Obligations: 8 weeks until enforcement</p>
       </div>
     </section>
 
-    <!-- Enhanced Authority Hero Section -->
-    <section class="bg-red-50 py-16">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-12">
-          <div class="inline-block bg-red-100 text-red-800 px-4 py-2 rounded-full font-semibold mb-4">
-            ⚠️ URGENT: GPAI Deadline <span data-countdown>Loading...</span> Remaining
-          </div>
-          
-          <!-- Authority Credentials -->
-          <p class="text-sm text-indigo-600 font-medium tracking-wide uppercase mb-2">
-            SCIENTIA ET LEX
-          </p>
-          <p class="text-lg text-blue-900 font-semibold mb-4">
-            AiLex: European Authority on AI Governance Excellence
-          </p>
-          
-          <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-            <span class="text-red-600">Emergency</span> EU AI Act Assessment
+    <!-- Hero Section -->
+    <section class="bg-gray-50 py-20">
+      <div class="max-w-4xl mx-auto px-4 text-center">
+        <div class="mb-8">
+          <p class="text-sm text-gray-600 uppercase tracking-wide mb-2">SCIENTIA ET LEX</p>
+          <h1 class="text-5xl font-bold text-gray-900 mb-6">
+            Emergency EU AI Act Assessment
           </h1>
-          <p class="text-xl md:text-2xl text-gray-700 mb-4 max-w-4xl mx-auto">
-            Systematic compliance analysis in 6 days through AI-enhanced regulatory methodology
-          </p>
-          <p class="text-lg text-gray-600 font-medium">
-            99.7% Regulatory Coverage • European Authority • Professional Excellence
+          <p class="text-xl text-gray-700 mb-8">
+            Systematic compliance analysis in 6 days. 99.7% regulatory coverage.
           </p>
         </div>
 
-        <!-- Risk Calculator Widget -->
-        <div class="bg-white rounded-xl shadow-xl p-8 max-w-2xl mx-auto mb-12 border-2 border-red-200">
-          <h3 class="text-2xl font-bold text-center mb-6 text-red-600">
-            Calculate Your Penalty Risk Exposure
-          </h3>
-          <div class="flex flex-col md:flex-row items-end space-y-4 md:space-y-0 md:space-x-4">
-            <div class="flex-1 w-full md:w-auto">
-              <label class="block text-sm font-medium text-gray-700 mb-2">
-                Annual Revenue (£M)
-              </label>
-              <input 
-                type="number" 
-                id="risk-revenue-input"
-                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent h-12"
-                placeholder="e.g. 10"
-                min="1"
-                step="0.1"
-              />
-            </div>
+        <!-- Risk Calculator -->
+        <div class="bg-white rounded-lg shadow-lg p-6 mb-8 max-w-md mx-auto">
+          <h3 class="text-lg font-semibold mb-4">Calculate Penalty Exposure</h3>
+          <div class="flex gap-3">
+            <input 
+              type="number" 
+              id="revenue-input"
+              class="flex-1 px-3 py-2 border rounded focus:ring-2 focus:ring-blue-500"
+              placeholder="Revenue (£M)"
+            />
             <button 
-              id="risk-calculate-button"
-              class="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors h-12 w-full md:w-auto whitespace-nowrap"
+              id="calculate-btn"
+              class="bg-red-600 text-white px-4 py-2 rounded font-medium hover:bg-red-700"
             >
-              Calculate Risk
+              Calculate
             </button>
           </div>
-          <div id="risk-penalty-result" class="mt-6 p-4 bg-red-100 rounded-lg" style="display: none;">
-            <p class="text-red-800 font-semibold text-center text-lg">
-              Maximum Penalty: <span id="risk-penalty-amount" class="text-2xl font-bold"></span>
-            </p>
-            <p class="text-red-600 text-center mt-2 font-medium">
-              Assessment Investment: £9,500 | Risk Mitigation: <span id="risk-protection-ratio" class="font-bold"></span>
-            </p>
+          <div id="result" class="mt-4 p-3 bg-red-50 rounded hidden">
+            <p class="text-red-800 font-semibold">Max Penalty: <span id="penalty"></span></p>
           </div>
         </div>
 
-        <!-- Primary Booking CTA -->
-        <div class="text-center">
-          <a 
-            href="#booking-section" 
-            class="inline-block bg-blue-900 hover:bg-blue-800 text-white px-12 py-6 rounded-xl font-bold text-xl transition-colors shadow-xl mb-4"
-          >
-            Request Emergency Assessment - £9,500
-          </a>
-          <p class="text-gray-600">
-            6-day systematic delivery • AI-enhanced analysis • European authority
-          </p>
-        </div>
+        <a 
+          href="#booking" 
+          class="inline-block bg-blue-900 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-800"
+        >
+          Request Assessment - £9,500
+        </a>
       </div>
     </section>
 
-    <!-- AI-Enhanced Methodology Credibility -->
-    <section class="py-8 bg-blue-50">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="bg-white rounded-xl p-6 shadow-lg border border-blue-200">
-          <div class="flex items-start space-x-4">
-            <div class="flex-shrink-0">
-              <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-                <span class="text-2xl">🤖</span>
-              </div>
-            </div>
-            <div>
-              <h4 class="font-semibold text-blue-900 mb-2">AI-Enhanced European Authority Methodology</h4>
-              <p class="text-sm text-gray-700 mb-3">
-                Systematic regulatory analysis achieving 99.7% EU AI Act requirement coverage through Claude AI-enhanced methodology combined with European regulatory expertise.
-              </p>
-              <ul class="text-xs text-gray-600 space-y-1">
-                <li>• Comprehensive review of all 99 regulatory articles</li>
-                <li>• 6-day emergency timeline vs. 6-8 weeks traditional consulting</li>
-                <li>• Real-time regulatory intelligence integration</li>
-                <li>• European authority validation and certification</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 6-Day Process Breakdown -->
+    <!-- Methodology -->
     <section class="py-16 bg-white">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-6xl mx-auto px-4">
         <div class="text-center mb-12">
-          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Systematic 6-Day Analysis Process
-          </h2>
-          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-            European authority methodology ensuring comprehensive regulatory compliance assessment
-          </p>
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">6-Day Systematic Process</h2>
+          <p class="text-gray-600">AI-enhanced methodology ensuring comprehensive coverage</p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <!-- Day 1-2 -->
-          <div class="bg-blue-50 rounded-xl p-6">
-            <div class="flex items-center mb-4">
-              <div class="w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold mr-3">
-                1-2
-              </div>
-              <h3 class="text-xl font-semibold">Discovery & Inventory</h3>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="text-center">
+            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+              <span class="text-blue-600 font-bold">1-2</span>
             </div>
-            <ul class="space-y-2 text-gray-700">
-              <li>• Complete AI system identification</li>
-              <li>• Data flow mapping and analysis</li>
-              <li>• Current documentation review</li>
-              <li>• Stakeholder interviews and assessment</li>
-            </ul>
+            <h3 class="font-semibold mb-2">Discovery</h3>
+            <p class="text-sm text-gray-600">Complete AI system inventory and documentation review</p>
           </div>
 
-          <!-- Day 3-4 -->
-          <div class="bg-amber-50 rounded-xl p-6">
-            <div class="flex items-center mb-4">
-              <div class="w-10 h-10 bg-amber-600 text-white rounded-full flex items-center justify-center font-bold mr-3">
-                3-4
-              </div>
-              <h3 class="text-xl font-semibold">Risk Classification</h3>
+          <div class="text-center">
+            <div class="w-12 h-12 bg-amber-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+              <span class="text-amber-600 font-bold">3-4</span>
             </div>
-            <ul class="space-y-2 text-gray-700">
-              <li>• AI-enhanced regulatory analysis</li>
-              <li>• Risk category assessment per Annex III</li>
-              <li>• GPAI model compliance evaluation</li>
-              <li>• Systematic compliance gap identification</li>
-            </ul>
+            <h3 class="font-semibold mb-2">Analysis</h3>
+            <p class="text-sm text-gray-600">Risk classification and compliance gap identification</p>
           </div>
 
-          <!-- Day 5-6 -->
-          <div class="bg-green-50 rounded-xl p-6">
-            <div class="flex items-center mb-4">
-              <div class="w-10 h-10 bg-green-600 text-white rounded-full flex items-center justify-center font-bold mr-3">
-                5-6
-              </div>
-              <h3 class="text-xl font-semibold">Action Plan Delivery</h3>
+          <div class="text-center">
+            <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+              <span class="text-green-600 font-bold">5-6</span>
             </div>
-            <ul class="space-y-2 text-gray-700">
-              <li>• Prioritised compliance roadmap</li>
-              <li>• Implementation timeline with milestones</li>
-              <li>• Resource requirements assessment</li>
-              <li>• Strategic next steps guidance</li>
-            </ul>
+            <h3 class="font-semibold mb-2">Delivery</h3>
+            <p class="text-sm text-gray-600">Prioritised roadmap and implementation plan</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Deliverables Section -->
+    <!-- Deliverables -->
     <section class="py-16 bg-gray-50">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-12">
-          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Professional Assessment Deliverables
-          </h2>
-          <p class="text-xl text-gray-600">
-            Comprehensive documentation for immediate compliance implementation
-          </p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div class="bg-white rounded-xl p-8 shadow-lg">
-            <h3 class="text-2xl font-semibold mb-6 text-blue-600">Regulatory Assessment Report</h3>
-            <ul class="space-y-3">
-              <li class="flex items-start">
-                <span class="text-green-500 mr-3 mt-1">✓</span>
-                <span><strong>AI System Inventory:</strong> Complete catalogue of all AI systems and models</span>
-              </li>
-              <li class="flex items-start">
-                <span class="text-green-500 mr-3 mt-1">✓</span>
-                <span><strong>Risk Classification Matrix:</strong> Each system categorised by regulatory risk level</span>
-              </li>
-              <li class="flex items-start">
-                <span class="text-green-500 mr-3 mt-1">✓</span>
-                <span><strong>Compliance Gap Analysis:</strong> Detailed identification of all regulatory gaps</span>
-              </li>
-              <li class="flex items-start">
-                <span class="text-green-500 mr-3 mt-1">✓</span>
-                <span><strong>GPAI Assessment:</strong> Specific evaluation of General Purpose AI requirements</span>
-              </li>
-            </ul>
-          </div>
-
-          <div class="bg-white rounded-xl p-8 shadow-lg">
-            <h3 class="text-2xl font-semibold mb-6 text-green-600">Implementation Strategy</h3>
-            <ul class="space-y-3">
-              <li class="flex items-start">
-                <span class="text-green-500 mr-3 mt-1">✓</span>
-                <span><strong>Prioritised Roadmap:</strong> Step-by-step compliance implementation plan</span>
-              </li>
-              <li class="flex items-start">
-                <span class="text-green-500 mr-3 mt-1">✓</span>
-                <span><strong>Timeline & Milestones:</strong> Realistic delivery schedule with key deadlines</span>
-              </li>
-              <li class="flex items-start">
-                <span class="text-green-500 mr-3 mt-1">✓</span>
-                <span><strong>Resource Requirements:</strong> Team, budget, and technology needs</span>
-              </li>
-              <li class="flex items-start">
-                <span class="text-green-500 mr-3 mt-1">✓</span>
-                <span><strong>Quick Wins:</strong> Immediate actions for rapid compliance progress</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ROI Justification -->
-    <section class="py-16 bg-blue-900 text-white">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-12">
-          <h2 class="text-3xl md:text-4xl font-bold mb-4">
-            Professional Investment vs Regulatory Risk Exposure
-          </h2>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div class="text-center">
-            <div class="text-6xl font-bold text-red-400 mb-4">€35M</div>
-            <p class="text-xl font-semibold mb-2">Maximum Penalty</p>
-            <p class="text-blue-200">Up to 7% of global annual turnover for non-compliance</p>
-          </div>
-
-          <div class="text-center">
-            <div class="text-6xl font-bold text-yellow-400 mb-4">VS</div>
-            <p class="text-xl font-semibold mb-2">Professional Investment</p>
-            <p class="text-blue-200">Systematic protection through European authority assessment</p>
-          </div>
-
-          <div class="text-center">
-            <div class="text-6xl font-bold text-green-400 mb-4">£9.5K</div>
-            <p class="text-xl font-semibold mb-2">Assessment Investment</p>
-            <p class="text-blue-200">Complete 6-day analysis with actionable compliance roadmap</p>
-          </div>
-        </div>
-
-        <div class="text-center mt-12">
-          <p class="text-2xl font-semibold mb-6">
-            Risk Mitigation Investment: Up to 3,684:1 ROI
-          </p>
-          <a 
-            href="#booking-section" 
-            class="inline-block bg-amber-500 hover:bg-amber-600 text-blue-900 px-12 py-6 rounded-xl font-bold text-xl transition-colors shadow-xl"
-          >
-            Request Assessment Now
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- AI-Enhanced Methodology -->
-    <section class="py-16 bg-white">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-12">
-          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            European Authority AI-Enhanced Methodology
-          </h2>
-          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-            Systematic Claude-powered analysis delivering superior regulatory intelligence through AI-human collaboration
-          </p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <div>
-            <h3 class="text-2xl font-semibold mb-6">Why European Authority AI-Enhanced Analysis?</h3>
-            <div class="space-y-4">
-              <div class="flex items-start">
-                <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-4 mt-1">
-                  <span class="text-blue-600 font-bold">99%</span>
-                </div>
-                <div>
-                  <h4 class="font-semibold text-lg">Complete Regulatory Coverage</h4>
-                  <p class="text-gray-600">Systematic analysis of all 99 regulatory articles ensuring comprehensive compliance</p>
-                </div>
-              </div>
-
-              <div class="flex items-start">
-                <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-4 mt-1">
-                  <span class="text-green-600 font-bold">6x</span>
-                </div>
-                <div>
-                  <h4 class="font-semibold text-lg">Accelerated Delivery</h4>
-                  <p class="text-gray-600">AI-powered analysis completing in days what requires weeks manually</p>
-                </div>
-              </div>
-
-              <div class="flex items-start">
-                <div class="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center mr-4 mt-1">
-                  <span class="text-purple-600 font-bold">✓</span>
-                </div>
-                <div>
-                  <h4 class="font-semibold text-lg">Professional Excellence</h4>
-                  <p class="text-gray-600">Systematic methodology ensuring reliable, repeatable results</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="bg-gray-50 rounded-xl p-8">
-            <h4 class="text-xl font-semibold mb-4">Methodology Transparency</h4>
-            <p class="text-gray-700 mb-4">
-              European authority employs Claude AI to enhance systematic analysis, providing:
-            </p>
+      <div class="max-w-4xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12">Assessment Deliverables</h2>
+        
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="bg-white rounded-lg p-6 shadow">
+            <h3 class="text-xl font-semibold mb-4 text-blue-600">Compliance Report</h3>
             <ul class="space-y-2 text-gray-700">
-              <li>• Comprehensive regulatory requirement parsing</li>
-              <li>• Systematic cross-reference verification</li>
-              <li>• Pattern recognition across complex regulations</li>
-              <li>• Quality assurance through multiple analysis iterations</li>
+              <li>• Complete AI system inventory</li>
+              <li>• Risk classification matrix</li>
+              <li>• Regulatory gap analysis</li>
+              <li>• GPAI compliance assessment</li>
             </ul>
-            <p class="text-sm text-gray-600 mt-4 italic">
-              AI enhancement combined with European regulatory expertise delivers superior outcomes for urgent compliance requirements.
-            </p>
+          </div>
+
+          <div class="bg-white rounded-lg p-6 shadow">
+            <h3 class="text-xl font-semibold mb-4 text-green-600">Implementation Plan</h3>
+            <ul class="space-y-2 text-gray-700">
+              <li>• Prioritised action roadmap</li>
+              <li>• Timeline with milestones</li>
+              <li>• Resource requirements</li>
+              <li>• Quick wins identification</li>
+            </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Professional Consultation Booking Section -->
-    <section id="booking-section" class="py-16 bg-gray-50">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-12">
-          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Request Professional Emergency Assessment
-          </h2>
-          <p class="text-xl text-gray-600">
-            Limited availability - Priority consultation for urgent GPAI compliance
-          </p>
+    <!-- Booking -->
+    <section id="booking" class="py-16 bg-blue-900 text-white">
+      <div class="max-w-3xl mx-auto px-4">
+        <div class="text-center mb-8">
+          <h2 class="text-3xl font-bold mb-4">Request Professional Assessment</h2>
+          <p class="text-blue-200">Limited availability for urgent compliance requirements</p>
         </div>
 
-        <div class="bg-white rounded-xl shadow-xl p-8">
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <!-- Service Summary -->
+        <div class="bg-white rounded-lg p-8 text-gray-900">
+          <div class="grid md:grid-cols-2 gap-8">
             <div>
-              <h3 class="text-2xl font-semibold mb-6">Emergency Assessment Package</h3>
-              <div class="space-y-4">
-                <div class="flex justify-between items-center py-2 border-b">
-                  <span>6-Day Systematic Analysis</span>
-                  <span class="font-semibold">Included</span>
+              <h3 class="text-xl font-semibold mb-4">Package Details</h3>
+              <div class="space-y-3">
+                <div class="flex justify-between">
+                  <span>6-Day Analysis</span>
+                  <span>Included</span>
                 </div>
-                <div class="flex justify-between items-center py-2 border-b">
-                  <span>AI System Inventory & Classification</span>
-                  <span class="font-semibold">Included</span>
+                <div class="flex justify-between">
+                  <span>Complete Documentation</span>
+                  <span>Included</span>
                 </div>
-                <div class="flex justify-between items-center py-2 border-b">
-                  <span>GPAI Compliance Assessment</span>
-                  <span class="font-semibold">Included</span>
+                <div class="flex justify-between">
+                  <span>Implementation Plan</span>
+                  <span>Included</span>
                 </div>
-                <div class="flex justify-between items-center py-2 border-b">
-                  <span>Prioritised Action Plan</span>
-                  <span class="font-semibold">Included</span>
-                </div>
-                <div class="flex justify-between items-center py-2 border-b">
-                  <span>Implementation Roadmap</span>
-                  <span class="font-semibold">Included</span>
-                </div>
-                <div class="flex justify-between items-center py-4 text-xl font-bold">
-                  <span>Professional Investment:</span>
-                  <span class="text-blue-600">£9,500</span>
+                <div class="flex justify-between font-bold pt-3 border-t">
+                  <span>Investment:</span>
+                  <span>£9,500</span>
                 </div>
               </div>
-              <p class="text-sm text-gray-600 mt-4">
-                Payment terms: 50% engagement deposit, 50% upon delivery
-              </p>
             </div>
 
-            <!-- Professional Consultation Form -->
             <div>
-              <h3 class="text-2xl font-semibold mb-6">Request Professional Consultation</h3>
-              
-              <form name="emergency-assessment" method="POST" action="/contact/" data-netlify="true" netlify-honeypot="bot-field" class="space-y-4">
+              <form name="emergency-assessment" method="POST" data-netlify="true" class="space-y-4">
                 <input type="hidden" name="form-name" value="emergency-assessment" />
-                <input type="hidden" name="form-type" value="emergency" />
-                <input type="hidden" name="service-tier" value="Emergency Assessment" />
-                <input type="hidden" name="lead-source" value="Website" />
                 
-                <p class="hidden">
-                  <label>Don't fill this out: <input name="bot-field" /></label>
-                </p>
+                <input 
+                  type="text" 
+                  name="name"
+                  placeholder="Full Name"
+                  required
+                  class="w-full px-3 py-2 border rounded focus:ring-2 focus:ring-blue-500"
+                />
                 
-                <div>
-                  <label class="block text-sm font-medium text-gray-700 mb-2">
-                    Senior Executive Contact *
-                  </label>
-                  <input 
-                    type="text" 
-                    name="name"
-                    required
-                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="Your full name and title"
-                  />
-                </div>
+                <input 
+                  type="email" 
+                  name="email"
+                  placeholder="Business Email"
+                  required
+                  class="w-full px-3 py-2 border rounded focus:ring-2 focus:ring-blue-500"
+                />
                 
-                <div>
-                  <label class="block text-sm font-medium text-gray-700 mb-2">
-                    Business Email *
-                  </label>
-                  <input 
-                    type="email" 
-                    name="email"
-                    required
-                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="your.email@company.com"
-                  />
-                </div>
+                <input 
+                  type="text" 
+                  name="company"
+                  placeholder="Company Name"
+                  required
+                  class="w-full px-3 py-2 border rounded focus:ring-2 focus:ring-blue-500"
+                />
                 
-                <div>
-                  <label class="block text-sm font-medium text-gray-700 mb-2">
-                    Organisation Name *
-                  </label>
-                  <input 
-                    type="text" 
-                    name="company"
-                    required
-                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="Your organisation"
-                  />
-                </div>
-
-                <div>
-                  <label class="block text-sm font-medium text-gray-700 mb-2">
-                    Executive Role
-                  </label>
-                  <select 
-                    name="job-title"
-                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  >
-                    <option value="">Select your role</option>
-                    <option value="CEO">CEO/Founder</option>
-                    <option value="Legal Counsel">Legal Counsel</option>  
-                    <option value="Compliance Officer">Compliance Officer</option>
-                    <option value="CTO">CTO/Technical Lead</option>
-                    <option value="Risk Officer">Chief Risk Officer</option>
-                    <option value="Other">Other C-Suite</option>
-                  </select>
-                </div>
-                
-                <div>
-                  <label class="block text-sm font-medium text-gray-700 mb-2">
-                    Annual Revenue (£M)
-                  </label>
-                  <select 
-                    name="revenue"
-                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  >
-                    <option value="">Select range</option>
-                    <option value="5-10">£5M - £10M</option>
-                    <option value="10-25">£10M - £25M</option>
-                    <option value="25-50">£25M - £50M</option>
-                    <option value="50-100">£50M - £100M</option>
-                    <option value="over-100">Over £100M</option>
-                  </select>
-                </div>
-                
-                <div>
-                  <label class="block text-sm font-medium text-gray-700 mb-2">
-                    AI Implementation Scope *
-                  </label>
-                  <select 
-                    name="ai-usage"
-                    required
-                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  >
-                    <option value="">Select your situation</option>
-                    <option value="basic">Basic AI tools and automation</option>
-                    <option value="integrated">AI integrated in products/services</option>
-                    <option value="custom">Custom AI systems deployment</option>
-                    <option value="gpai">General Purpose AI model usage</option>
-                  </select>
-                </div>
-                
-                <div>
-                  <label class="block text-sm font-medium text-gray-700 mb-2">
-                    Compliance Urgency Assessment
-                  </label>
-                  <textarea 
-                    name="urgency-details"
-                    rows="3"
-                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="Describe your urgent compliance requirements and timeline..."
-                  ></textarea>
-                </div>
-
-                <div class="bg-green-50 rounded-lg p-4">
-                  <div class="text-center">
-                    <p class="text-green-600 font-semibold">✓ Professional consultation within 24 hours</p>
-                    <p class="text-green-600 font-semibold">✓ Assessment engagement within 48 hours</p>
-                    <p class="text-green-600 font-semibold">✓ 6-day delivery guarantee</p>
-                  </div>
-                </div>
+                <select 
+                  name="ai-usage"
+                  required
+                  class="w-full px-3 py-2 border rounded focus:ring-2 focus:ring-blue-500"
+                >
+                  <option value="">AI Usage Type</option>
+                  <option value="basic">Basic AI tools</option>
+                  <option value="integrated">AI in products</option>
+                  <option value="custom">Custom systems</option>
+                  <option value="gpai">GPAI models</option>
+                </select>
 
                 <button 
                   type="submit"
-                  class="w-full bg-blue-600 hover:bg-blue-700 text-white py-4 rounded-lg font-bold text-lg transition-colors shadow-lg"
+                  class="w-full bg-blue-600 text-white py-3 rounded font-semibold hover:bg-blue-700"
                 >
-                  Request Professional Assessment - £9,500
+                  Request Assessment
                 </button>
               </form>
             </div>
@@ -545,46 +214,12 @@ import Footer from '../components/Footer.astro';
   </main>
   
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const calculateButton = document.getElementById('risk-calculate-button');
-      const revenueInput = document.getElementById('risk-revenue-input');
-      
-      if (calculateButton && revenueInput) {
-        calculateButton.addEventListener('click', function() {
-          const revenue = parseFloat(revenueInput.value);
-          
-          if (revenue && revenue > 0) {
-            // Calculate 7% penalty
-            const penalty = revenue * 1000000 * 0.07;
-            const assessmentCost = 9500;
-            const protectionRatio = Math.round(penalty / assessmentCost);
-            
-            // Format penalty as currency
-            const penaltyFormatted = '£' + penalty.toLocaleString('en-GB', {
-              minimumFractionDigits: 0,
-              maximumFractionDigits: 0
-            });
-            
-            // Show result
-            document.getElementById('risk-penalty-amount').textContent = penaltyFormatted;
-            document.getElementById('risk-protection-ratio').textContent = protectionRatio + ':1';
-            document.getElementById('risk-penalty-result').style.display = 'block';
-            
-            // Track the calculation
-            if (typeof window.trackConversion !== 'undefined') {
-              window.trackConversion('emergency_penalty_calculated', {revenue: revenue, ratio: protectionRatio});
-            }
-          } else {
-            alert('Please enter a valid revenue amount (e.g., 10 for £10M)');
-          }
-        });
-        
-        // Allow Enter key to calculate
-        revenueInput.addEventListener('keypress', function(e) {
-          if (e.key === 'Enter') {
-            calculateButton.click();
-          }
-        });
+    document.getElementById('calculate-btn').addEventListener('click', function() {
+      const revenue = parseFloat(document.getElementById('revenue-input').value);
+      if (revenue > 0) {
+        const penalty = revenue * 1000000 * 0.07;
+        document.getElementById('penalty').textContent = '£' + penalty.toLocaleString();
+        document.getElementById('result').classList.remove('hidden');
       }
     });
   </script>
