@@ -1,587 +1,207 @@
----
-import Layout from '../layouts/Layout.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
----
-
-<Layout 
-  title="AI-Enhanced EU AI Act Analysis Methodology | AiLex Consulting"
-  description="Our transparent Claude-powered methodology delivers 99.7% regulatory requirement coverage through systematic AI-human collaboration for EU AI Act compliance."
->
-  <Header />
-  
-  <main>
-    <!-- Methodology Hero -->
-    <section class="bg-gradient-to-br from-blue-50 to-purple-50 py-20">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-12">
-          <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-            Our <span class="text-blue-600">AI-Enhanced</span> Methodology
-          </h1>
-          <p class="text-xl md:text-2xl text-gray-700 mb-8 max-w-4xl mx-auto">
-            Transparent systematic analysis delivering 99.7% regulatory requirement coverage
-          </p>
-          <div class="bg-white rounded-xl shadow-lg p-6 max-w-2xl mx-auto">
-            <p class="text-lg font-semibold text-blue-600 mb-2">
-              Why We're Transparent About AI Enhancement
-            </p>
-            <p class="text-gray-700">
-              Our Claude AI partnership is a competitive advantage, not a secret. See exactly how AI-human collaboration delivers superior compliance analysis.
-            </p>
-          </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Enhanced Compliance Methodology | AiLex Consulting</title>
+    <meta name="description" content="Systematic Claude AI-enhanced methodology achieving 99.7% regulatory coverage through systematic analysis for EU AI Act compliance assessments.">
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How does AI-enhanced analysis improve compliance assessment accuracy?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Claude AI processes all 99 EU AI Act articles simultaneously, identifying regulatory interconnections and patterns that manual analysis typically misses, achieving 99.7% requirement coverage."
+                }
+            },
+            {
+                "@type": "Question", 
+                "name": "What is the systematic process for 6-day emergency assessments?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Four-phase methodology: system discovery and inventory, comprehensive technical analysis, risk classification with GPAI evaluation, and strategic compliance roadmap development."
+                }
+            }
+        ]
+    }
+    </script>
+    
+    <style>
+        :root {
+            --institutional-navy: #1a365d;
+            --academic-gray: #2d3748;
+            --regulatory-blue: #1e40af;
+            --authority-green: #166534;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; line-height: 1.6; color: var(--academic-gray); }
+        .font-serif { font-family: Georgia, serif; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
+        
+        .hero { background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%); padding: 4rem 0; text-align: center; }
+        .hero h1 { font-size: 2.5rem; font-weight: 700; color: var(--institutional-navy); margin-bottom: 1rem; font-family: Georgia, serif; }
+        .hero-subtitle { font-size: 1.25rem; color: var(--academic-gray); margin-bottom: 2rem; }
+        .scientia-badge { background: white; padding: 1rem 2rem; border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); display: inline-block; border-left: 4px solid var(--regulatory-blue); }
+        
+        .section { padding: 3rem 0; border-bottom: 1px solid #e5e7eb; }
+        .section:last-child { border-bottom: none; }
+        .section h2 { font-size: 2rem; font-weight: 700; color: var(--institutional-navy); margin-bottom: 1rem; font-family: Georgia, serif; text-align: center; }
+        .section p { text-align: center; margin-bottom: 2rem; color: var(--academic-gray); }
+        
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin: 2rem 0; }
+        .stat-card { text-align: center; padding: 1.5rem; background: white; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .stat-number { font-size: 2.5rem; font-weight: 700; color: var(--regulatory-blue); margin-bottom: 0.5rem; }
+        .stat-label { font-weight: 600; color: var(--institutional-navy); }
+        
+        .process-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
+        .process-card { background: white; border-radius: 8px; padding: 2rem; box-shadow: 0 2px 4px rgba(0,0,0,0.1); border-left: 4px solid var(--regulatory-blue); }
+        .process-number { background: var(--regulatory-blue); color: white; width: 2rem; height: 2rem; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; margin-bottom: 1rem; }
+        .process-title { font-size: 1.125rem; font-weight: 600; color: var(--institutional-navy); margin-bottom: 0.5rem; }
+        
+        .comparison-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-top: 2rem; }
+        .comparison-column h3 { font-size: 1.5rem; font-weight: 600; margin-bottom: 1.5rem; color: var(--institutional-navy); }
+        .comparison-item { padding: 1rem; margin-bottom: 1rem; border-radius: 6px; }
+        .traditional-item { background: #fef2f2; border-left: 3px solid #dc2626; }
+        .enhanced-item { background: #f0fdf4; border-left: 3px solid var(--authority-green); }
+        
+        .faq-section { background: #f9fafb; padding: 3rem 0; }
+        .faq-item { background: white; border-radius: 8px; padding: 1.5rem; margin-bottom: 1rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        .faq-question { font-size: 1.125rem; font-weight: 600; color: var(--institutional-navy); margin-bottom: 0.75rem; }
+        
+        .cta-section { background: var(--institutional-navy); color: white; padding: 3rem 0; text-align: center; }
+        .cta-button { background: var(--regulatory-blue); color: white; padding: 0.875rem 2rem; border-radius: 6px; text-decoration: none; font-weight: 600; display: inline-block; margin-top: 1rem; transition: background-color 0.3s; }
+        .cta-button:hover { background: #1d4ed8; }
+        
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .comparison-grid { grid-template-columns: 1fr; gap: 2rem; }
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <div class="container">
+            <h1>AI-Enhanced Compliance Methodology</h1>
+            <p class="hero-subtitle">Systematic Claude AI analysis achieving 99.7% regulatory requirement coverage</p>
+            <div class="scientia-badge">
+                <strong>SCIENTIA ET LEX</strong><br>
+                Evidence-based regulatory compliance through AI-human collaboration
+            </div>
         </div>
-      </div>
     </section>
 
-    <!-- The Challenge -->
-    <section class="py-16 bg-white">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-12">
-          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-            The EU AI Act Compliance Challenge
-          </h2>
-          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-            Why traditional compliance approaches fail with complex AI regulations
-          </p>
+    <section class="section">
+        <div class="container">
+            <h2>How does AI-enhanced analysis improve compliance assessment accuracy?</h2>
+            <p>Claude AI processes all 99 EU AI Act articles simultaneously, identifying regulatory interconnections and patterns that manual analysis typically misses.</p>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">99.7%</div>
+                    <div class="stat-label">Requirement Coverage</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">6</div>
+                    <div class="stat-label">Day Delivery</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Systematic Process</div>
+                </div>
+            </div>
         </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div class="bg-red-50 rounded-xl p-6 text-center">
-            <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <span class="text-2xl font-bold text-red-600">99</span>
-            </div>
-            <h3 class="font-semibold text-lg mb-2">Regulatory Articles</h3>
-            <p class="text-gray-600 text-sm">Complex interconnected requirements across technical, operational, and governance domains</p>
-          </div>
-
-          <div class="bg-yellow-50 rounded-xl p-6 text-center">
-            <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <span class="text-2xl font-bold text-yellow-600">180</span>
-            </div>
-            <h3 class="font-semibold text-lg mb-2">Pages of Regulation</h3>
-            <p class="text-gray-600 text-sm">Dense legal language requiring systematic interpretation and cross-referencing</p>
-          </div>
-
-          <div class="bg-blue-50 rounded-xl p-6 text-center">
-            <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <span class="text-2xl font-bold text-blue-600">∞</span>
-            </div>
-            <h3 class="font-semibold text-lg mb-2">Interconnections</h3>
-            <p class="text-gray-600 text-sm">Requirements reference each other in complex patterns that manual analysis often misses</p>
-          </div>
-
-          <div class="bg-purple-50 rounded-xl p-6 text-center">
-            <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <span class="text-2xl font-bold text-purple-600">⏰</span>
-            </div>
-            <h3 class="font-semibold text-lg mb-2">Time Pressure</h3>
-            <p class="text-gray-600 text-sm">GPAI deadlines approaching while businesses need immediate clarity</p>
-          </div>
-        </div>
-
-        <div class="mt-12 bg-gray-50 rounded-xl p-8">
-          <h3 class="text-2xl font-bold text-center mb-6">Traditional Analysis Problems</h3>
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="text-center">
-              <span class="text-4xl mb-3 block">❌</span>
-              <h4 class="font-semibold mb-2">Incomplete Coverage</h4>
-              <p class="text-gray-600 text-sm">Manual analysis typically misses 15-30% of applicable requirements</p>
-            </div>
-            <div class="text-center">
-              <span class="text-4xl mb-3 block">⏳</span>
-              <h4 class="font-semibold mb-2">Slow Delivery</h4>
-              <p class="text-gray-600 text-sm">Traditional consulting takes 4-8 weeks for comprehensive analysis</p>
-            </div>
-            <div class="text-center">
-              <span class="text-4xl mb-3 block">💸</span>
-              <h4 class="font-semibold mb-2">High Cost</h4>
-              <p class="text-gray-600 text-sm">Manual analysis requires extensive senior consultant time</p>
-            </div>
-          </div>
-        </div>
-      </div>
     </section>
 
-    <!-- Our AI-Enhanced Solution -->
-    <section class="py-16 bg-blue-900 text-white">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-12">
-          <h2 class="text-3xl md:text-4xl font-bold mb-6">
-            Our AI-Enhanced Solution
-          </h2>
-          <p class="text-xl text-blue-200 max-w-3xl mx-auto">
-            Claude AI + regulatory expertise = systematic analysis that delivers superior results
-          </p>
-        </div>
-
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div>
-            <h3 class="text-2xl font-bold mb-6">Why Claude AI Partnership?</h3>
-            <div class="space-y-4">
-              <div class="flex items-start">
-                <div class="w-8 h-8 bg-blue-700 rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
-                  <span class="text-white font-bold text-sm">1</span>
+    <section class="section">
+        <div class="container">
+            <h2>What is the systematic process for 6-day emergency assessments?</h2>
+            <p>Four-phase methodology combining human expertise with AI-powered systematic analysis</p>
+            
+            <div class="process-grid">
+                <div class="process-card">
+                    <div class="process-number">01</div>
+                    <div class="process-title">System Discovery & Inventory</div>
+                    <p>Comprehensive AI system identification and initial risk categorisation through stakeholder interviews combined with Claude AI pattern recognition across regulatory definitions.</p>
                 </div>
-                <div>
-                  <h4 class="font-semibold text-lg mb-1">Comprehensive Analysis</h4>
-                  <p class="text-blue-200">Claude can systematically process all 99 articles simultaneously, identifying patterns and connections human analysis might miss.</p>
+                
+                <div class="process-card">
+                    <div class="process-number">02</div>
+                    <div class="process-title">Technical Analysis & Regulatory Mapping</div>
+                    <p>Deep technical specification review with systematic mapping of each system to EU AI Act requirements, identifying applicable obligations and compliance evidence gaps.</p>
                 </div>
-              </div>
-
-              <div class="flex items-start">
-                <div class="w-8 h-8 bg-blue-700 rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
-                  <span class="text-white font-bold text-sm">2</span>
+                
+                <div class="process-card">
+                    <div class="process-number">03</div>
+                    <div class="process-title">Risk Classification & GPAI Assessment</div>
+                    <p>AI-enhanced risk category assignment with specific General Purpose AI model evaluation, including FLOPS calculation and systematic deadline urgency assessment.</p>
                 </div>
-                <div>
-                  <h4 class="font-semibold text-lg mb-1">Consistent Quality</h4>
-                  <p class="text-blue-200">AI analysis eliminates human variability, ensuring every assessment follows the same rigorous systematic approach.</p>
+                
+                <div class="process-card">
+                    <div class="process-number">04</div>
+                    <div class="process-title">Strategic Roadmap Development</div>
+                    <p>Prioritised compliance action plan with realistic timelines, resource requirements, and dependency-optimised implementation sequence for maximum efficiency.</p>
                 </div>
-              </div>
-
-              <div class="flex items-start">
-                <div class="w-8 h-8 bg-blue-700 rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
-                  <span class="text-white font-bold text-sm">3</span>
-                </div>
-                <div>
-                  <h4 class="font-semibold text-lg mb-1">Speed Without Sacrifice</h4>
-                  <p class="text-blue-200">6-day delivery maintains thoroughness through AI-powered systematic processing of complex regulatory requirements.</p>
-                </div>
-              </div>
-
-              <div class="flex items-start">
-                <div class="w-8 h-8 bg-blue-700 rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
-                  <span class="text-white font-bold text-sm">4</span>
-                </div>
-                <div>
-                  <h4 class="font-semibold text-lg mb-1">Regulatory Expertise Enhanced</h4>
-                  <p class="text-blue-200">AI handles systematic analysis while regulatory expertise guides interpretation and practical application.</p>
-                </div>
-              </div>
             </div>
-          </div>
-
-          <div class="bg-blue-800 rounded-xl p-8">
-            <h3 class="text-2xl font-bold mb-6 text-center">Our Results</h3>
-            <div class="space-y-6">
-              <div class="text-center">
-                <div class="text-4xl font-bold text-amber-400 mb-2">99.7%</div>
-                <p class="text-blue-200">Requirement Coverage</p>
-                <p class="text-sm text-blue-300 mt-1">Systematic analysis ensures comprehensive regulatory compliance</p>
-              </div>
-
-              <div class="text-center">
-                <div class="text-4xl font-bold text-green-400 mb-2">6x</div>
-                <p class="text-blue-200">Faster Delivery</p>
-                <p class="text-sm text-blue-300 mt-1">AI-enhanced analysis completed in days, not weeks</p>
-              </div>
-
-              <div class="text-center">
-                <div class="text-4xl font-bold text-purple-400 mb-2">100%</div>
-                <p class="text-blue-200">Systematic Approach</p>
-                <p class="text-sm text-blue-300 mt-1">Every assessment follows identical rigorous methodology</p>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
     </section>
 
-    <!-- 6-Day Process Detail -->
-    <section class="py-16 bg-gray-50">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-12">
-          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-            Detailed 6-Day Process Breakdown
-          </h2>
-          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-            Systematic AI-human collaboration delivering comprehensive compliance analysis
-          </p>
+    <section class="section">
+        <div class="container">
+            <h2>Traditional vs AI-Enhanced Analysis</h2>
+            <p>Systematic comparison demonstrating measurable advantages of AI-human collaboration</p>
+            
+            <div class="comparison-grid">
+                <div class="comparison-column">
+                    <h3>Traditional Manual Analysis</h3>
+                    <div class="comparison-item traditional-item">
+                        <strong>Incomplete Coverage:</strong> Manual analysis typically achieves 70-85% requirement identification due to human processing limitations across 99 interconnected articles.
+                    </div>
+                    <div class="comparison-item traditional-item">
+                        <strong>Extended Timeline:</strong> 4-8 weeks required for comprehensive analysis due to sequential manual processing and review cycles.
+                    </div>
+                </div>
+                
+                <div class="comparison-column">
+                    <h3>AI-Enhanced Systematic Analysis</h3>
+                    <div class="comparison-item enhanced-item">
+                        <strong>Comprehensive Coverage:</strong> 99.7% requirement identification through systematic processing of all regulatory interconnections simultaneously.
+                    </div>
+                    <div class="comparison-item enhanced-item">
+                        <strong>Accelerated Delivery:</strong> 6-day completion through AI-powered parallel processing combined with expert validation and practical guidance.
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <div class="space-y-8">
-          <!-- Day 1 -->
-          <div class="bg-white rounded-xl shadow-lg overflow-hidden">
-            <div class="bg-gradient-to-r from-blue-600 to-blue-700 text-white p-6">
-              <h3 class="text-2xl font-bold">Day 1: Discovery & System Inventory</h3>
-              <p class="text-blue-200 mt-2">Foundation setting through comprehensive AI system identification</p>
-            </div>
-            <div class="p-8">
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div>
-                  <h4 class="text-xl font-semibold mb-4 text-blue-600">Human-Led Activities</h4>
-                  <ul class="space-y-2">
-                    <li class="flex items-start">
-                      <span class="text-green-500 mr-2 mt-1">👥</span>
-                      <span>Stakeholder interviews and system walkthroughs</span>
-                    </li>
-                    <li class="flex items-start">
-                      <span class="text-green-500 mr-2 mt-1">🔍</span>
-                      <span>Technical architecture and data flow discovery</span>
-                    </li>
-                    <li class="flex items-start">
-                      <span class="text-green-500 mr-2 mt-1">📋</span>
-                      <span>Existing documentation review and gap identification</span>
-                    </li>
-                    <li class="flex items-start">
-                      <span class="text-green-500 mr-2 mt-1">🎯</span>
-                      <span>Business context and use case understanding</span>
-                    </li>
-                  </ul>
-                </div>
-                <div>
-                  <h4 class="text-xl font-semibold mb-4 text-purple-600">AI-Enhanced Analysis</h4>
-                  <ul class="space-y-2">
-                    <li class="flex items-start">
-                      <span class="text-blue-500 mr-2 mt-1">🤖</span>
-                      <span>Systematic categorization of AI systems by regulatory definitions</span>
-                    </li>
-                    <li class="flex items-start">
-                      <span class="text-blue-500 mr-2 mt-1">📊</span>
-                      <span>Initial risk pattern recognition and classification</span>
-                    </li>
-                    <li class="flex items-start">
-                      <span class="text-blue-500 mr-2 mt-1">🔗</span>
-                      <span>Cross-reference system interconnections and dependencies</span>
-                    </li>
-                    <li class="flex items-start">
-                      <span class="text-blue-500 mr-2 mt-1">⚡</span>
-                      <span>Rapid identification of immediate compliance concerns</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Day 2 -->
-          <div class="bg-white rounded-xl shadow-lg overflow-hidden">
-            <div class="bg-gradient-to-r from-amber-600 to-amber-700 text-white p-6">
-              <h3 class="text-2xl font-bold">Day 2: Deep System Analysis</h3>
-              <p class="text-amber-200 mt-2">Comprehensive technical and regulatory assessment of each AI system</p>
-            </div>
-            <div class="p-8">
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div>
-                  <h4 class="text-xl font-semibold mb-4 text-amber-600">Technical Deep Dive</h4>
-                  <ul class="space-y-2">
-                    <li class="flex items-start">
-                      <span class="text-green-500 mr-2 mt-1">⚙️</span>
-                      <span>Detailed technical specification analysis</span>
-                    </li>
-                    <li class="flex items-start">
-                      <span class="text-green-500 mr-2 mt-1">📈</span>
-                      <span>Data processing and decision-making workflow mapping</span>
-                    </li>
-                    <li class="flex items-start">
-                      <span class="text-green-500 mr-2 mt-1">🔒</span>
-                      <span>Security and privacy control assessment</span>
-                    </li>
-                    <li class="flex items-start">
-                      <span class="text-green-500 mr-2 mt-1">📝</span>
-                      <span>Documentation adequacy and completeness review</span>
-                    </li>
-                  </ul>
-                </div>
-                <div>
-                  <h4 class="text-xl font-semibold mb-4 text-purple-600">AI Regulatory Mapping</h4>
-                  <ul class="space-y-2">
-                    <li class="flex items-start">
-                      <span class="text-blue-500 mr-2 mt-1">🎯</span>
-                      <span>Systematic mapping of each system to EU AI Act definitions</span>
-                    </li>
-                    <li class="flex items-start">
-                      <span class="text-blue-500 mr-2 mt-1">⚖️</span>
-                      <span>Automated requirement applicability assessment</span>
-                    </li>
-                    <li class="flex items-start">
-                      <span class="text-blue-500 mr-2 mt-1">🔍</span>
-                      <span>Gap analysis against regulatory requirements</span>
-                    </li>
-                    <li class="flex items-start">
-                      <span class="text-blue-500 mr-2 mt-1">📋</span>
-                      <span>Compliance evidence identification and cataloging</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Day 3-4 Combined -->
-          <div class="bg-white rounded-xl shadow-lg overflow-hidden">
-            <div class="bg-gradient-to-r from-green-600 to-green-700 text-white p-6">
-              <h3 class="text-2xl font-bold">Days 3-4: Risk Classification & GPAI Assessment</h3>
-              <p class="text-green-200 mt-2">AI-enhanced systematic classification and General Purpose AI evaluation</p>
-            </div>
-            <div class="p-8">
-              <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div>
-                  <h4 class="text-xl font-semibold mb-4 text-green-600">Risk Classification</h4>
-                  <ul class="space-y-2 text-sm">
-                    <li class="flex items-start">
-                      <span class="text-green-500 mr-2 mt-1">📊</span>
-                      <span>Systematic risk category assignment</span>
-                    </li>
-                    <li class="flex items-start">
-                      <span class="text-blue-500 mr-2 mt-1">🤖</span>
-                      <span>AI-powered risk pattern recognition</span>
-                    </li>
-                    <li class="flex items-start">
-                      <span class="text-green-500 mr-2 mt-1">⚡</span>
-                      <span>High-risk system identification</span>
-                    </li>
-                    <li class="flex items-start">
-                      <span class="text-blue-500 mr-2 mt-1">🔗</span>
-                      <span>Cross-system risk dependency mapping</span>
-                    </li>
-                  </ul>
-                </div>
-                <div>
-                  <h4 class="text-xl font-semibold mb-4 text-green-600">GPAI Evaluation</h4>
-                  <ul class="space-y-2 text-sm">
-                    <li class="flex items-start">
-                      <span class="text-green-500 mr-2 mt-1">🎯</span>
-                      <span>General Purpose AI model identification</span>
-                    </li>
-                    <li class="flex items-start">
-                      <span class="text-blue-500 mr-2 mt-1">⚖️</span>
-                      <span>Systematic FLOPS calculation analysis</span>
-                    </li>
-                    <li class="flex items-start">
-                      <span class="text-green-500 mr-2 mt-1">📋</span>
-                      <span>GPAI-specific requirement mapping</span>
-                    </li>
-                    <li class="flex items-start">
-                      <span class="text-blue-500 mr-2 mt-1">🚨</span>
-                      <span>Urgent compliance action identification</span>
-                    </li>
-                  </ul>
-                </div>
-                <div>
-                  <h4 class="text-xl font-semibold mb-4 text-green-600">Compliance Gaps</h4>
-                  <ul class="space-y-2 text-sm">
-                    <li class="flex items-start">
-                      <span class="text-green-500 mr-2 mt-1">🔍</span>
-                      <span>Detailed gap analysis and documentation</span>
-                    </li>
-                    <li class="flex items-start">
-                      <span class="text-blue-500 mr-2 mt-1">📈</span>
-                      <span>Priority ranking of compliance issues</span>
-                    </li>
-                    <li class="flex items-start">
-                      <span class="text-green-500 mr-2 mt-1">💡</span>
-                      <span>Quick win identification</span>
-                    </li>
-                    <li class="flex items-start">
-                      <span class="text-blue-500 mr-2 mt-1">⏰</span>
-                      <span>Timeline-based urgency assessment</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Day 5-6 -->
-          <div class="bg-white rounded-xl shadow-lg overflow-hidden">
-            <div class="bg-gradient-to-r from-purple-600 to-purple-700 text-white p-6">
-              <h3 class="text-2xl font-bold">Days 5-6: Action Plan & Roadmap Development</h3>
-              <p class="text-purple-200 mt-2">Strategic compliance roadmap with prioritised implementation guidance</p>
-            </div>
-            <div class="p-8">
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div>
-                  <h4 class="text-xl font-semibold mb-4 text-purple-600">Strategic Planning</h4>
-                  <ul class="space-y-2">
-                    <li class="flex items-start">
-                      <span class="text-green-500 mr-2 mt-1">🗺️</span>
-                      <span>Comprehensive compliance roadmap development</span>
-                    </li>
-                    <li class="flex items-start">
-                      <span class="text-green-500 mr-2 mt-1">📅</span>
-                      <span>Realistic timeline and milestone planning</span>
-                    </li>
-                    <li class="flex items-start">
-                      <span class="text-green-500 mr-2 mt-1">💰</span>
-                      <span>Resource requirement and budget estimation</span>
-                    </li>
-                    <li class="flex items-start">
-                      <span class="text-green-500 mr-2 mt-1">⚡</span>
-                      <span>Quick wins and immediate action identification</span>
-                    </li>
-                  </ul>
-                </div>
-                <div>
-                  <h4 class="text-xl font-semibold mb-4 text-purple-600">AI-Enhanced Optimization</h4>
-                  <ul class="space-y-2">
-                    <li class="flex items-start">
-                      <span class="text-blue-500 mr-2 mt-1">🎯</span>
-                      <span>Systematic priority optimization across all requirements</span>
-                    </li>
-                    <li class="flex items-start">
-                      <span class="text-blue-500 mr-2 mt-1">🔗</span>
-                      <span>Dependency and sequence optimization</span>
-                    </li>
-                    <li class="flex items-start">
-                      <span class="text-blue-500 mr-2 mt-1">📊</span>
-                      <span>Risk-based implementation sequencing</span>
-                    </li>
-                    <li class="flex items-start">
-                      <span class="text-blue-500 mr-2 mt-1">✅</span>
-                      <span>Quality assurance and completeness verification</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </section>
 
-    <!-- Quality Assurance -->
-    <section class="py-16 bg-white">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-12">
-          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-            Quality Assurance & Validation
-          </h2>
-          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-            Multiple verification layers ensure reliable, actionable compliance guidance
-          </p>
+    <section class="faq-section">
+        <div class="container">
+            <h2>Methodology Questions</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">How does Claude AI enhance regulatory analysis accuracy?</div>
+                <div>Claude processes all 99 EU AI Act articles simultaneously, identifying regulatory patterns and cross-references that sequential human analysis often misses. This systematic approach ensures comprehensive requirement coverage while maintaining analysis speed.</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">What quality assurance validates AI-enhanced analysis?</div>
+                <div>Multi-pass AI analysis undergoes regulatory expert validation, ensuring practical applicability and implementation feasibility. Every deliverable receives systematic verification against regulatory requirements and real-world compliance criteria.</div>
+            </div>
         </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div class="bg-blue-50 rounded-xl p-8 text-center">
-            <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-              <span class="text-white text-2xl">🔄</span>
-            </div>
-            <h3 class="text-xl font-semibold mb-4">Multi-Pass Analysis</h3>
-            <p class="text-gray-600">
-              Claude performs multiple analysis passes, each focusing on different aspects of compliance requirements to ensure comprehensive coverage.
-            </p>
-          </div>
-
-          <div class="bg-green-50 rounded-xl p-8 text-center">
-            <div class="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
-              <span class="text-white text-2xl">👨‍💼</span>
-            </div>
-            <h3 class="text-xl font-semibold mb-4">Expert Validation</h3>
-            <p class="text-gray-600">
-              Regulatory expertise validates AI analysis, ensuring practical applicability and real-world implementation feasibility.
-            </p>
-          </div>
-
-          <div class="bg-purple-50 rounded-xl p-8 text-center">
-            <div class="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-              <span class="text-white text-2xl">✅</span>
-            </div>
-            <h3 class="text-xl font-semibold mb-3">Systematic Verification</h3>
-            <p class="text-gray-600">
-              Every deliverable undergoes systematic verification against regulatory requirements and practical implementation criteria.
-            </p>
-          </div>
-        </div>
-      </div>
     </section>
 
-    <!-- Competitive Advantage -->
-    <section class="py-16 bg-gray-900 text-white">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-12">
-          <h2 class="text-3xl md:text-4xl font-bold mb-6">
-            Why This Approach Wins
-          </h2>
-          <p class="text-xl text-gray-300 max-w-3xl mx-auto">
-            Transparency about our AI enhancement isn't just honest - it's our competitive advantage
-          </p>
+    <section class="cta-section">
+        <div class="container">
+            <h2>Request Professional Consultation</h2>
+            <p>Experience systematic AI-enhanced compliance analysis delivering measurable regulatory coverage improvements.</p>
+            <a href="/emergency-assessment" class="cta-button">Schedule Assessment</a>
         </div>
-
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          <div>
-            <h3 class="text-2xl font-bold mb-6 text-blue-400">Traditional Consulting</h3>
-            <div class="space-y-4">
-              <div class="flex items-start">
-                <span class="text-red-400 mr-3 mt-1">❌</span>
-                <div>
-                  <h4 class="font-semibold mb-1">Manual Analysis</h4>
-                  <p class="text-gray-300 text-sm">Human limitations lead to missed requirements and inconsistent quality</p>
-                </div>
-              </div>
-              <div class="flex items-start">
-                <span class="text-red-400 mr-3 mt-1">❌</span>
-                <div>
-                  <h4 class="font-semibold mb-1">Slow Delivery</h4>
-                  <p class="text-gray-300 text-sm">4-8 weeks for comprehensive analysis due to manual processing</p>
-                </div>
-              </div>
-              <div class="flex items-start">
-                <span class="text-red-400 mr-3 mt-1">❌</span>
-                <div>
-                  <h4 class="font-semibold mb-1">Variable Quality</h4>
-                  <p class="text-gray-300 text-sm">Results depend on individual consultant experience and attention</p>
-                </div>
-              </div>
-              <div class="flex items-start">
-                <span class="text-red-400 mr-3 mt-1">❌</span>
-                <div>
-                  <h4 class="font-semibold mb-1">High Cost</h4>
-                  <p class="text-gray-300 text-sm">Extensive senior consultant time increases project costs</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div>
-            <h3 class="text-2xl font-bold mb-6 text-green-400">Our AI-Enhanced Approach</h3>
-            <div class="space-y-4">
-              <div class="flex items-start">
-                <span class="text-green-400 mr-3 mt-1">✅</span>
-                <div>
-                  <h4 class="font-semibold mb-1">Systematic Coverage</h4>
-                  <p class="text-gray-300 text-sm">99.7% requirement coverage through AI-powered systematic analysis</p>
-                </div>
-              </div>
-              <div class="flex items-start">
-                <span class="text-green-400 mr-3 mt-1">✅</span>
-                <div>
-                  <h4 class="font-semibold mb-1">Rapid Delivery</h4>
-                  <p class="text-gray-300 text-sm">6-day turnaround through AI-enhanced processing power</p>
-                </div>
-              </div>
-              <div class="flex items-start">
-                <span class="text-green-400 mr-3 mt-1">✅</span>
-                <div>
-                  <h4 class="font-semibold mb-1">Consistent Excellence</h4>
-                  <p class="text-gray-300 text-sm">Every assessment follows identical rigorous methodology</p>
-                </div>
-              </div>
-              <div class="flex items-start">
-                <span class="text-green-400 mr-3 mt-1">✅</span>
-                <div>
-                  <h4 class="font-semibold mb-1">Superior Value</h4>
-                  <p class="text-gray-300 text-sm">Better results at competitive pricing through AI efficiency</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="text-center mt-12">
-          <p class="text-2xl font-semibold mb-6 text-amber-400">
-            Ready to Experience the Difference?
-          </p>
-          <a 
-            href="/emergency-assessment" 
-            class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-10 py-4 rounded-xl font-bold text-lg transition-colors shadow-xl"
-            onclick="trackConversion('methodology_final_cta')"
-          >
-            Get Your AI-Enhanced Assessment
-          </a>
-        </div>
-      </div>
     </section>
-  </main>
-  
-  <Footer />
-</Layout>
+</body>
+</html>
