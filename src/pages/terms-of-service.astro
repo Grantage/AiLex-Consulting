@@ -1,251 +1,221 @@
 ---
-// src/pages/terms.astro
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 ---
 
-<Layout title="Terms of Service - AiLex Consulting" description="Professional terms of service for AiLex Consulting regulatory affairs and AI governance services. European legal standards for portfolio company advisory.">
+<Layout 
+  title="Terms of Service | AiLex Consulting | Professional AI Governance Advisory"
+  description="Professional service terms governing AiLex Consulting regulatory affairs and AI governance advisory relationships. Comprehensive framework for systematic compliance consultation."
+>
   <Header />
   
-  <main class="bg-parchment">
-    <!-- Header Section -->
-    <section class="pt-20 pb-12 bg-white border-b border-slate-200">
+  <main>
+    <!-- Professional Hero -->
+    <section class="bg-gradient-to-r from-slate-50 to-blue-50 py-12">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center">
-          <h1 class="text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
+          <p class="text-slate-600 text-sm mb-4 tracking-wider">SCIENTIA ET LEX</p>
+          <h1 class="text-3xl md:text-4xl font-serif text-slate-900 mb-4">
             Terms of Service
           </h1>
-          <p class="text-xl text-advisory-grey max-w-3xl mx-auto">
-            Professional service terms governing AiLex Consulting regulatory affairs 
-            and AI governance advisory relationships.
+          <p class="text-lg text-slate-700 max-w-2xl mx-auto mb-6">
+            Professional service terms governing AiLex Consulting regulatory affairs and AI governance advisory relationships.
           </p>
-          <div class="mt-6 text-sm text-slate-600">
-            <p><strong>Effective Date:</strong> 1 January 2025</p>
-            <p><strong>Last Updated:</strong> 3 June 2025</p>
+          <div class="grid grid-cols-3 gap-4 max-w-lg mx-auto text-sm">
+            <div class="text-center">
+              <div class="font-bold text-blue-800">1 Jan 2025</div>
+              <p class="text-slate-600">Effective Date</p>
+            </div>
+            <div class="text-center">
+              <div class="font-bold text-green-700">£2M</div>
+              <p class="text-slate-600">Professional Indemnity</p>
+            </div>
+            <div class="text-center">
+              <div class="font-bold text-amber-600">UK Law</div>
+              <p class="text-slate-600">Governing Jurisdiction</p>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Terms Content -->
-    <section class="py-16">
+    <!-- Company Information -->
+    <section class="py-12 bg-white">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="bg-white rounded-2xl shadow-lg border border-slate-200 p-8 lg:p-12">
-          
-          <!-- Company Information -->
-          <div class="mb-12 pb-8 border-b border-slate-200">
-            <h2 class="text-2xl font-semibold text-slate-900 mb-6">Company Information</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
-              <div>
-                <p><strong>Company Name:</strong> AiLex Consulting Limited</p>
-                <p><strong>Registration:</strong> England and Wales</p>
-                <p><strong>Company Number:</strong> [To be confirmed upon incorporation]</p>
-                <p><strong>Registered Address:</strong> [To be confirmed]</p>
-              </div>
-              <div>
-                <p><strong>Principal Contact:</strong> matthew@ailexconsulting.com</p>
-                <p><strong>Telephone:</strong> +44 (0) 7XXX XXX XXX</p>
-                <p><strong>VAT Registration:</strong> [To be confirmed]</p>
-                <p><strong>Professional Indemnity:</strong> £2,000,000</p>
-              </div>
+        <h2 class="text-2xl font-serif text-slate-900 mb-6">Company Information</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
+          <div class="bg-slate-50 rounded-lg p-4">
+            <h3 class="font-semibold text-slate-900 mb-2">Legal Entity</h3>
+            <p class="text-slate-700">AiLex Consulting Limited, England and Wales Registration</p>
+            <p class="text-slate-600">Principal Contact: matthew@ailexconsulting.com</p>
+          </div>
+          <div class="bg-slate-50 rounded-lg p-4">
+            <h3 class="font-semibold text-slate-900 mb-2">Professional Standards</h3>
+            <p class="text-slate-700">Professional Indemnity: £2,000,000 per claim</p>
+            <p class="text-slate-600">Regulatory Affairs & AI Governance Specialisation</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Service Standards -->
+    <section class="py-12 bg-slate-50">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-2xl font-serif text-slate-900 mb-6">Service Provision Framework</h2>
+        <div class="space-y-4">
+          <div class="bg-white rounded-lg p-4 border border-slate-200">
+            <h3 class="font-semibold text-slate-900 mb-2">Professional Standards</h3>
+            <p class="text-slate-700 text-sm">AiLex Consulting provides Professional Services with skill, care, and diligence reasonably expected from competent practitioners in regulatory affairs and AI governance, maintaining current knowledge of EU AI Act requirements and UK data protection legislation.</p>
+          </div>
+          <div class="bg-white rounded-lg p-4 border border-slate-200">
+            <h3 class="font-semibold text-slate-900 mb-2">Service Scope</h3>
+            <p class="text-slate-700 text-sm">Services performed in accordance with Statement of Work or Service Schedule. Variations requiring additional resources or extending timelines require written agreement and additional fees. Client cooperation essential including timely information provision and decision-making authority.</p>
+          </div>
+          <div class="bg-white rounded-lg p-4 border border-slate-200">
+            <h3 class="font-semibold text-slate-900 mb-2">Professional Independence</h3>
+            <p class="text-slate-700 text-sm">AiLex maintains professional independence whilst delivering services. Recommendations based on regulatory requirements and best practice rather than commercial considerations unrelated to compliance objectives.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Financial Terms -->
+    <section class="py-12 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-2xl font-serif text-slate-900 mb-6">Fees & Payment Terms</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="space-y-4">
+            <div class="bg-slate-50 rounded-lg p-4">
+              <h3 class="font-semibold text-slate-900 mb-2">Fee Structure</h3>
+              <p class="text-slate-700 text-sm">Fixed project amounts, monthly retainers, or time-based charges at agreed rates. Project fees exceeding £10,000 require advance payments according to milestones.</p>
+            </div>
+            <div class="bg-slate-50 rounded-lg p-4">
+              <h3 class="font-semibold text-slate-900 mb-2">Payment Terms</h3>
+              <p class="text-slate-700 text-sm">Invoices due within 14 days. Assessment services require 60% payment upon engagement commencement. Late payment incurs 8% above Bank of England base rate.</p>
             </div>
           </div>
-
-          <!-- Section 1: Definitions -->
-          <section class="mb-8">
-            <h2 class="text-2xl font-semibold text-slate-900 mb-4">1. Definitions and Interpretation</h2>
-            <div class="space-y-3 text-advisory-grey">
-              <p><strong>"Agreement"</strong> means these Terms of Service combined with any Statement of Work, Proposal, or Service Schedule agreed between the parties.</p>
-              <p><strong>"Client"</strong> means the organisation or individual engaging AiLex Consulting for professional services.</p>
-              <p><strong>"Confidential Information"</strong> includes all proprietary, technical, commercial, or strategic information disclosed by either party.</p>
-              <p><strong>"Deliverables"</strong> means reports, assessments, frameworks, training materials, or other work products specified in the applicable Statement of Work.</p>
-              <p><strong>"EU AI Act"</strong> means Regulation (EU) 2024/1689 on artificial intelligence and amending regulations, as may be amended from time to time.</p>
-              <p><strong>"Professional Services"</strong> includes regulatory affairs guidance, AI governance advisory, compliance assessment, training delivery, and strategic consultation.</p>
-              <p><strong>"Personal Data"</strong> has the meaning set forth in the UK General Data Protection Regulation and Data Protection Act 2018.</p>
+          <div class="space-y-4">
+            <div class="bg-slate-50 rounded-lg p-4">
+              <h3 class="font-semibold text-slate-900 mb-2">Currency & VAT</h3>
+              <p class="text-slate-700 text-sm">All fees exclusive of VAT unless specified. Payments in GBP unless alternative arrangements documented. Emergency consultation commands premium rates.</p>
             </div>
-          </section>
-
-          <!-- Section 2: Service Provision -->
-          <section class="mb-8">
-            <h2 class="text-2xl font-semibold text-slate-900 mb-4">2. Service Provision and Scope</h2>
-            <div class="space-y-4 text-advisory-grey">
-              <p><strong>2.1 Service Standards:</strong> AiLex Consulting shall provide Professional Services with the skill, care, and diligence reasonably expected from a competent practitioner in regulatory affairs and AI governance.</p>
-              
-              <p><strong>2.2 Scope Definition:</strong> Services shall be performed in accordance with the Statement of Work or Service Schedule. Any variation requiring additional resources or extending timelines shall be subject to written agreement and additional fees.</p>
-              
-              <p><strong>2.3 Regulatory Currency:</strong> AILEX maintains current knowledge of EU AI Act requirements, UK data protection legislation, and related regulatory frameworks. Clients acknowledge that regulatory interpretation may evolve and additional guidance may necessitate service adjustments.</p>
-              
-              <p><strong>2.4 Independence Requirement:</strong> AILEX shall maintain professional independence whilst delivering services. Recommendations shall be based on regulatory requirements and best practice rather than commercial considerations unrelated to compliance objectives.</p>
-              
-              <p><strong>2.5 Client Cooperation:</strong> Service delivery requires Client cooperation including timely provision of information, access to relevant personnel, and decision-making authority for implementation recommendations.</p>
-            </div>
-          </section>
-
-          <!-- Section 3: Fees and Payment -->
-          <section class="mb-8">
-            <h2 class="text-2xl font-semibold text-slate-900 mb-4">3. Fees, Payment Terms, and Expenses</h2>
-            <div class="space-y-4 text-advisory-grey">
-              <p><strong>3.1 Fee Structure:</strong> Fees shall be as specified in the Statement of Work, calculated either as fixed project amounts, monthly retainers, or time-based charges at agreed daily or hourly rates.</p>
-              
-              <p><strong>3.2 Payment Schedule:</strong> Project fees exceeding £10,000 require advance payments according to agreed milestones. Retainer services require monthly payment in advance. Assessment services require 60% payment upon engagement commencement.</p>
-              
-              <p><strong>3.3 Payment Terms:</strong> Invoices are due within 14 days of issue unless otherwise specified. Late payment may incur interest at 8% above Bank of England base rate and suspension of services until payment received.</p>
-              
-              <p><strong>3.4 Expenses:</strong> Reasonable expenses incurred in service delivery, including travel, accommodation, and specialist third-party costs, shall be reimbursed at cost with appropriate documentation.</p>
-              
-              <p><strong>3.5 Currency and VAT:</strong> All fees are stated exclusive of VAT unless specified otherwise. Payments shall be made in GBP unless alternative currency arrangements are documented.</p>
-              
-              <p><strong>3.6 Fee Variation:</strong> Annual fee reviews may apply to ongoing retainer arrangements. Emergency consultation services command premium rates as specified in engagement communications.</p>
-            </div>
-          </section>
-
-          <!-- Section 4: Intellectual Property -->
-          <section class="mb-8">
-            <h2 class="text-2xl font-semibold text-slate-900 mb-4">4. Intellectual Property and Confidentiality</h2>
-            <div class="space-y-4 text-advisory-grey">
-              <p><strong>4.1 Deliverable Ownership:</strong> Upon full payment, Client shall own all rights in customised Deliverables created specifically for their organisation. AILEX retains ownership of methodologies, templates, and general knowledge developed independently.</p>
-              
-              <p><strong>4.2 Existing IP Protection:</strong> AILEX's pre-existing intellectual property, including assessment frameworks, training materials, and analytical methodologies, remains AILEX property with Client receiving licence for agreed purposes.</p>
-              
-              <p><strong>4.3 Confidentiality Obligations:</strong> Both parties undertake to maintain confidentiality of Confidential Information disclosed during the engagement. This obligation survives termination and continues for five years unless information enters public domain through no breach of this Agreement.</p>
-              
-              <p><strong>4.4 Data Protection Compliance:</strong> Processing of Personal Data shall comply with applicable data protection legislation. Where AILEX processes Personal Data on Client's behalf, separate data processing agreements may be required.</p>
-              
-              <p><strong>4.5 Knowledge Retention:</strong> AILEX may retain general knowledge, experience, and techniques acquired during service delivery for application to future client relationships, provided no Confidential Information is disclosed.</p>
-            </div>
-          </section>
-
-          <!-- Section 5: Liability and Insurance -->
-          <section class="mb-8">
-            <h2 class="text-2xl font-semibold text-slate-900 mb-4">5. Liability, Insurance, and Risk Allocation</h2>
-            <div class="space-y-4 text-advisory-grey">
-              <p><strong>5.1 Professional Standards:</strong> AILEX warrants that services shall be performed with reasonable skill and care in accordance with professional standards applicable to regulatory consulting.</p>
-              
-              <p><strong>5.2 Liability Limitation:</strong> AILEX's total liability for any claim arising from or relating to services shall not exceed the total fees paid by Client in the 12 months preceding the claim, subject to minimum liability of £50,000.</p>
-              
-              <p><strong>5.3 Excluded Losses:</strong> Neither party shall be liable for indirect, consequential, special, or punitive damages, loss of profits, business interruption, or loss of data, even if advised of the possibility of such damages.</p>
-              
-              <p><strong>5.4 Professional Indemnity:</strong> AILEX maintains professional indemnity insurance of not less than £2,000,000 per claim with annual aggregate cover. Insurance certificates available upon request.</p>
-              
-              <p><strong>5.5 Regulatory Interpretation:</strong> Whilst AILEX provides expert guidance on regulatory requirements, final compliance responsibility remains with Client. AILEX shall not be liable for regulatory interpretation changes or enforcement actions beyond its control.</p>
-              
-              <p><strong>5.6 Claim Notification:</strong> Claims must be notified in writing within 12 months of discovery or reasonable discovery of the circumstances giving rise to the claim.</p>
-            </div>
-          </section>
-
-          <!-- Section 6: Termination -->
-          <section class="mb-8">
-            <h2 class="text-2xl font-semibold text-slate-900 mb-4">6. Termination and Suspension</h2>
-            <div class="space-y-4 text-advisory-grey">
-              <p><strong>6.1 Termination Rights:</strong> Either party may terminate with 30 days' written notice for ongoing retainer arrangements. Project-based work may be terminated only with mutual consent or for material breach.</p>
-              
-              <p><strong>6.2 Immediate Termination:</strong> Either party may terminate immediately upon written notice if the other party commits material breach unremedied after 14 days' written notice, becomes insolvent, or ceases trading.</p>
-              
-              <p><strong>6.3 Payment on Termination:</strong> Upon termination, Client shall pay for all services performed and expenses incurred up to the termination date. Work product completed prior to termination shall be delivered upon payment.</p>
-              
-              <p><strong>6.4 Service Suspension:</strong> AILEX may suspend services if payments become overdue by more than 30 days, provided 14 days' written notice is given.</p>
-              
-              <p><strong>6.5 Survival Provisions:</strong> Confidentiality, intellectual property, payment obligations, and liability limitations shall survive termination.</p>
-            </div>
-          </section>
-
-          <!-- Section 7: General Provisions -->
-          <section class="mb-8">
-            <h2 class="text-2xl font-semibold text-slate-900 mb-4">7. General Provisions</h2>
-            <div class="space-y-4 text-advisory-grey">
-              <p><strong>7.1 Governing Law:</strong> This Agreement shall be governed by English law and subject to the exclusive jurisdiction of English courts.</p>
-              
-              <p><strong>7.2 Force Majeure:</strong> Neither party shall be liable for failure to perform obligations due to circumstances beyond reasonable control, including natural disasters, government actions, or technical failures.</p>
-              
-              <p><strong>7.3 Entire Agreement:</strong> This Agreement constitutes the entire agreement between parties and supersedes all prior negotiations, representations, or agreements relating to the subject matter.</p>
-              
-              <p><strong>7.4 Variation:</strong> Modifications must be agreed in writing by authorised representatives of both parties.</p>
-              
-              <p><strong>7.5 Severability:</strong> If any provision is found invalid or unenforceable, the remaining provisions shall continue in full force and effect.</p>
-              
-              <p><strong>7.6 Assignment:</strong> Neither party may assign rights or obligations without prior written consent, except AILEX may assign to affiliated companies or in connection with business transfer.</p>
-              
-              <p><strong>7.7 Notices:</strong> Formal notices shall be delivered to the registered addresses or principal email addresses of each party and deemed received when delivery is confirmed.</p>
-            </div>
-          </section>
-
-          <!-- Section 8: Regulatory Compliance -->
-          <section class="mb-8">
-            <h2 class="text-2xl font-semibold text-slate-900 mb-4">8. Regulatory and Professional Compliance</h2>
-            <div class="space-y-4 text-advisory-grey">
-              <p><strong>8.1 Professional Standards:</strong> AILEX adheres to applicable professional standards for regulatory consulting and maintains current knowledge through continuing professional development.</p>
-              
-              <p><strong>8.2 Regulatory Authority:</strong> AILEX operates as an independent professional services firm and does not hold itself out as providing legal advice unless separately qualified and engaged for such purpose.</p>
-              
-              <p><strong>8.3 Conflicts of Interest:</strong> AILEX shall disclose any material conflicts of interest and implement appropriate measures to ensure independent professional judgement.</p>
-              
-              <p><strong>8.4 Anti-Bribery Compliance:</strong> Both parties shall comply with applicable anti-bribery and corruption legislation, including the UK Bribery Act 2010.</p>
-              
-              <p><strong>8.5 Data Security:</strong> AILEX maintains appropriate technical and organisational measures to protect Confidential Information and Personal Data in accordance with applicable data protection requirements.</p>
-            </div>
-          </section>
-
-          <!-- Contact Information -->
-          <div class="mt-12 pt-8 border-t border-slate-200">
-            <h3 class="text-lg font-semibold text-slate-900 mb-4">Questions About These Terms</h3>
-            <div class="bg-parchment rounded-lg p-6">
-              <p class="text-advisory-grey mb-4">
-                For questions regarding these Terms of Service or to discuss service arrangements, please contact:
-              </p>
-              <div class="space-y-2 text-sm">
-                <p><strong>Principal Contact:</strong> Matthew Grant</p>
-                <p><strong>Email:</strong> matthew@ailexconsulting.com</p>
-                <p><strong>Telephone:</strong> +44 (0) 7XXX XXX XXX</p>
-                <p><strong>Address:</strong> AiLex Consulting Limited, [Registered Address]</p>
-              </div>
+            <div class="bg-slate-50 rounded-lg p-4">
+              <h3 class="font-semibold text-slate-900 mb-2">Expenses</h3>
+              <p class="text-slate-700 text-sm">Reasonable expenses including travel, accommodation, and specialist third-party costs reimbursed at cost with appropriate documentation.</p>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
 
-          <!-- Legal Notice -->
-          <div class="mt-8 p-4 bg-slate-50 rounded-lg border border-slate-200">
-            <p class="text-xs text-slate-600">
-              <strong>Legal Notice:</strong> These Terms of Service constitute a legally binding agreement. 
-              By engaging AiLex Consulting services, clients acknowledge acceptance of these terms. 
-              Independent legal advice is recommended for significant service engagements.
-            </p>
+    <!-- Intellectual Property -->
+    <section class="py-12 bg-slate-50">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-2xl font-serif text-slate-900 mb-6">Intellectual Property & Confidentiality</h2>
+        <div class="space-y-4">
+          <div class="bg-white rounded-lg p-4 border border-slate-200">
+            <h3 class="font-semibold text-slate-900 mb-2">Deliverable Ownership</h3>
+            <p class="text-slate-700 text-sm">Upon full payment, Client owns customised Deliverables created specifically for their organisation. AiLex retains ownership of methodologies, templates, and general knowledge developed independently.</p>
           </div>
+          <div class="bg-white rounded-lg p-4 border border-slate-200">
+            <h3 class="font-semibold text-slate-900 mb-2">Confidentiality</h3>
+            <p class="text-slate-700 text-sm">Both parties maintain confidentiality of disclosed information. Obligation survives termination and continues for five years unless information enters public domain through no breach of this Agreement.</p>
+          </div>
+          <div class="bg-white rounded-lg p-4 border border-slate-200">
+            <h3 class="font-semibold text-slate-900 mb-2">Data Protection</h3>
+            <p class="text-slate-700 text-sm">Personal Data processing complies with applicable legislation. Where AiLex processes Personal Data on Client's behalf, separate data processing agreements may be required.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- Liability Framework -->
+    <section class="py-12 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-2xl font-serif text-slate-900 mb-6">Liability & Professional Standards</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="space-y-4">
+            <div class="bg-slate-50 rounded-lg p-4">
+              <h3 class="font-semibold text-slate-900 mb-2">Professional Warranty</h3>
+              <p class="text-slate-700 text-sm">Services performed with reasonable skill and care in accordance with professional standards applicable to regulatory consulting.</p>
+            </div>
+            <div class="bg-slate-50 rounded-lg p-4">
+              <h3 class="font-semibold text-slate-900 mb-2">Liability Limitation</h3>
+              <p class="text-slate-700 text-sm">Total liability shall not exceed fees paid by Client in 12 months preceding claim, subject to minimum liability of £50,000.</p>
+            </div>
+          </div>
+          <div class="space-y-4">
+            <div class="bg-slate-50 rounded-lg p-4">
+              <h3 class="font-semibold text-slate-900 mb-2">Professional Indemnity</h3>
+              <p class="text-slate-700 text-sm">AiLex maintains professional indemnity insurance of £2,000,000 per claim with annual aggregate cover. Certificates available upon request.</p>
+            </div>
+            <div class="bg-slate-50 rounded-lg p-4">
+              <h3 class="font-semibold text-slate-900 mb-2">Claim Notification</h3>
+              <p class="text-slate-700 text-sm">Claims must be notified in writing within 12 months of discovery or reasonable discovery of circumstances giving rise to claim.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- General Provisions -->
+    <section class="py-12 bg-slate-50">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-2xl font-serif text-slate-900 mb-6">General Provisions</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
+          <div class="space-y-3">
+            <div class="bg-white rounded-lg p-3 border border-slate-200">
+              <strong>Governing Law:</strong> English law and exclusive jurisdiction of English courts
+            </div>
+            <div class="bg-white rounded-lg p-3 border border-slate-200">
+              <strong>Termination:</strong> 30 days' written notice for retainer arrangements, immediate for material breach
+            </div>
+            <div class="bg-white rounded-lg p-3 border border-slate-200">
+              <strong>Force Majeure:</strong> Neither party liable for circumstances beyond reasonable control
+            </div>
+          </div>
+          <div class="space-y-3">
+            <div class="bg-white rounded-lg p-3 border border-slate-200">
+              <strong>Variation:</strong> Modifications require written agreement by authorised representatives
+            </div>
+            <div class="bg-white rounded-lg p-3 border border-slate-200">
+              <strong>Professional Compliance:</strong> Adherence to applicable standards with continuing development
+            </div>
+            <div class="bg-white rounded-lg p-3 border border-slate-200">
+              <strong>Anti-Bribery:</strong> Compliance with applicable legislation including UK Bribery Act 2010
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Information -->
+    <section class="py-12 bg-slate-900 text-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-2xl font-serif mb-4">Questions About These Terms</h2>
+        <p class="text-slate-300 mb-6">
+          For questions regarding Terms of Service or to discuss service arrangements, contact our professional team.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
+          <div class="bg-slate-800 rounded-lg p-4">
+            <h3 class="font-semibold mb-2">Principal Contact</h3>
+            <p>Matthew Grant, Principal</p>
+            <p>matthew@ailexconsulting.com</p>
+          </div>
+          <div class="bg-slate-800 rounded-lg p-4">
+            <h3 class="font-semibold mb-2">Legal Notice</h3>
+            <p>These Terms constitute legally binding agreement</p>
+            <p>Independent legal advice recommended for significant engagements</p>
+          </div>
         </div>
       </div>
     </section>
   </main>
-
+  
   <Footer />
 </Layout>
 
 <style>
-  /* Additional styling for professional document appearance */
-  .terms-section {
-    @apply mb-8 last:mb-0;
-  }
-  
-  .terms-subsection {
-    @apply mb-4 last:mb-0;
-  }
-  
-  /* Print-friendly styles */
-  @media print {
-    .no-print {
-      display: none !important;
-    }
-    
-    body {
-      font-size: 12pt;
-      line-height: 1.4;
-    }
-    
-    h1, h2, h3 {
-      page-break-after: avoid;
-    }
-    
-    .terms-section {
-      page-break-inside: avoid;
-    }
-  }
+  .font-serif { font-family: Georgia, serif; }
 </style>
