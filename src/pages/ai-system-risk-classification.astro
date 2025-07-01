@@ -5,485 +5,215 @@ import Footer from '../components/Footer.astro';
 ---
 
 <Layout 
-  title="How to Determine if Your AI System is High-Risk Under EU AI Act | AiLex Consulting"
-  description="Complete guide to AI system risk classification under the EU AI Act. Interactive checker, Annex III requirements, and expert compliance guidance for UK companies."
+  title="AI System Risk Classification Under EU AI Act | AiLex Consulting"
+  description="Professional AI risk classification services for EU AI Act compliance. Expert assessment preventing €15M misclassification penalties."
 >
   <Header />
   
   <main>
-    <!-- Hero Section with Direct Answer -->
-    <section class="bg-gradient-to-br from-blue-50 to-amber-50 py-20">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-12">
-          <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-            How to Determine if Your AI System is 
-            <span class="text-red-600">High-Risk</span>
+    <!-- Professional Hero -->
+    <section class="bg-gradient-to-r from-slate-50 to-red-50 py-16">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+          <h1 class="text-4xl md:text-5xl font-serif text-slate-900 mb-6">
+            EU AI Act Risk <span class="text-red-700">Classification</span>
           </h1>
-          <div class="bg-white rounded-xl shadow-lg p-8 max-w-4xl mx-auto mb-8">
-            <p class="text-xl md:text-2xl text-gray-800 font-semibold mb-4">
-              Direct Answer: AI systems are classified as high-risk under the EU AI Act if they fall into specific categories listed in Annex III, including biometric identification, critical infrastructure management, education and training, employment decisions, access to essential services, law enforcement, migration and border control, or justice administration.
+          <div class="bg-white rounded-lg shadow-lg p-6 max-w-4xl mx-auto mb-8">
+            <p class="text-xl text-slate-800 font-semibold mb-4">
+              Direct Answer: AI systems are classified as high-risk under EU AI Act Annex III if they operate in biometric identification, critical infrastructure, employment decisions, essential services, law enforcement, education, migration, or justice administration. Misclassification penalties reach €15 million or 3% of global turnover.
             </p>
-            <p class="text-lg text-gray-700">
-              High-risk classification also applies to AI systems used as safety components in regulated products like medical devices or automotive systems. Misclassification can result in penalties up to €15 million or 3% of global turnover.
+            <p class="text-lg text-slate-700">
+              <em class="text-red-700">SCIENTIA ET LEX</em> — systematic classification through regulatory expertise prevents costly errors.
             </p>
           </div>
-        </div>
-
-        <!-- Interactive Risk Checker -->
-        <div class="bg-white rounded-xl shadow-xl p-8 max-w-3xl mx-auto">
-          <h2 class="text-2xl font-bold text-center mb-6 text-gray-900">
-            🔍 Interactive AI Risk Classification Checker
-          </h2>
-          <div class="space-y-6">
-            <div>
-              <label class="block text-lg font-medium text-gray-700 mb-3">
-                What does your AI system do? (Select the closest match)
-              </label>
-              <select 
-                id="ai-purpose-select"
-                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-lg"
-              >
-                <option value="">Select your AI system's primary purpose...</option>
-                <option value="biometric">Biometric identification or categorisation</option>
-                <option value="infrastructure">Critical infrastructure management (energy, transport, water)</option>
-                <option value="education">Education and vocational training (scoring, evaluation)</option>
-                <option value="employment">Employment decisions (recruitment, performance evaluation)</option>
-                <option value="essential-services">Access to essential services (credit scoring, insurance)</option>
-                <option value="law-enforcement">Law enforcement applications</option>
-                <option value="migration">Migration, asylum, or border control</option>
-                <option value="justice">Justice and democratic processes</option>
-                <option value="safety-component">Safety component in regulated products</option>
-                <option value="general-purpose">General-purpose AI model (foundation model)</option>
-                <option value="customer-service">Customer service or support</option>
-                <option value="content-generation">Content generation or recommendation</option>
-                <option value="data-analysis">Data analysis or business intelligence</option>
-                <option value="other">Other/None of the above</option>
-              </select>
+          <div class="grid grid-cols-4 gap-4 max-w-2xl mx-auto">
+            <div class="text-center">
+              <div class="text-2xl font-bold text-red-700">8</div>
+              <p class="text-slate-600 text-sm">Annex III Categories</p>
             </div>
-
-            <button 
-              id="check-risk-button"
-              class="w-full bg-blue-600 hover:bg-blue-700 text-white py-4 px-6 rounded-lg font-bold text-lg transition-colors shadow-lg"
-            >
-              Check Risk Classification
-            </button>
-
-            <div id="risk-result" class="hidden">
-              <div id="high-risk-result" class="bg-red-50 border-2 border-red-200 rounded-lg p-6 hidden">
-                <div class="flex items-center mb-4">
-                  <div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mr-4">
-                    <span class="text-red-600 text-2xl">⚠️</span>
-                  </div>
-                  <div>
-                    <h3 class="text-xl font-bold text-red-900">HIGH-RISK CLASSIFICATION</h3>
-                    <p class="text-red-700">Your AI system requires comprehensive EU AI Act compliance</p>
-                  </div>
-                </div>
-                <div class="space-y-3 mb-6">
-                  <p class="text-red-800 font-semibold">Required Actions:</p>
-                  <ul class="space-y-2 text-red-700">
-                    <li>• Comprehensive risk assessment and documentation</li>
-                    <li>• Conformity assessment before deployment</li>
-                    <li>• Human oversight and monitoring systems</li>
-                    <li>• Transparency and explainability requirements</li>
-                    <li>• Post-market surveillance and reporting</li>
-                  </ul>
-                </div>
-                <div class="bg-red-100 rounded-lg p-4 mb-4">
-                  <p class="text-red-800 font-semibold text-center">
-                    Penalty Risk: Up to €15M or 3% of global turnover for non-compliance
-                  </p>
-                </div>
-                <div class="text-center">
-                  <a href="/emergency-assessment" class="inline-block bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
-                    Get Professional Risk Assessment - £9,500
-                  </a>
-                </div>
-              </div>
-
-              <div id="gpai-result" class="bg-purple-50 border-2 border-purple-200 rounded-lg p-6 hidden">
-                <div class="flex items-center mb-4">
-                  <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mr-4">
-                    <span class="text-purple-600 text-2xl">🤖</span>
-                  </div>
-                  <div>
-                    <h3 class="text-xl font-bold text-purple-900">GENERAL-PURPOSE AI MODEL</h3>
-                    <p class="text-purple-700">Subject to specific GPAI obligations from August 2025</p>
-                  </div>
-                </div>
-                <div class="space-y-3 mb-6">
-                  <p class="text-purple-800 font-semibold">GPAI Requirements:</p>
-                  <ul class="space-y-2 text-purple-700">
-                    <li>• Model documentation and transparency reporting</li>
-                    <li>• Training data governance and bias assessment</li>
-                    <li>• Systemic risk evaluation for large models</li>
-                    <li>• Downstream use case monitoring</li>
-                  </ul>
-                </div>
-                <div class="bg-purple-100 rounded-lg p-4 mb-4">
-                  <p class="text-purple-800 font-semibold text-center">
-                    URGENT: GPAI obligations begin August 2, 2025
-                  </p>
-                </div>
-                <div class="text-center">
-                  <a href="/emergency-assessment" class="inline-block bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
-                    Get GPAI Compliance Assessment - £9,500
-                  </a>
-                </div>
-              </div>
-
-              <div id="low-risk-result" class="bg-green-50 border-2 border-green-200 rounded-lg p-6 hidden">
-                <div class="flex items-center mb-4">
-                  <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4">
-                    <span class="text-green-600 text-2xl">✅</span>
-                  </div>
-                  <div>
-                    <h3 class="text-xl font-bold text-green-900">LOW/MINIMAL RISK</h3>
-                    <p class="text-green-700">Limited compliance requirements</p>
-                  </div>
-                </div>
-                <div class="space-y-3 mb-6">
-                  <p class="text-green-800 font-semibold">Basic Requirements:</p>
-                  <ul class="space-y-2 text-green-700">
-                    <li>• Basic transparency if interacting with humans</li>
-                    <li>• Clear disclosure of AI system use</li>
-                    <li>• General data protection compliance</li>
-                    <li>• Monitor for potential reclassification</li>
-                  </ul>
-                </div>
-                <div class="text-center">
-                  <a href="/contact" class="inline-block bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
-                    Confirm Classification - Free Consultation
-                  </a>
-                </div>
-              </div>
+            <div class="text-center">
+              <div class="text-2xl font-bold text-orange-600">€15M</div>
+              <p class="text-slate-600 text-sm">Penalty Risk</p>
+            </div>
+            <div class="text-center">
+              <div class="text-2xl font-bold text-blue-700">6 Days</div>
+              <p class="text-slate-600 text-sm">Assessment</p>
+            </div>
+            <div class="text-center">
+              <div class="text-2xl font-bold text-green-700">99.7%</div>
+              <p class="text-slate-600 text-sm">Coverage</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Detailed Classification Guide -->
+    <!-- Classification Framework -->
     <section class="py-16 bg-white">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12">
-          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Complete EU AI Act Risk Classification Guide
-          </h2>
-          <p class="text-xl text-gray-600">
-            Understand exactly how the EU AI Act categorises AI systems and what it means for your business
-          </p>
+          <h2 class="text-3xl font-serif text-slate-900 mb-4">Systematic Classification Framework</h2>
+          <p class="text-lg text-slate-600">Evidence-based assessment methodology covering all regulatory categories</p>
         </div>
-
-        <!-- High-Risk Categories -->
-        <div class="mb-12">
-          <h3 class="text-2xl font-bold text-red-600 mb-6">High-Risk AI Systems (Annex III Categories)</h3>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div class="bg-red-50 rounded-xl p-6 border border-red-200">
-              <h4 class="text-xl font-semibold text-red-900 mb-3">1. Biometric Systems</h4>
-              <ul class="space-y-2 text-red-700">
-                <li>• Real-time biometric identification</li>
-                <li>• Biometric categorisation systems</li>
-                <li>• Emotion recognition in workplace/education</li>
-              </ul>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+          <div class="border border-red-200 rounded-lg p-6">
+            <div class="w-10 h-10 bg-red-700 text-white rounded-lg flex items-center justify-center mb-4">
+              <span class="font-mono text-sm">HR</span>
             </div>
-
-            <div class="bg-red-50 rounded-xl p-6 border border-red-200">
-              <h4 class="text-xl font-semibold text-red-900 mb-3">2. Critical Infrastructure</h4>
-              <ul class="space-y-2 text-red-700">
-                <li>• Road traffic management</li>
-                <li>• Water, gas, electricity supply</li>
-                <li>• Digital infrastructure components</li>
-              </ul>
-            </div>
-
-            <div class="bg-red-50 rounded-xl p-6 border border-red-200">
-              <h4 class="text-xl font-semibold text-red-900 mb-3">3. Education & Training</h4>
-              <ul class="space-y-2 text-red-700">
-                <li>• Student assessment and evaluation</li>
-                <li>• Admission decisions</li>
-                <li>• Educational path recommendations</li>
-              </ul>
-            </div>
-
-            <div class="bg-red-50 rounded-xl p-6 border border-red-200">
-              <h4 class="text-xl font-semibold text-red-900 mb-3">4. Employment Decisions</h4>
-              <ul class="space-y-2 text-red-700">
-                <li>• Recruitment and hiring processes</li>
-                <li>• Performance evaluation</li>
-                <li>• Promotion and termination decisions</li>
-              </ul>
-            </div>
-
-            <div class="bg-red-50 rounded-xl p-6 border border-red-200">
-              <h4 class="text-xl font-semibold text-red-900 mb-3">5. Essential Services</h4>
-              <ul class="space-y-2 text-red-700">
-                <li>• Credit scoring and loan decisions</li>
-                <li>• Insurance underwriting</li>
-                <li>• Healthcare service eligibility</li>
-              </ul>
-            </div>
-
-            <div class="bg-red-50 rounded-xl p-6 border border-red-200">
-              <h4 class="text-xl font-semibold text-red-900 mb-3">6. Law Enforcement</h4>
-              <ul class="space-y-2 text-red-700">
-                <li>• Risk assessment for crime prediction</li>
-                <li>• Evidence evaluation systems</li>
-                <li>• Lie detection technologies</li>
-              </ul>
-            </div>
-
-            <div class="bg-red-50 rounded-xl p-6 border border-red-200">
-              <h4 class="text-xl font-semibold text-red-900 mb-3">7. Migration & Justice</h4>
-              <ul class="space-y-2 text-red-700">
-                <li>• Asylum application processing</li>
-                <li>• Border control systems</li>
-                <li>• Court decision support</li>
-              </ul>
-            </div>
-
-            <div class="bg-red-50 rounded-xl p-6 border border-red-200">
-              <h4 class="text-xl font-semibold text-red-900 mb-3">8. Safety Components</h4>
-              <ul class="space-y-2 text-red-700">
-                <li>• Medical device AI components</li>
-                <li>• Automotive safety systems</li>
-                <li>• Aviation safety components</li>
-              </ul>
-            </div>
+            <h3 class="text-lg font-semibold text-slate-900 mb-3">High-Risk</h3>
+            <ul class="text-sm text-slate-700 space-y-1">
+              <li>• Biometric systems</li>
+              <li>• Critical infrastructure</li>
+              <li>• Employment decisions</li>
+              <li>• Essential services</li>
+            </ul>
           </div>
-        </div>
-
-        <!-- Compliance Requirements by Risk Level -->
-        <div class="bg-gray-50 rounded-2xl p-8">
-          <h3 class="text-2xl font-bold text-gray-900 mb-6 text-center">Compliance Requirements by Risk Level</h3>
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <!-- High-Risk Requirements -->
-            <div class="bg-white rounded-xl p-6 shadow-lg">
-              <h4 class="text-xl font-bold text-red-600 mb-4">High-Risk Systems</h4>
-              <ul class="space-y-3 text-gray-700">
-                <li class="flex items-start">
-                  <span class="text-red-500 mr-2 mt-1">•</span>
-                  <span>Risk management system</span>
-                </li>
-                <li class="flex items-start">
-                  <span class="text-red-500 mr-2 mt-1">•</span>
-                  <span>Data governance measures</span>
-                </li>
-                <li class="flex items-start">
-                  <span class="text-red-500 mr-2 mt-1">•</span>
-                  <span>Technical documentation</span>
-                </li>
-                <li class="flex items-start">
-                  <span class="text-red-500 mr-2 mt-1">•</span>
-                  <span>Human oversight measures</span>
-                </li>
-                <li class="flex items-start">
-                  <span class="text-red-500 mr-2 mt-1">•</span>
-                  <span>Accuracy and robustness</span>
-                </li>
-                <li class="flex items-start">
-                  <span class="text-red-500 mr-2 mt-1">•</span>
-                  <span>Transparency obligations</span>
-                </li>
-                <li class="flex items-start">
-                  <span class="text-red-500 mr-2 mt-1">•</span>
-                  <span>Conformity assessment</span>
-                </li>
-              </ul>
+          <div class="border border-purple-200 rounded-lg p-6">
+            <div class="w-10 h-10 bg-purple-700 text-white rounded-lg flex items-center justify-center mb-4">
+              <span class="font-mono text-sm">GP</span>
             </div>
-
-            <!-- Limited Risk Requirements -->
-            <div class="bg-white rounded-xl p-6 shadow-lg">
-              <h4 class="text-xl font-bold text-amber-600 mb-4">Limited Risk Systems</h4>
-              <ul class="space-y-3 text-gray-700">
-                <li class="flex items-start">
-                  <span class="text-amber-500 mr-2 mt-1">•</span>
-                  <span>Transparency obligations</span>
-                </li>
-                <li class="flex items-start">
-                  <span class="text-amber-500 mr-2 mt-1">•</span>
-                  <span>Clear disclosure to users</span>
-                </li>
-                <li class="flex items-start">
-                  <span class="text-amber-500 mr-2 mt-1">•</span>
-                  <span>User awareness requirements</span>
-                </li>
-                <li class="flex items-start">
-                  <span class="text-amber-500 mr-2 mt-1">•</span>
-                  <span>Basic data protection</span>
-                </li>
-              </ul>
+            <h3 class="text-lg font-semibold text-slate-900 mb-3">General-Purpose</h3>
+            <ul class="text-sm text-slate-700 space-y-1">
+              <li>• Foundation models</li>
+              <li>• Systemic risk assessment</li>
+              <li>• Model documentation</li>
+            </ul>
+          </div>
+          <div class="border border-amber-200 rounded-lg p-6">
+            <div class="w-10 h-10 bg-amber-600 text-white rounded-lg flex items-center justify-center mb-4">
+              <span class="font-mono text-sm">LR</span>
             </div>
-
-            <!-- Minimal Risk Requirements -->
-            <div class="bg-white rounded-xl p-6 shadow-lg">
-              <h4 class="text-xl font-bold text-green-600 mb-4">Minimal Risk Systems</h4>
-              <ul class="space-y-3 text-gray-700">
-                <li class="flex items-start">
-                  <span class="text-green-500 mr-2 mt-1">•</span>
-                  <span>Voluntary transparency</span>
-                </li>
-                <li class="flex items-start">
-                  <span class="text-green-500 mr-2 mt-1">•</span>
-                  <span>General data protection</span>
-                </li>
-                <li class="flex items-start">
-                  <span class="text-green-500 mr-2 mt-1">•</span>
-                  <span>Basic ethical guidelines</span>
-                </li>
-                <li class="flex items-start">
-                  <span class="text-green-500 mr-2 mt-1">•</span>
-                  <span>Monitor for reclassification</span>
-                </li>
-              </ul>
+            <h3 class="text-lg font-semibold text-slate-900 mb-3">Limited Risk</h3>
+            <ul class="text-sm text-slate-700 space-y-1">
+              <li>• Transparency obligations</li>
+              <li>• User disclosure</li>
+              <li>• Interaction clarity</li>
+            </ul>
+          </div>
+          <div class="border border-green-200 rounded-lg p-6">
+            <div class="w-10 h-10 bg-green-700 text-white rounded-lg flex items-center justify-center mb-4">
+              <span class="font-mono text-sm">MR</span>
             </div>
+            <h3 class="text-lg font-semibold text-slate-900 mb-3">Minimal Risk</h3>
+            <ul class="text-sm text-slate-700 space-y-1">
+              <li>• Voluntary measures</li>
+              <li>• General data protection</li>
+              <li>• Ethical guidelines</li>
+            </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Common Misclassification Scenarios -->
-    <section class="py-16 bg-white">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Annex III Categories -->
+    <section class="py-16 bg-slate-50">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12">
-          <h2 class="text-3xl font-bold text-red-600 mb-4">⚠️ Common Misclassification Risks</h2>
-          <p class="text-xl text-gray-600">
-            Avoid costly mistakes by understanding these frequently misclassified scenarios
-          </p>
+          <h2 class="text-3xl font-serif text-slate-900 mb-4">What AI Systems Are High-Risk Under EU AI Act?</h2>
+          <p class="text-lg text-slate-600">Comprehensive regulatory scope requiring professional assessment</p>
         </div>
-
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div class="bg-yellow-50 border-l-4 border-yellow-400 p-6 rounded-r-lg">
-            <h3 class="text-lg font-semibold text-yellow-800 mb-3">❌ Wrongly Classified as Low-Risk</h3>
-            <ul class="space-y-2 text-yellow-700">
-              <li>• AI-powered recruitment screening tools</li>
-              <li>• Credit scoring algorithms</li>
-              <li>• Employee performance evaluation systems</li>
-              <li>• Healthcare diagnostic support tools</li>
-              <li>• Educational assessment platforms</li>
-            </ul>
-            <p class="text-yellow-800 font-medium mt-4">
-              Risk: €15M penalty for operating high-risk systems without compliance
-            </p>
+          <div class="bg-white rounded-lg p-6 border border-slate-200">
+            <h3 class="text-xl font-semibold text-red-700 mb-4">Primary Categories</h3>
+            <div class="space-y-2 text-sm text-slate-700">
+              <div><span class="font-semibold">Biometric Systems:</span> Real-time identification, emotion recognition</div>
+              <div><span class="font-semibold">Critical Infrastructure:</span> Transport, energy, water management</div>
+              <div><span class="font-semibold">Education:</span> Assessment, admission, evaluation systems</div>
+              <div><span class="font-semibold">Employment:</span> Recruitment, performance decisions</div>
+            </div>
           </div>
-
-          <div class="bg-green-50 border-l-4 border-green-400 p-6 rounded-r-lg">
-            <h3 class="text-lg font-semibold text-green-800 mb-3">✅ Correctly Classified as Low-Risk</h3>
-            <ul class="space-y-2 text-green-700">
-              <li>• Content recommendation systems</li>
-              <li>• Marketing optimization tools</li>
-              <li>• Inventory management AI</li>
-              <li>• General business intelligence</li>
-              <li>• Customer service chatbots</li>
-            </ul>
-            <p class="text-green-800 font-medium mt-4">
-              Requirement: Basic transparency and disclosure obligations
-            </p>
-          </div>
-        </div>
-
-        <div class="bg-red-50 rounded-xl p-8 mt-8">
-          <h3 class="text-xl font-bold text-red-900 mb-4 text-center">
-            Professional Classification Required
-          </h3>
-          <p class="text-red-700 text-center mb-6">
-            Classification mistakes are the #1 cause of EU AI Act penalties. Don't risk €15M+ fines with DIY assessments.
-          </p>
-          <div class="text-center">
-            <a 
-              href="/emergency-assessment" 
-              class="inline-block bg-red-600 hover:bg-red-700 text-white px-12 py-4 rounded-xl font-bold text-lg transition-colors shadow-xl"
-            >
-              Get Professional Risk Classification - £9,500
-            </a>
-            <p class="text-red-600 mt-4 font-medium">
-              6-day systematic analysis • AI-enhanced methodology • 99.7% requirement coverage
-            </p>
+          <div class="bg-white rounded-lg p-6 border border-slate-200">
+            <h3 class="text-xl font-semibold text-red-700 mb-4">Additional Categories</h3>
+            <div class="space-y-2 text-sm text-slate-700">
+              <div><span class="font-semibold">Essential Services:</span> Credit scoring, insurance eligibility</div>
+              <div><span class="font-semibold">Law Enforcement:</span> Risk assessment, evidence evaluation</div>
+              <div><span class="font-semibold">Migration & Justice:</span> Asylum processing, court support</div>
+              <div><span class="font-semibold">Safety Components:</span> Medical devices, automotive systems</div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- FAQ Section -->
-    <section class="py-16 bg-gray-50">
+    <!-- Professional Services -->
+    <section class="py-16 bg-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-serif text-slate-900 mb-4">Professional Classification Services</h2>
+          <p class="text-lg text-slate-600">Expert assessment preventing misclassification penalties</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-slate-50 rounded-lg p-6">
+            <h3 class="text-lg font-semibold text-slate-900 mb-3">Classification Review</h3>
+            <div class="text-2xl font-bold text-blue-800 mb-4">£3,500</div>
+            <ul class="text-sm text-slate-700 space-y-1 mb-6">
+              <li>• Classification audit</li>
+              <li>• Regulatory alignment</li>
+              <li>• Risk exposure analysis</li>
+            </ul>
+            <a href="/contact" class="block text-center bg-slate-200 hover:bg-slate-300 text-slate-900 py-2 rounded font-semibold transition-colors">Request Review</a>
+          </div>
+          <div class="bg-white rounded-lg p-6 border-2 border-red-700">
+            <div class="text-center mb-3">
+              <span class="bg-red-700 text-white px-3 py-1 rounded text-xs font-semibold">RECOMMENDED</span>
+            </div>
+            <h3 class="text-lg font-semibold text-slate-900 mb-3">Complete Assessment</h3>
+            <div class="text-2xl font-bold text-red-700 mb-4">£9,500</div>
+            <ul class="text-sm text-slate-700 space-y-1 mb-6">
+              <li>• Full risk classification</li>
+              <li>• Compliance roadmap</li>
+              <li>• Implementation strategy</li>
+            </ul>
+            <a href="/emergency-assessment" class="block text-center bg-red-700 hover:bg-red-800 text-white py-2 rounded font-semibold transition-colors">Begin Assessment</a>
+          </div>
+          <div class="bg-slate-50 rounded-lg p-6">
+            <h3 class="text-lg font-semibold text-slate-900 mb-3">Ongoing Monitoring</h3>
+            <div class="text-2xl font-bold text-blue-800 mb-4">£1,200<span class="text-sm text-slate-600">/month</span></div>
+            <ul class="text-sm text-slate-700 space-y-1 mb-6">
+              <li>• Regular classification review</li>
+              <li>• Regulatory monitoring</li>
+              <li>• Risk status updates</li>
+            </ul>
+            <a href="/contact" class="block text-center bg-green-700 hover:bg-green-800 text-white py-2 rounded font-semibold transition-colors">Explore Monitoring</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ for AEO -->
+    <section class="py-16 bg-slate-50">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12">
-          <h2 class="text-3xl font-bold text-gray-900 mb-4">
-            Frequently Asked Questions
-          </h2>
+          <h2 class="text-3xl font-serif text-slate-900 mb-4">How Does AI Risk Classification Work?</h2>
         </div>
-
-        <div class="space-y-6">
-          <div class="bg-white rounded-lg p-6 shadow-md">
-            <h3 class="text-lg font-semibold text-gray-900 mb-3">
-              What happens if I misclassify my AI system?
-            </h3>
-            <p class="text-gray-700">
-              Misclassifying a high-risk AI system as low-risk can result in penalties up to €15 million or 3% of global annual turnover. Operating without required compliance measures exposes your organisation to significant regulatory and financial risk.
-            </p>
+        <div class="space-y-4">
+          <div class="bg-white rounded-lg p-4">
+            <h3 class="text-lg font-semibold text-slate-900 mb-2">What are the penalties for AI misclassification?</h3>
+            <p class="text-slate-700 text-sm">Misclassifying high-risk AI systems results in penalties up to €15 million or 3% of global annual turnover under EU AI Act enforcement.</p>
           </div>
-
-          <div class="bg-white rounded-lg p-6 shadow-md">
-            <h3 class="text-lg font-semibold text-gray-900 mb-3">
-              Can AI system classification change over time?
-            </h3>
-            <p class="text-gray-700">
-              Yes, AI system classification can change based on new use cases, updated regulations, or changes in system functionality. Regular review of classification status is essential for ongoing compliance.
-            </p>
-          </div>
-
-          <div class="bg-white rounded-lg p-6 shadow-md">
-            <h3 class="text-lg font-semibold text-gray-900 mb-3">
-              Do I need professional help for AI system classification?
-            </h3>
-            <p class="text-gray-700">
-              Given the complexity of EU AI Act requirements and severe penalties for misclassification, professional assessment is strongly recommended. Our AI-enhanced methodology ensures comprehensive analysis of all regulatory requirements.
-            </p>
-          </div>
-
-          <div class="bg-white rounded-lg p-6 shadow-md">
-            <h3 class="text-lg font-semibold text-gray-900 mb-3">
-              How long does professional classification take?
-            </h3>
-            <p class="text-gray-700">
-              Our emergency assessment process delivers complete AI system classification within 6 days, including risk categorisation, compliance requirements analysis, and implementation roadmap.
-            </p>
+          <div class="bg-white rounded-lg p-4">
+            <h3 class="text-lg font-semibold text-slate-900 mb-2">How long does professional classification take?</h3>
+            <p class="text-slate-700 text-sm">Professional AI risk classification delivers complete assessment within 6 days, including regulatory analysis and compliance roadmap.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Final CTA -->
-    <section class="py-16 bg-blue-900 text-white">
+    <!-- Professional Consultation -->
+    <section class="py-16 bg-slate-900 text-white">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 class="text-3xl md:text-4xl font-bold mb-6">
-          Get Professional AI Risk Classification
-        </h2>
-        <p class="text-xl text-blue-200 mb-8">
-          Don't risk €15M+ penalties with incorrect classification. Our AI-enhanced assessment delivers certainty in just 6 days.
-        </p>
+        <h2 class="text-3xl font-serif mb-6">Professional Risk Classification</h2>
+        <p class="text-xl text-slate-300 mb-8">Ensure accurate classification through systematic regulatory assessment methodology.</p>
         <div class="space-y-4 md:space-y-0 md:space-x-4 md:flex md:justify-center">
-          <a 
-            href="/emergency-assessment" 
-            class="inline-block bg-amber-500 hover:bg-amber-600 text-blue-900 px-12 py-6 rounded-xl font-bold text-xl transition-colors shadow-xl"
-          >
-            Emergency Assessment - £9,500
-          </a>
-          <a 
-            href="/contact" 
-            class="inline-block border-2 border-white text-white hover:bg-white hover:text-blue-900 px-10 py-6 rounded-xl font-bold text-xl transition-colors"
-          >
-            Free Classification Consultation
-          </a>
+          <a href="/emergency-assessment" class="inline-block bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">Emergency Assessment — £9,500</a>
+          <a href="/contact" class="inline-block border border-white text-white hover:bg-white hover:text-slate-900 px-8 py-3 rounded-lg font-semibold transition-colors">Schedule Consultation</a>
         </div>
-        <p class="text-blue-200 mt-6">
-          6-day delivery • AI-enhanced analysis • Complete compliance roadmap
-        </p>
+        <p class="text-slate-400 mt-6 text-sm">6-day delivery • AI-enhanced methodology • Regulatory certainty</p>
       </div>
     </section>
   </main>
 
-  <!-- Schema Markup for AEO -->
+  <!-- Schema Markup -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -491,80 +221,27 @@ import Footer from '../components/Footer.astro';
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "How do I determine if my AI system is high-risk under the EU AI Act?",
+        "name": "What are the penalties for AI misclassification?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "AI systems are classified as high-risk under the EU AI Act if they fall into specific categories listed in Annex III, including biometric identification, critical infrastructure management, education and training, employment decisions, access to essential services, law enforcement, migration and border control, or justice administration. High-risk classification also applies to AI systems used as safety components in regulated products like medical devices or automotive systems."
+          "text": "Misclassifying high-risk AI systems results in penalties up to €15 million or 3% of global annual turnover under EU AI Act enforcement."
         }
       },
       {
-        "@type": "Question",
-        "name": "What happens if I misclassify my AI system?",
+        "@type": "Question", 
+        "name": "How long does professional classification take?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Misclassifying a high-risk AI system as low-risk can result in penalties up to €15 million or 3% of global annual turnover. Operating without required compliance measures exposes your organisation to significant regulatory and financial risk."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can AI system classification change over time?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, AI system classification can change based on new use cases, updated regulations, or changes in system functionality. Regular review of classification status is essential for ongoing compliance."
+          "text": "Professional AI risk classification delivers complete assessment within 6 days, including regulatory analysis and compliance roadmap."
         }
       }
     ]
   }
   </script>
-  
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const purposeSelect = document.getElementById('ai-purpose-select');
-      const checkButton = document.getElementById('check-risk-button');
-      const resultDiv = document.getElementById('risk-result');
-      const highRiskResult = document.getElementById('high-risk-result');
-      const gpaiResult = document.getElementById('gpai-result');
-      const lowRiskResult = document.getElementById('low-risk-result');
 
-      if (checkButton && purposeSelect) {
-        checkButton.addEventListener('click', function() {
-          const purpose = purposeSelect.value;
-          
-          if (!purpose) {
-            alert('Please select your AI system\'s primary purpose');
-            return;
-          }
-
-          // Hide all results first
-          highRiskResult.classList.add('hidden');
-          gpaiResult.classList.add('hidden');
-          lowRiskResult.classList.add('hidden');
-
-          // Show appropriate result based on selection
-          if (['biometric', 'infrastructure', 'education', 'employment', 'essential-services', 'law-enforcement', 'migration', 'justice', 'safety-component'].includes(purpose)) {
-            highRiskResult.classList.remove('hidden');
-          } else if (purpose === 'general-purpose') {
-            gpaiResult.classList.remove('hidden');
-          } else {
-            lowRiskResult.classList.remove('hidden');
-          }
-
-          resultDiv.classList.remove('hidden');
-
-          // Track interaction
-          if (typeof window.trackConversion !== 'undefined') {
-            window.trackConversion('ai_risk_classification_used', {
-              purpose: purpose,
-              timestamp: new Date().toISOString()
-            });
-          }
-
-          // Scroll to result
-          resultDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        });
-      }
-    });
-  </script>
-  
   <Footer />
 </Layout>
+
+<style>
+  .font-serif { font-family: Georgia, serif; }
+</style>
