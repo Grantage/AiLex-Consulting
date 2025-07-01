@@ -11,119 +11,119 @@ import Footer from '../components/Footer.astro';
   <Header />
   
   <main>
-    <!-- Hero Authority -->
-    <section class="bg-gradient-to-br from-blue-50 to-amber-50 py-20">
+    <!-- Hero Authority - High Contrast -->
+    <section class="bg-white py-20 border-b border-gray-200">
       <div class="max-w-4xl mx-auto px-4 text-center">
-        <p class="text-sm text-gray-600 uppercase tracking-wide mb-3">SCIENTIA ET LEX</p>
-        <h1 class="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+        <p class="text-sm text-gray-500 uppercase tracking-wide mb-3 font-medium">SCIENTIA ET LEX</p>
+        <h1 class="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
           <span class="text-blue-900">Ai</span>Lex: European AI Governance Authority
         </h1>
-        <p class="text-xl text-gray-700 mb-8 max-w-3xl mx-auto">
+        <p class="text-xl text-gray-700 mb-8 max-w-3xl mx-auto leading-relaxed">
           Systematic EU AI Act compliance through AI-enhanced regulatory analysis
         </p>
 
-        <!-- Penalty Calculator -->
-        <div class="bg-white rounded-xl shadow-lg p-6 max-w-md mx-auto mb-8">
-          <h3 class="text-lg font-semibold mb-4">Calculate Penalty Exposure</h3>
+        <!-- Penalty Calculator - Enhanced Contrast -->
+        <div class="bg-gray-50 border-2 border-gray-200 rounded-xl shadow-sm p-6 max-w-md mx-auto mb-8">
+          <h3 class="text-lg font-semibold mb-4 text-gray-900">Calculate Penalty Exposure</h3>
           <div class="flex gap-3">
             <input 
               type="number" 
               id="revenue-input"
-              class="flex-1 px-3 py-2 border rounded focus:ring-2 focus:ring-blue-500"
+              class="flex-1 px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-blue-600 bg-white text-gray-900"
               placeholder="Revenue (£M)"
             />
             <button 
               id="calculate-button"
-              class="bg-red-600 text-white px-4 py-2 rounded font-medium hover:bg-red-700"
+              class="bg-red-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-700 transition-colors"
             >
               Calculate
             </button>
           </div>
-          <div id="penalty-result" class="mt-4 p-3 bg-red-50 rounded hidden">
-            <p class="text-red-800 font-semibold">Max Penalty: <span id="penalty-amount"></span></p>
+          <div id="penalty-result" class="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg hidden">
+            <p class="text-red-800 font-semibold">Max Penalty: <span id="penalty-amount" class="text-red-900"></span></p>
           </div>
         </div>
 
         <a 
           href="/emergency-assessment" 
-          class="inline-block bg-blue-900 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-800"
+          class="inline-block bg-blue-900 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-800 transition-colors shadow-lg"
         >
           Request Emergency Assessment - £9,500
         </a>
-        <p class="text-gray-600 mt-3">6-day systematic analysis • 99.7% regulatory coverage</p>
+        <p class="text-gray-600 mt-4 font-medium">6-day systematic analysis • 99.7% regulatory coverage</p>
       </div>
     </section>
 
-    <!-- Methodology -->
+    <!-- Methodology - Clean White Background -->
     <section class="py-16 bg-white">
       <div class="max-w-6xl mx-auto px-4">
-        <h2 class="text-3xl font-bold text-center mb-12">Systematic AI-Enhanced Analysis</h2>
+        <h2 class="text-3xl font-bold text-center mb-12 text-gray-900">Systematic AI-Enhanced Analysis</h2>
         
         <div class="grid md:grid-cols-3 gap-8">
-          <div class="text-center">
-            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+          <div class="text-center p-6 bg-gray-50 rounded-xl border border-gray-200">
+            <div class="w-16 h-16 bg-blue-900 text-white rounded-lg flex items-center justify-center mx-auto mb-4">
               <span class="text-2xl">🤖</span>
             </div>
-            <h3 class="font-semibold mb-2">AI-Enhanced</h3>
-            <p class="text-gray-600">Claude-powered analysis achieving 99.7% requirement coverage</p>
+            <h3 class="font-semibold mb-3 text-gray-900">AI-Enhanced</h3>
+            <p class="text-gray-700 leading-relaxed">Claude-powered analysis achieving 99.7% requirement coverage</p>
           </div>
 
-          <div class="text-center">
-            <div class="w-12 h-12 bg-amber-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+          <div class="text-center p-6 bg-gray-50 rounded-xl border border-gray-200">
+            <div class="w-16 h-16 bg-amber-600 text-white rounded-lg flex items-center justify-center mx-auto mb-4">
               <span class="text-2xl">⚡</span>
             </div>
-            <h3 class="font-semibold mb-2">6-Day Emergency</h3>
-            <p class="text-gray-600">Systematic assessment designed for urgent GPAI compliance</p>
+            <h3 class="font-semibold mb-3 text-gray-900">6-Day Emergency</h3>
+            <p class="text-gray-700 leading-relaxed">Systematic assessment designed for urgent GPAI compliance</p>
           </div>
 
-          <div class="text-center">
-            <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+          <div class="text-center p-6 bg-gray-50 rounded-xl border border-gray-200">
+            <div class="w-16 h-16 bg-green-600 text-white rounded-lg flex items-center justify-center mx-auto mb-4">
               <span class="text-2xl">🎯</span>
             </div>
-            <h3 class="font-semibold mb-2">SME-Focused</h3>
-            <p class="text-gray-600">Practical implementation requiring no internal compliance teams</p>
+            <h3 class="font-semibold mb-3 text-gray-900">SME-Focused</h3>
+            <p class="text-gray-700 leading-relaxed">Practical implementation requiring no internal compliance teams</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- FAQ Schema -->
-    <section class="py-16 bg-gray-50">
+    <!-- FAQ Schema - High Contrast -->
+    <section class="py-16 bg-gray-50 border-t border-gray-200">
       <div class="max-w-4xl mx-auto px-4">
-        <h2 class="text-3xl font-bold text-center mb-12">EU AI Act Compliance</h2>
+        <h2 class="text-3xl font-bold text-center mb-12 text-gray-900">EU AI Act Compliance</h2>
 
-        <div class="space-y-6">
-          <div class="bg-white rounded-lg p-6" itemscope itemtype="https://schema.org/Question">
-            <h3 class="font-semibold text-lg mb-3" itemprop="name">What are GPAI model obligations?</h3>
+        <div class="space-y-4">
+          <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm" itemscope itemtype="https://schema.org/Question">
+            <h3 class="font-semibold text-lg mb-3 text-gray-900" itemprop="name">What are GPAI model obligations?</h3>
             <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
-              <div itemprop="text" class="text-gray-700">
+              <div itemprop="text" class="text-gray-700 leading-relaxed">
                 <p>General-Purpose AI obligations take effect 2 August 2025, applying to foundation models exceeding 10^25 FLOPs. Companies using OpenAI, Anthropic, or Google APIs must implement systemic risk assessments and monitoring.</p>
               </div>
             </div>
           </div>
 
-          <div class="bg-white rounded-lg p-6" itemscope itemtype="https://schema.org/Question">
-            <h3 class="font-semibold text-lg mb-3" itemprop="name">How does AiLex achieve 99.7% coverage?</h3>
+          <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm" itemscope itemtype="https://schema.org/Question">
+            <h3 class="font-semibold text-lg mb-3 text-gray-900" itemprop="name">How does AiLex achieve 99.7% coverage?</h3>
             <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
-              <div itemprop="text" class="text-gray-700">
+              <div itemprop="text" class="text-gray-700 leading-relaxed">
                 <p>Our AI-enhanced methodology systematically analyses all 99 EU AI Act articles through Claude-powered review, ensuring comprehensive compliance assessment whilst maintaining practical implementation focus.</p>
               </div>
             </div>
           </div>
 
-          <div class="bg-white rounded-lg p-6" itemscope itemtype="https://schema.org/Question">
-            <h3 class="font-semibold text-lg mb-3" itemprop="name">What penalties apply for non-compliance?</h3>
+          <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm" itemscope itemtype="https://schema.org/Question">
+            <h3 class="font-semibold text-lg mb-3 text-gray-900" itemprop="name">What penalties apply for non-compliance?</h3>
             <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
-              <div itemprop="text" class="text-gray-700">
+              <div itemprop="text" class="text-gray-700 leading-relaxed">
                 <p>EU AI Act penalties reach €35 million or 7% of global turnover for prohibited practices, €15 million for high-risk violations, and €7.5 million for documentation failures.</p>
               </div>
             </div>
           </div>
 
-          <div class="bg-white rounded-lg p-6" itemscope itemtype="https://schema.org/Question">
-            <h3 class="font-semibold text-lg mb-3" itemprop="name">How can SMEs prepare without internal teams?</h3>
+          <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm" itemscope itemtype="https://schema.org/Question">
+            <h3 class="font-semibold text-lg mb-3 text-gray-900" itemprop="name">How can SMEs prepare without internal teams?</h3>
             <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
-              <div itemprop="text" class="text-gray-700">
+              <div itemprop="text" class="text-gray-700 leading-relaxed">
                 <p>AiLex's 6-day emergency assessment identifies all AI systems, classifies risks, and provides implementation roadmaps requiring no internal compliance expertise.</p>
               </div>
             </div>
@@ -132,21 +132,21 @@ import Footer from '../components/Footer.astro';
       </div>
     </section>
 
-    <!-- Final CTA -->
-    <section class="py-16 bg-blue-900 text-white">
+    <!-- Final CTA - High Contrast Dark -->
+    <section class="py-16 bg-gray-900 text-white border-t border-gray-800">
       <div class="max-w-4xl mx-auto px-4 text-center">
-        <h2 class="text-3xl font-bold mb-4">GPAI Deadline: 8 Weeks Remaining</h2>
-        <p class="text-xl mb-8 text-blue-200">
+        <h2 class="text-3xl font-bold mb-4 text-white">GPAI Deadline: 8 Weeks Remaining</h2>
+        <p class="text-xl mb-8 text-gray-300 leading-relaxed">
           Systematic compliance analysis protecting against €35M penalties
         </p>
         <a 
           href="/emergency-assessment" 
-          class="inline-block bg-amber-500 text-blue-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-amber-600"
+          class="inline-block bg-amber-500 text-gray-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-amber-400 transition-colors shadow-lg"
         >
           Request Emergency Assessment
         </a>
-        <p class="text-blue-200 mt-4">
-          Or <a href="/contact" class="underline">schedule consultation</a> to discuss requirements
+        <p class="text-gray-400 mt-4">
+          Or <a href="/contact" class="text-amber-400 hover:text-amber-300 underline">schedule consultation</a> to discuss requirements
         </p>
       </div>
     </section>
