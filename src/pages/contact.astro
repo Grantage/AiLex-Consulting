@@ -5,477 +5,265 @@ import Footer from '../components/Footer.astro';
 ---
 
 <Layout 
-  title="Contact AiLex Consulting - EU AI Act Compliance Consultation"
-  description="Book your free EU AI Act compliance consultation. Emergency assessments, SME solutions, and fractional CAIO services. Get expert guidance today."
+  title="Professional AI Governance Consultation | AiLex Consulting"
+  description="Schedule professional EU AI Act compliance consultation. Expert assessment and implementation guidance from European AI governance authorities."
 >
   <Header />
   
   <main>
-    <!-- Contact Hero -->
-    <section class="bg-gradient-to-br from-blue-50 to-green-50 py-20">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-12">
-          <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-            Let's Discuss Your 
-            <span class="text-blue-600">AI Compliance Needs</span>
+    <!-- Professional Hero -->
+    <section class="bg-gradient-to-r from-slate-50 to-blue-50 py-16">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+          <h1 class="text-4xl md:text-5xl font-serif text-slate-900 mb-6">
+            Professional <span class="text-blue-800">Consultation</span>
           </h1>
-          <p class="text-xl md:text-2xl text-gray-700 mb-8 max-w-4xl mx-auto">
-            Free consultation to understand your situation and recommend the right compliance approach
+          <p class="text-xl text-slate-700 max-w-4xl mx-auto mb-8">
+            Systematic EU AI Act compliance consultation providing regulatory certainty through evidence-based methodology. <em class="text-blue-800">SCIENTIA ET LEX</em> — professional guidance from established AI governance authorities.
           </p>
-          <div class="bg-red-100 border border-red-300 rounded-xl p-4 max-w-2xl mx-auto">
-            <p class="text-red-800 font-semibold">
-              ⚠️ GPAI Deadline: <span data-countdown>Loading...</span> Remaining
-            </p>
-            <p class="text-red-700 text-sm mt-1">
-              Book urgent consultation for immediate compliance guidance
-            </p>
+          <div class="bg-red-50 border border-red-200 rounded-lg p-4 max-w-2xl mx-auto">
+            <p class="text-red-800 font-semibold">GPAI Obligations: August 2, 2025</p>
+            <p class="text-red-700 text-sm">Schedule consultation for immediate compliance assessment</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Contact Options -->
+    <!-- Consultation Framework -->
     <section class="py-16 bg-white">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12">
-          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            How Would You Like to Connect?
-          </h2>
-          <p class="text-xl text-gray-600">
-            Choose the option that works best for your timeline and needs
-          </p>
+          <h2 class="text-3xl font-serif text-slate-900 mb-4">How Do I Schedule an AI Compliance Consultation?</h2>
+          <p class="text-lg text-slate-600">Systematic consultation process ensuring comprehensive regulatory assessment</p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-          <!-- Emergency Consultation Form -->
-          <div class="bg-red-50 rounded-2xl p-8 border-2 border-red-200">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Emergency Consultation -->
+          <div class="bg-red-50 rounded-lg p-8 border border-red-200">
             <div class="text-center mb-6">
-              <div class="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span class="text-white text-2xl">🚨</span>
+              <div class="w-12 h-12 bg-red-700 text-white rounded-lg flex items-center justify-center mx-auto mb-4">
+                <span class="text-2xl">⚡</span>
               </div>
-              <h3 class="text-2xl font-bold text-red-600 mb-4">Emergency Consultation</h3>
-              <p class="text-gray-700 mb-4">
-                Urgent GPAI compliance issues requiring immediate attention.
-              </p>
+              <h3 class="text-xl font-semibold text-slate-900 mb-2">Emergency Assessment</h3>
+              <p class="text-slate-600 text-sm">Urgent compliance requirements necessitating immediate regulatory analysis</p>
             </div>
             
-            <form name="emergency-contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="space-y-4">
-  <input type="hidden" name="form-name" value="emergency-contact" />
-  <input type="hidden" name="form-type" value="emergency" />
-  <input type="hidden" name="service-tier" value="Emergency Contact" />
-  <input type="hidden" name="lead-source" value="Website" />
-  
-  <p class="hidden">
-    <label>Don't fill this out: <input name="bot-field" /></label>
-  </p>
-  
-  <div>
-    <input 
-      type="text" 
-      name="name"
-      required
-      class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
-      placeholder="Your Name"
-    />
-  </div>
-  
-  <div>
-    <input 
-      type="email" 
-      name="email"
-      required
-      class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
-      placeholder="Email Address"
-    />
-  </div>
-  
-  <div>
-    <input 
-      type="text" 
-      name="company"
-      required
-      class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
-      placeholder="Company Name"
-    />
-  </div>
-
-  <div>
-    <select 
-      name="job-title"
-      class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
-    >
-      <option value="">Your Role (Optional)</option>
-      <option value="CEO">CEO/Founder</option>
-      <option value="Legal Counsel">Legal Counsel</option>  
-      <option value="Compliance Officer">Compliance Officer</option>
-      <option value="CTO">CTO/Technical Lead</option>
-      <option value="Product Manager">Product Manager</option>
-      <option value="Other">Other</option>
-    </select>
-  </div>
-
-  <div>
-    <select 
-      name="urgency-level"
-      class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
-    >
-      <option value="">Urgency Level</option>
-      <option value="immediate">Immediate (Same day response needed)</option>
-      <option value="urgent">Urgent (Within 24 hours)</option>
-      <option value="high">High (Within 48 hours)</option>
-    </select>
-  </div>
-  
-  <div>
-    <textarea 
-      name="urgency"
-      required
-      rows="3"
-      class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
-      placeholder="Briefly describe your urgent compliance issue"
-    ></textarea>
-  </div>
-  
-  <button 
-    type="submit"
-    class="w-full bg-red-600 hover:bg-red-700 text-white py-3 rounded-lg font-semibold transition-colors"
-  >
-    Request Emergency Call
-  </button>
-</form>
-</div>
-
-          <!-- Standard Consultation Form -->
-          <div class="bg-blue-50 rounded-2xl p-8 border-2 border-blue-200">
-            <div class="text-center mb-6">
-              <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span class="text-white text-2xl">📅</span>
-              </div>
-              <h3 class="text-2xl font-bold text-blue-600 mb-4">Standard Consultation</h3>
-              <p class="text-gray-700 mb-4">
-                30-minute structured consultation to discuss your compliance needs.
-              </p>
+            <div class="space-y-3 mb-6 text-sm text-slate-700">
+              <div>• Same-day response for urgent compliance matters</div>
+              <div>• Comprehensive 6-day systematic assessment</div>
+              <div>• £9,500 professional evaluation</div>
+              <div>• 99.7% regulatory requirement coverage</div>
             </div>
             
-            <form name="standard-consultation" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="space-y-4">
-  <input type="hidden" name="form-name" value="standard-consultation" />
-  <input type="hidden" name="form-type" value="standard" />
-  <input type="hidden" name="lead-source" value="Website" />
-  
-  <p class="hidden">
-    <label>Don't fill this out: <input name="bot-field" /></label>
-  </p>
-  
-  <div>
-    <input 
-      type="text" 
-      name="name"
-      required
-      class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-      placeholder="Your Name"
-    />
-  </div>
-  
-  <div>
-    <input 
-      type="email" 
-      name="email"
-      required
-      class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-      placeholder="Email Address"
-    />
-  </div>
-  
-  <div>
-    <input 
-      type="text" 
-      name="company"
-      required
-      class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-      placeholder="Company Name"
-    />
-  </div>
+            <a href="/emergency-assessment" class="block text-center bg-red-700 hover:bg-red-800 text-white py-3 rounded-lg font-semibold transition-colors">
+              Request Emergency Assessment
+            </a>
+          </div>
 
-  <div>
-    <select 
-      name="job-title"
-      class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-    >
-      <option value="">Your Role (Optional)</option>
-      <option value="CEO">CEO/Founder</option>
-      <option value="Legal Counsel">Legal Counsel</option>  
-      <option value="Compliance Officer">Compliance Officer</option>
-      <option value="CTO">CTO/Technical Lead</option>
-      <option value="Product Manager">Product Manager</option>
-      <option value="Other">Other</option>
-    </select>
-  </div>
-  
-  <div>
-    <select 
-      name="service"
-      class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-    >
-      <option value="">Select Service Interest</option>
-      <option value="emergency-assessment">Emergency Assessment (£9,500)</option>
-      <option value="sme-implementation">SME Implementation</option>
-      <option value="fractional-caio">Fractional CAIO</option>
-      <option value="consultation">Consultation Only</option>
-    </select>
-  </div>
-  
-  <div>
-    <textarea 
-      name="message"
-      rows="2"
-      class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-      placeholder="Brief message (optional)"
-    ></textarea>
-  </div>
-  
-  <button 
-    type="submit"
-    class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-semibold transition-colors"
-  >
-    Schedule Consultation
-  </button>
-</form>
+          <!-- Standard Consultation -->
+          <div class="bg-blue-50 rounded-lg p-8 border border-blue-200">
+            <div class="text-center mb-6">
+              <div class="w-12 h-12 bg-blue-800 text-white rounded-lg flex items-center justify-center mx-auto mb-4">
+                <span class="text-2xl">📋</span>
+              </div>
+              <h3 class="text-xl font-semibold text-slate-900 mb-2">Professional Consultation</h3>
+              <p class="text-slate-600 text-sm">Structured regulatory assessment and compliance guidance session</p>
+            </div>
+            
+            <div class="space-y-3 mb-6 text-sm text-slate-700">
+              <div>• 30-minute systematic compliance review</div>
+              <div>• Regulatory positioning assessment</div>
+              <div>• Implementation roadmap development</div>
+              <div>• Professional recommendation framework</div>
+            </div>
+            
+            <button onclick="document.getElementById('consultation-form').scrollIntoView({behavior: 'smooth'})" class="block w-full text-center bg-blue-800 hover:bg-blue-900 text-white py-3 rounded-lg font-semibold transition-colors">
+              Schedule Consultation
+            </button>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Contact Form -->
-    <section class="py-16 bg-gray-50">
+    <!-- Professional Consultation Form -->
+    <section class="py-16 bg-slate-50" id="consultation-form">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12">
-          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Or Fill Out This Detailed Form
-          </h2>
-          <p class="text-xl text-gray-600">
-            We'll respond within 24 hours with next steps
-          </p>
+          <h2 class="text-3xl font-serif text-slate-900 mb-4">Request Professional Consultation</h2>
+          <p class="text-lg text-slate-600">Complete assessment form for systematic compliance evaluation</p>
         </div>
 
-        <div class="bg-white rounded-2xl shadow-xl p-8">
-          <form name="general-contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="space-y-6">
-            <input type="hidden" name="form-name" value="general-contact" />
+        <div class="bg-white rounded-lg shadow-lg p-8">
+          <form name="professional-consultation" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="space-y-6">
+            <input type="hidden" name="form-name" value="professional-consultation" />
+            <input type="hidden" name="lead-source" value="Website Contact" />
+            
             <p class="hidden">
               <label>Don't fill this out: <input name="bot-field" /></label>
             </p>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <label for="name" class="block text-sm font-medium text-gray-700 mb-2">
-                  Full Name *
-                </label>
-                <input 
-                  type="text" 
-                  id="name" 
-                  name="name"
-                  required
-                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  placeholder="Your full name"
-                />
+                <label for="name" class="block text-sm font-semibold text-slate-700 mb-2">Full Name *</label>
+                <input type="text" id="name" name="name" required class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Your full name" />
               </div>
               <div>
-                <label for="email" class="block text-sm font-medium text-gray-700 mb-2">
-                  Business Email *
-                </label>
-                <input 
-                  type="email" 
-                  id="email" 
-                  name="email"
-                  required
-                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  placeholder="your.email@company.com"
-                />
+                <label for="email" class="block text-sm font-semibold text-slate-700 mb-2">Business Email *</label>
+                <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="your.email@company.com" />
               </div>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <label for="company" class="block text-sm font-medium text-gray-700 mb-2">
-                  Company Name *
-                </label>
-                <input 
-                  type="text" 
-                  id="company" 
-                  name="company"
-                  required
-                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  placeholder="Your company name"
-                />
+                <label for="company" class="block text-sm font-semibold text-slate-700 mb-2">Organisation *</label>
+                <input type="text" id="company" name="company" required class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Organisation name" />
               </div>
               <div>
-                <label for="revenue" class="block text-sm font-medium text-gray-700 mb-2">
-                  Annual Revenue (£M)
-                </label>
-                <select 
-                  id="revenue" 
-                  name="revenue"
-                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                >
-                  <option value="">Select range</option>
-                  <option value="under-5">Under £5M</option>
-                  <option value="5-10">£5M - £10M</option>
-                  <option value="10-25">£10M - £25M</option>
-                  <option value="25-50">£25M - £50M</option>
-                  <option value="50-100">£50M - £100M</option>
-                  <option value="over-100">Over £100M</option>
+                <label for="role" class="block text-sm font-semibold text-slate-700 mb-2">Role</label>
+                <select id="role" name="role" class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                  <option value="">Select role</option>
+                  <option value="CEO">Chief Executive</option>
+                  <option value="Legal Counsel">Legal Counsel</option>
+                  <option value="Compliance Officer">Compliance Officer</option>
+                  <option value="CTO">Technical Director</option>
+                  <option value="Other">Other</option>
                 </select>
               </div>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <label for="ai-usage" class="block text-sm font-medium text-gray-700 mb-2">
-                  Current AI Usage *
-                </label>
-                <select 
-                  id="ai-usage" 
-                  name="ai-usage"
-                  required
-                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                >
-                  <option value="">Select your situation</option>
-                  <option value="basic">Basic AI tools (ChatGPT, etc.)</option>
-                  <option value="integrated">AI integrated in products/services</option>
-                  <option value="custom">Custom AI systems/models</option>
-                  <option value="gpai">Using General Purpose AI models</option>
-                  <option value="developing">Developing AI solutions</option>
+                <label for="ai-usage" class="block text-sm font-semibold text-slate-700 mb-2">Current AI Implementation *</label>
+                <select id="ai-usage" name="ai-usage" required class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                  <option value="">Select current status</option>
+                  <option value="basic">Basic AI tools utilisation</option>
+                  <option value="integrated">AI integrated systems</option>
+                  <option value="custom">Custom AI development</option>
+                  <option value="gpai">General Purpose AI models</option>
                   <option value="planning">Planning AI implementation</option>
                 </select>
               </div>
               <div>
-                <label for="urgency" class="block text-sm font-medium text-gray-700 mb-2">
-                  Timeline *
-                </label>
-                <select 
-                  id="urgency" 
-                  name="urgency"
-                  required
-                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                >
+                <label for="urgency" class="block text-sm font-semibold text-slate-700 mb-2">Implementation Timeline *</label>
+                <select id="urgency" name="urgency" required class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
                   <option value="">Select timeline</option>
                   <option value="urgent">Urgent (within 2 weeks)</option>
-                  <option value="soon">Soon (within 1 month)</option>
+                  <option value="soon">Immediate (within 1 month)</option>
                   <option value="planned">Planned (within 3 months)</option>
-                  <option value="exploring">Exploring options</option>
+                  <option value="exploring">Assessment phase</option>
                 </select>
               </div>
             </div>
 
             <div>
-              <label for="service-interest" class="block text-sm font-medium text-gray-700 mb-2">
-                Service Interest
-              </label>
-              <select 
-                id="service-interest" 
-                name="service-interest"
-                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              >
+              <label for="service-interest" class="block text-sm font-semibold text-slate-700 mb-2">Service Requirement</label>
+              <select id="service-interest" name="service-interest" class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
                 <option value="">Select service</option>
                 <option value="emergency-assessment">Emergency Assessment (£9,500)</option>
-                <option value="sme-implementation">SME Implementation Support</option>
+                <option value="sme-implementation">SME Implementation Programme</option>
                 <option value="fractional-caio">Fractional CAIO Services</option>
-                <option value="consultation-only">Consultation only</option>
-                <option value="unsure">Not sure - need guidance</option>
+                <option value="consultation-only">Professional consultation</option>
+                <option value="assessment">Regulatory assessment required</option>
               </select>
             </div>
 
             <div>
-              <label for="message" class="block text-sm font-medium text-gray-700 mb-2">
-                Tell Us About Your Situation
-              </label>
-              <textarea 
-                id="message" 
-                name="message"
-                rows="4"
-                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                placeholder="Describe your current AI usage, compliance concerns, or specific questions..."
-              ></textarea>
+              <label for="message" class="block text-sm font-semibold text-slate-700 mb-2">Compliance Requirements</label>
+              <textarea id="message" name="message" rows="3" class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Describe current AI implementation, compliance concerns, or specific regulatory requirements..."></textarea>
             </div>
 
             <div class="bg-blue-50 rounded-lg p-4">
-              <p class="text-sm text-blue-800 mb-2">
-                <strong>What happens next?</strong>
-              </p>
+              <p class="text-sm text-blue-800 font-semibold mb-2">Professional Consultation Process:</p>
               <ul class="text-sm text-blue-700 space-y-1">
-                <li>• We'll review your submission within 24 hours</li>
-                <li>• Matthew will personally respond with initial guidance</li>
-                <li>• We'll schedule a consultation if appropriate</li>
-                <li>• No obligation - just professional compliance guidance</li>
+                <li>• Submission review within 24 hours</li>
+                <li>• Personal response with initial assessment</li>
+                <li>• Structured consultation scheduling</li>
+                <li>• Professional compliance guidance provision</li>
               </ul>
             </div>
 
-            <button 
-              type="submit"
-              class="w-full bg-blue-600 hover:bg-blue-700 text-white py-4 rounded-lg font-bold text-lg transition-colors shadow-lg"
-            >
-              Schedule Consultation
+            <button type="submit" class="w-full bg-blue-800 hover:bg-blue-900 text-white py-4 rounded-lg font-bold text-lg transition-colors">
+              Request Professional Consultation
             </button>
           </form>
         </div>
       </div>
     </section>
 
-    <!-- Direct Contact Info -->
-    <section class="py-16 bg-blue-900 text-white">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- FAQ for AEO -->
+    <section class="py-16 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12">
-          <h2 class="text-3xl md:text-4xl font-bold mb-4">
-            Direct Contact Information
-          </h2>
-          <p class="text-xl text-blue-200">
-            Prefer direct contact? Reach out using any of these methods
-          </p>
+          <h2 class="text-3xl font-serif text-slate-900 mb-4">What Happens During an AI Compliance Consultation?</h2>
         </div>
+        <div class="space-y-4">
+          <div class="bg-slate-50 rounded-lg p-4">
+            <h3 class="text-lg font-semibold text-slate-900 mb-2">How long does an AI compliance consultation take?</h3>
+            <p class="text-slate-700 text-sm">Professional AI compliance consultations are structured 30-minute sessions providing systematic regulatory assessment, implementation roadmap development, and compliance positioning guidance.</p>
+          </div>
+          <div class="bg-slate-50 rounded-lg p-4">
+            <h3 class="text-lg font-semibold text-slate-900 mb-2">What information do I need for a consultation?</h3>
+            <p class="text-slate-700 text-sm">Consultations require details about current AI implementation, organisational structure, compliance timeline, and specific regulatory requirements to ensure comprehensive assessment.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <!-- Professional Contact -->
+    <section class="py-16 bg-slate-900 text-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl font-serif mb-6">Direct Professional Contact</h2>
+        <p class="text-xl text-slate-300 mb-8">Alternative consultation arrangements and urgent compliance matters</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div class="text-center">
-            <div class="w-16 h-16 bg-blue-700 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div class="w-12 h-12 bg-blue-800 rounded-lg flex items-center justify-center mx-auto mb-4">
               <span class="text-2xl">📧</span>
             </div>
-            <h3 class="text-xl font-semibold mb-2">Email</h3>
-            <p class="text-blue-200 mb-4">For all inquiries and consultations</p>
-            <a 
-              href="mailto:consult@ailexconsulting.com" 
-              class="text-amber-400 hover:text-amber-300 font-semibold text-lg"
-            >
-              consult@ailexconsulting.com
-            </a>
+            <h3 class="text-lg font-semibold mb-2">Professional Enquiries</h3>
+            <a href="mailto:consult@ailexconsulting.com" class="text-blue-300 hover:text-blue-200 font-semibold">consult@ailexconsulting.com</a>
           </div>
-
           <div class="text-center">
-            <div class="w-16 h-16 bg-blue-700 rounded-full flex items-center justify-center mx-auto mb-4">
-              <span class="text-2xl">📞</span>
-            </div>
-            <h3 class="text-xl font-semibold mb-2">Phone</h3>
-            <p class="text-blue-200 mb-4">For urgent compliance matters</p>
-            <p class="text-amber-400 font-semibold text-lg">
-              Urgent Call-back
-            </p>
-            <p class="text-blue-300 text-sm mt-1">
-              (Email for fastest response)
-            </p>
-          </div>
-
-          <div class="text-center">
-            <div class="w-16 h-16 bg-blue-700 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div class="w-12 h-12 bg-blue-800 rounded-lg flex items-center justify-center mx-auto mb-4">
               <span class="text-2xl">📍</span>
             </div>
-            <h3 class="text-xl font-semibold mb-2">Location</h3>
-            <p class="text-blue-200 mb-4">Serving UK SMEs nationwide</p>
-            <p class="text-amber-400 font-semibold text-lg">London, UK</p>
-            <p class="text-blue-300 text-sm mt-1">
-              Remote consultations available
-            </p>
+            <h3 class="text-lg font-semibold mb-2">Location</h3>
+            <p class="text-slate-300">London, United Kingdom</p>
+            <p class="text-slate-400 text-sm">Remote consultations available</p>
           </div>
         </div>
       </div>
     </section>
   </main>
-  
+
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How long does an AI compliance consultation take?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Professional AI compliance consultations are structured 30-minute sessions providing systematic regulatory assessment, implementation roadmap development, and compliance positioning guidance."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What information do I need for a consultation?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Consultations require details about current AI implementation, organisational structure, compliance timeline, and specific regulatory requirements to ensure comprehensive assessment."
+        }
+      }
+    ]
+  }
+  </script>
+
   <Footer />
 </Layout>
+
+<style>
+  .font-serif { font-family: Georgia, serif; }
+</style>
