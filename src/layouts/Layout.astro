@@ -1,5 +1,4 @@
 ---
-// src/layouts/Layout.astro
 export interface Props {
   title: string;
   description?: string;
@@ -34,7 +33,7 @@ const { title, description = "AiLex Consulting - UK AI Act Compliance & AI Gover
     },
     "serviceType": [
       "AI Governance Consulting",
-      "EU AI Act Compliance",
+      "EU AI Act Compliance", 
       "Emergency AI Assessment",
       "AI Risk Management",
       "Financial Services AI Governance"
@@ -58,7 +57,7 @@ const { title, description = "AiLex Consulting - UK AI Act Compliance & AI Gover
           "priceCurrency": "GBP"
         },
         {
-          "@type": "Offer",
+          "@type": "Offer", 
           "itemOffered": {
             "@type": "Service",
             "name": "Rapid Compliance Implementation",
@@ -70,7 +69,7 @@ const { title, description = "AiLex Consulting - UK AI Act Compliance & AI Gover
         {
           "@type": "Offer",
           "itemOffered": {
-            "@type": "Service",
+            "@type": "Service", 
             "name": "Fractional Chief AI Officer",
             "description": "Ongoing AI governance oversight"
           },
@@ -83,6 +82,45 @@ const { title, description = "AiLex Consulting - UK AI Act Compliance & AI Gover
   </script>
 </head>
 <body>
-  <slot />
-</body>
-</html>
+  <!-- Professional Header with Square A Logo -->
+  <header class="site-header">
+    <div class="header-container">
+      <div class="header-content">
+        <div class="brand-section">
+          <a href="/" class="brand-link">
+            <div class="logo-container">
+              <div class="logo-square">
+                <span class="logo-a">A</span>
+              </div>
+              <div class="brand-text">
+                <div class="company-name">AiLex</div>
+                <div class="tagline">SCIENTIA ET LEX</div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <nav class="main-navigation">
+          <a href="/" class="nav-link">Home</a>
+          <a href="/about" class="nav-link">About</a>
+          <a href="/emergency-assessment" class="nav-link">Services</a>
+          <a href="/eu-ai-act" class="nav-link">EU AI Act</a>
+          <a href="/contact" class="nav-link">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <slot />
+  </main>
+
+  <!-- Professional Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <div class="logo-square small">
+              <span class="logo-a">A</span>
+            </div>
+            <div class="footer-brand-
