@@ -1,466 +1,171 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Hero from '../components/Hero.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 ---
 
-<Layout title="AiLex Consulting - UK AI Act Compliance & Governance">
+<Layout 
+  title="AiLex Consulting - UK AI Act Compliance & AI Governance for Financial Services"
+  description="Expert AI governance consulting for UK financial services. Emergency assessments, rapid implementation, and fractional CAIO services. EU AI Act compliance specialists."
+>
+  <Header />
+  
   <main>
-    <Hero />
-    
-    <!-- Services Overview -->
-    <section class="services-overview">
-      <div class="container">
-        <div class="section-header">
-          <h2>AI Governance Services for Financial Services</h2>
-          <p>Institutional quality at boutique speed - regulatory compliance without Big Four costs</p>
+    <!-- Hero Section with Financial Services Focus -->
+    <section class="bg-gradient-to-r from-slate-50 to-blue-50 py-16">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+          <h1 class="text-4xl md:text-5xl font-serif text-slate-900 mb-6">
+            UK AI Act Compliance in <span class="text-blue-800">6 Weeks</span>
+          </h1>
+          <p class="text-xl text-slate-700 max-w-4xl mx-auto mb-8">
+            Expert AI governance for financial services. Emergency assessments, rapid implementation, and ongoing governance without Big Four costs. <em class="text-blue-800">SCIENTIA ET LEX</em> — Knowledge and Law.
+          </p>
+          <div class="grid grid-cols-4 gap-6 max-w-2xl mx-auto mb-8">
+            <div class="text-center">
+              <div class="text-2xl font-bold text-blue-800">6</div>
+              <p class="text-slate-600 text-sm">Weeks vs 12-16</p>
+            </div>
+            <div class="text-center">
+              <div class="text-2xl font-bold text-green-700">£45K</div>
+              <p class="text-slate-600 text-sm">vs £150K-500K</p>
+            </div>
+            <div class="text-center">
+              <div class="text-2xl font-bold text-amber-600">47</div>
+              <p class="text-slate-600 text-sm">Point Framework</p>
+            </div>
+            <div class="text-center">
+              <div class="text-2xl font-bold text-red-700">64</div>
+              <p class="text-slate-600 text-sm">Target Companies</p>
+            </div>
+          </div>
+          <a href="/contact" class="inline-block bg-blue-800 hover:bg-blue-900 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors">
+            Book Free Assessment
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-16 bg-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-serif text-slate-900 mb-4">AI Governance Services for Financial Services</h2>
+          <p class="text-lg text-slate-600">Institutional quality at boutique speed</p>
         </div>
         
-        <div class="services-grid">
-          <div class="service-card">
-            <div class="service-icon">⚡</div>
-            <h3>Emergency AI Act Assessment</h3>
-            <div class="service-price">£15,000</div>
-            <p>6-day comprehensive AI compliance diagnostic with actionable remediation roadmap</p>
-            <ul class="service-features">
-              <li>47-point EU AI Act compliance evaluation</li>
-              <li>Priority risk identification</li>
-              <li>Implementation timeline</li>
-              <li>Penalty exposure analysis</li>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Emergency Assessment -->
+          <div class="border border-slate-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+            <div class="w-10 h-10 bg-red-700 text-white rounded-lg flex items-center justify-center mb-4">
+              <span class="font-mono text-sm">⚡</span>
+            </div>
+            <h3 class="text-xl font-semibold text-slate-900 mb-3">Emergency AI Act Assessment</h3>
+            <div class="text-2xl font-bold text-red-700 mb-3">£15,000</div>
+            <p class="text-slate-600 text-sm mb-4">6-day comprehensive AI compliance diagnostic with actionable remediation roadmap</p>
+            <ul class="space-y-1 text-slate-700 text-sm mb-6">
+              <li>• 47-point EU AI Act compliance evaluation</li>
+              <li>• Priority risk identification</li>
+              <li>• Implementation timeline</li>
+              <li>• Penalty exposure analysis</li>
             </ul>
-            <a href="/strategic-governance" class="service-cta">Learn More</a>
+            <a href="/emergency-assessment" class="inline-block bg-red-700 hover:bg-red-800 text-white px-4 py-2 rounded-lg font-semibold text-sm transition-colors">
+              Learn More
+            </a>
           </div>
-          
-          <div class="service-card featured">
-            <div class="service-icon">🚀</div>
-            <h3>Rapid Compliance Implementation</h3>
-            <div class="service-price">£45,000</div>
-            <p>6-week systematic AI governance framework deployment with operational monitoring</p>
-            <ul class="service-features">
-              <li>Complete governance framework</li>
-              <li>Policy development and training</li>
-              <li>System integration and monitoring</li>
-              <li>Board-ready documentation</li>
+
+          <!-- Rapid Implementation -->
+          <div class="border-2 border-blue-800 rounded-lg p-6 hover:shadow-lg transition-shadow bg-blue-50">
+            <div class="w-10 h-10 bg-blue-800 text-white rounded-lg flex items-center justify-center mb-4">
+              <span class="font-mono text-sm">🚀</span>
+            </div>
+            <h3 class="text-xl font-semibold text-slate-900 mb-3">Rapid Compliance Implementation</h3>
+            <div class="text-2xl font-bold text-blue-800 mb-3">£45,000</div>
+            <p class="text-slate-600 text-sm mb-4">6-week systematic AI governance framework deployment</p>
+            <ul class="space-y-1 text-slate-700 text-sm mb-6">
+              <li>• Complete governance framework</li>
+              <li>• Policy development and training</li>
+              <li>• System integration and monitoring</li>
+              <li>• Board-ready documentation</li>
             </ul>
-            <a href="/operational-excellence" class="service-cta">Learn More</a>
+            <a href="/operational-excellence" class="inline-block bg-blue-800 hover:bg-blue-900 text-white px-4 py-2 rounded-lg font-semibold text-sm transition-colors">
+              Learn More
+            </a>
           </div>
-          
-          <div class="service-card">
-            <div class="service-icon">🎯</div>
-            <h3>Fractional Chief AI Officer</h3>
-            <div class="service-price">£8,000/month</div>
-            <p>Ongoing AI governance oversight with continuous compliance monitoring and strategic guidance</p>
-            <ul class="service-features">
-              <li>Monthly strategic consultation</li>
-              <li>Continuous regulatory monitoring</li>
-              <li>Board reporting and presentations</li>
-              <li>Crisis response and escalation</li>
+
+          <!-- Fractional CAIO -->
+          <div class="border border-slate-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+            <div class="w-10 h-10 bg-green-700 text-white rounded-lg flex items-center justify-center mb-4">
+              <span class="font-mono text-sm">🎯</span>
+            </div>
+            <h3 class="text-xl font-semibold text-slate-900 mb-3">Fractional Chief AI Officer</h3>
+            <div class="text-2xl font-bold text-green-700 mb-3">£8,000<span class="text-sm text-slate-600">/month</span></div>
+            <p class="text-slate-600 text-sm mb-4">Ongoing AI governance oversight with continuous compliance monitoring</p>
+            <ul class="space-y-1 text-slate-700 text-sm mb-6">
+              <li>• Monthly strategic consultation</li>
+              <li>• Continuous regulatory monitoring</li>
+              <li>• Board reporting and presentations</li>
+              <li>• Crisis response and escalation</li>
             </ul>
-            <a href="/growth-enablement-support" class="service-cta">Learn More</a>
+            <a href="/growth-enablement-support" class="inline-block bg-green-700 hover:bg-green-800 text-white px-4 py-2 rounded-lg font-semibold text-sm transition-colors">
+              Learn More
+            </a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Target Market -->
-    <section class="target-market">
-      <div class="container">
-        <div class="market-content">
-          <div class="market-text">
-            <h2>Specialized Expertise for UK Financial Services</h2>
-            <p>AiLex provides AI governance solutions specifically designed for:</p>
-            <div class="market-sectors">
-              <div class="sector">
-                <h4>🏦 Asset Management</h4>
-                <p>Portfolio optimization algorithms, ESG scoring systems, investment decision governance</p>
-              </div>
-              <div class="sector">
-                <h4>🏛️ Insurance</h4>
-                <p>Automated underwriting, claims processing, risk assessment algorithm validation</p>
-              </div>
-              <div class="sector">
-                <h4>💳 Fintech</h4>
-                <p>Payment optimization, fraud detection, automated lending algorithm compliance</p>
-              </div>
-              <div class="sector">
-                <h4>📊 Corporate Finance</h4>
-                <p>Risk modeling, automated compliance, client analytics, due diligence systems</p>
-              </div>
-            </div>
-          </div>
-          <div class="market-stats">
-            <div class="stat-card">
-              <div class="stat-number">64</div>
-              <div class="stat-label">Target Companies Identified</div>
-            </div>
-            <div class="stat-card">
-              <div class="stat-number">92%</div>
-              <div class="stat-label">AI Adoption Rate</div>
-            </div>
-            <div class="stat-card">
-              <div class="stat-number">£8.5B+</div>
-              <div class="stat-label">Combined Revenue</div>
-            </div>
-          </div>
+    <!-- Financial Services Focus -->
+    <section class="py-16 bg-slate-50">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-serif text-slate-900 mb-4">Specialized for UK Financial Services</h2>
+          <p class="text-lg text-slate-600">Target sectors requiring AI governance expertise</p>
         </div>
-      </div>
-    </section>
-
-    <!-- Competitive Advantage -->
-    <section class="competitive-advantage">
-      <div class="container">
-        <h2>Why AiLex vs Big Four Consulting</h2>
-        <div class="comparison-grid">
-          <div class="comparison-item">
-            <h4>Implementation Speed</h4>
-            <div class="comparison-row">
-              <span class="ailex">AiLex: 6 weeks</span>
-              <span class="competitor">Big Four: 12-16 weeks</span>
-            </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="bg-white rounded-lg p-6 text-center">
+            <div class="text-3xl mb-3">🏦</div>
+            <h3 class="font-semibold text-slate-900 mb-2">Asset Management</h3>
+            <p class="text-slate-600 text-sm">Portfolio optimization, ESG scoring, investment algorithms</p>
           </div>
-          <div class="comparison-item">
-            <h4>Cost Structure</h4>
-            <div class="comparison-row">
-              <span class="ailex">AiLex: £45,000</span>
-              <span class="competitor">Big Four: £150K-£500K</span>
-            </div>
+          <div class="bg-white rounded-lg p-6 text-center">
+            <div class="text-3xl mb-3">🏛️</div>
+            <h3 class="font-semibold text-slate-900 mb-2">Insurance</h3>
+            <p class="text-slate-600 text-sm">Automated underwriting, claims processing, risk assessment</p>
           </div>
-          <div class="comparison-item">
-            <h4>Regulatory Expertise</h4>
-            <div class="comparison-row">
-              <span class="ailex">UK AI Act Specialist</span>
-              <span class="competitor">Generalist Approach</span>
-            </div>
+          <div class="bg-white rounded-lg p-6 text-center">
+            <div class="text-3xl mb-3">💳</div>
+            <h3 class="font-semibold text-slate-900 mb-2">Fintech</h3>
+            <p class="text-slate-600 text-sm">Payment optimization, fraud detection, lending algorithms</p>
           </div>
-          <div class="comparison-item">
-            <h4>Service Focus</h4>
-            <div class="comparison-row">
-              <span class="ailex">Financial Services Only</span>
-              <span class="competitor">All Industries</span>
-            </div>
+          <div class="bg-white rounded-lg p-6 text-center">
+            <div class="text-3xl mb-3">📊</div>
+            <h3 class="font-semibold text-slate-900 mb-2">Corporate Finance</h3>
+            <p class="text-slate-600 text-sm">Risk modeling, compliance automation, client analytics</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- CTA Section -->
-    <section class="cta-section">
-      <div class="container">
-        <div class="cta-content">
-          <h2>Ready to Achieve AI Act Compliance?</h2>
-          <p>Book a free 45-minute strategic assessment to identify your compliance gaps and implementation priorities</p>
-          <div class="cta-actions">
-            <a href="/contact" class="btn-primary-large">Book Free Assessment</a>
-            <a href="/eu-ai-act" class="btn-secondary-large">EU AI Act Resources</a>
-          </div>
-        </div>
+    <section class="py-16 bg-slate-900 text-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl font-serif mb-6">Ready to Achieve AI Act Compliance?</h2>
+        <p class="text-xl text-slate-300 mb-8">
+          Book a free 45-minute strategic assessment to identify your compliance gaps and implementation priorities
+        </p>
+        <a href="/contact" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+          Book Free Assessment
+        </a>
+        <p class="text-slate-400 mt-6 text-sm">6-week implementation • Institutional quality • Big Four alternative</p>
       </div>
     </section>
   </main>
+
+  <Footer />
 </Layout>
 
 <style>
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
-
-  .services-overview {
-    padding: 80px 0;
-    background: white;
-  }
-
-  .section-header {
-    text-align: center;
-    margin-bottom: 60px;
-  }
-
-  .section-header h2 {
-    font-size: 2.5rem;
-    color: #1e3a8a;
-    margin-bottom: 1rem;
-  }
-
-  .section-header p {
-    font-size: 1.2rem;
-    color: #525252;
-  }
-
-  .services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 30px;
-  }
-
-  .service-card {
-    background: #fefcf3;
-    border: 2px solid #e5e7eb;
-    border-radius: 12px;
-    padding: 40px 30px;
-    text-align: center;
-    transition: all 0.3s;
-  }
-
-  .service-card.featured {
-    border-color: #4f46e5;
-    transform: scale(1.05);
-  }
-
-  .service-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-  }
-
-  .service-icon {
-    font-size: 3rem;
-    margin-bottom: 20px;
-  }
-
-  .service-card h3 {
-    font-size: 1.5rem;
-    color: #1e3a8a;
-    margin-bottom: 10px;
-  }
-
-  .service-price {
-    font-size: 2rem;
-    font-weight: 600;
-    color: #4f46e5;
-    margin-bottom: 20px;
-  }
-
-  .service-features {
-    list-style: none;
-    padding: 0;
-    margin: 20px 0;
-  }
-
-  .service-features li {
-    padding: 5px 0;
-    color: #525252;
-  }
-
-  .service-features li:before {
-    content: "✓ ";
-    color: #047857;
-    font-weight: bold;
-  }
-
-  .service-cta {
-    display: inline-block;
-    background: #1e3a8a;
-    color: white;
-    padding: 12px 24px;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: 500;
-    margin-top: 20px;
-    transition: background 0.3s;
-  }
-
-  .service-cta:hover {
-    background: #1e40af;
-  }
-
-  .target-market {
-    padding: 80px 0;
-    background: linear-gradient(135deg, #fefcf3 0%, rgba(30, 58, 138, 0.03) 100%);
-  }
-
-  .market-content {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 60px;
-    align-items: center;
-  }
-
-  .market-text h2 {
-    font-size: 2.2rem;
-    color: #1e3a8a;
-    margin-bottom: 20px;
-  }
-
-  .market-text > p {
-    font-size: 1.1rem;
-    color: #525252;
-    margin-bottom: 30px;
-  }
-
-  .market-sectors {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-  }
-
-  .sector h4 {
-    color: #1e3a8a;
-    margin-bottom: 10px;
-  }
-
-  .sector p {
-    color: #525252;
-    font-size: 0.9rem;
-  }
-
-  .market-stats {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .stat-card {
-    background: white;
-    padding: 30px;
-    border-radius: 12px;
-    text-align: center;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  }
-
-  .stat-number {
-    display: block;
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #4f46e5;
-  }
-
-  .stat-label {
-    color: #525252;
-    font-size: 0.9rem;
-    margin-top: 5px;
-  }
-
-  .competitive-advantage {
-    padding: 80px 0;
-    background: white;
-  }
-
-  .competitive-advantage h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    color: #1e3a8a;
-    margin-bottom: 50px;
-  }
-
-  .comparison-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-  }
-
-  .comparison-item {
-    background: #fefcf3;
-    padding: 30px;
-    border-radius: 12px;
-    border: 2px solid #e5e7eb;
-  }
-
-  .comparison-item h4 {
-    color: #1e3a8a;
-    margin-bottom: 15px;
-    text-align: center;
-  }
-
-  .comparison-row {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .ailex {
-    background: #047857;
-    color: white;
-    padding: 10px;
-    border-radius: 6px;
-    font-weight: 500;
-  }
-
-  .competitor {
-    background: #dc2626;
-    color: white;
-    padding: 10px;
-    border-radius: 6px;
-    font-weight: 500;
-  }
-
-  .cta-section {
-    padding: 80px 0;
-    background: #1e3a8a;
-    color: white;
-  }
-
-  .cta-content {
-    text-align: center;
-  }
-
-  .cta-content h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-  }
-
-  .cta-content p {
-    font-size: 1.2rem;
-    margin-bottom: 40px;
-    opacity: 0.9;
-  }
-
-  .cta-actions {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-  }
-
-  .btn-primary-large {
-    background: #4f46e5;
-    color: white;
-    padding: 18px 36px;
-    border-radius: 10px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1.1rem;
-    transition: background 0.3s;
-  }
-
-  .btn-primary-large:hover {
-    background: #4338ca;
-  }
-
-  .btn-secondary-large {
-    background: transparent;
-    color: white;
-    padding: 18px 36px;
-    border: 2px solid white;
-    border-radius: 10px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1.1rem;
-    transition: all 0.3s;
-  }
-
-  .btn-secondary-large:hover {
-    background: white;
-    color: #1e3a8a;
-  }
-
-  @media (max-width: 768px) {
-    .services-grid {
-      grid-template-columns: 1fr;
-    }
-
-    .market-content {
-      grid-template-columns: 1fr;
-    }
-
-    .market-sectors {
-      grid-template-columns: 1fr;
-    }
-
-    .comparison-grid {
-      grid-template-columns: 1fr;
-    }
-
-    .cta-actions {
-      flex-direction: column;
-      align-items: center;
-    }
-  }
+  .font-serif { font-family: Georgia, serif; }
 </style>
