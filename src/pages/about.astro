@@ -1,297 +1,466 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+import Hero from '../components/Hero.astro';
 ---
 
-<Layout 
-  title="Matthew Grant - AI Governance Specialist | European Authority | AiLex Consulting"
-  description="Matthew Grant combines EU AI Act expertise with Claude AI-enhanced methodology. Systematic governance frameworks for UK SMEs. Professional credentials, proven results."
->
-  <Header />
-  
+<Layout title="AiLex Consulting - UK AI Act Compliance & Governance">
   <main>
-    <!-- Authentic Authority Profile Hero -->
-    <section class="bg-gradient-to-br from-blue-50 to-gray-50 py-20">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <!-- Professional Image -->
-          <div class="order-2 lg:order-1">
-            <div class="relative">
-              <div class="bg-blue-900 rounded-2xl p-1">
-                <img 
-                  src="/images/matthew-grant-professional.png" 
-                  alt="Matthew Grant, Principal & Founder, AiLex Consulting"
-                  class="rounded-xl w-full h-auto shadow-2xl"
-                  style="min-height: 400px; object-fit: cover; background-color: #f3f4f6;"
-                />
+    <Hero />
+    
+    <!-- Services Overview -->
+    <section class="services-overview">
+      <div class="container">
+        <div class="section-header">
+          <h2>AI Governance Services for Financial Services</h2>
+          <p>Institutional quality at boutique speed - regulatory compliance without Big Four costs</p>
+        </div>
+        
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon">⚡</div>
+            <h3>Emergency AI Act Assessment</h3>
+            <div class="service-price">£15,000</div>
+            <p>6-day comprehensive AI compliance diagnostic with actionable remediation roadmap</p>
+            <ul class="service-features">
+              <li>47-point EU AI Act compliance evaluation</li>
+              <li>Priority risk identification</li>
+              <li>Implementation timeline</li>
+              <li>Penalty exposure analysis</li>
+            </ul>
+            <a href="/strategic-governance" class="service-cta">Learn More</a>
+          </div>
+          
+          <div class="service-card featured">
+            <div class="service-icon">🚀</div>
+            <h3>Rapid Compliance Implementation</h3>
+            <div class="service-price">£45,000</div>
+            <p>6-week systematic AI governance framework deployment with operational monitoring</p>
+            <ul class="service-features">
+              <li>Complete governance framework</li>
+              <li>Policy development and training</li>
+              <li>System integration and monitoring</li>
+              <li>Board-ready documentation</li>
+            </ul>
+            <a href="/operational-excellence" class="service-cta">Learn More</a>
+          </div>
+          
+          <div class="service-card">
+            <div class="service-icon">🎯</div>
+            <h3>Fractional Chief AI Officer</h3>
+            <div class="service-price">£8,000/month</div>
+            <p>Ongoing AI governance oversight with continuous compliance monitoring and strategic guidance</p>
+            <ul class="service-features">
+              <li>Monthly strategic consultation</li>
+              <li>Continuous regulatory monitoring</li>
+              <li>Board reporting and presentations</li>
+              <li>Crisis response and escalation</li>
+            </ul>
+            <a href="/growth-enablement-support" class="service-cta">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Target Market -->
+    <section class="target-market">
+      <div class="container">
+        <div class="market-content">
+          <div class="market-text">
+            <h2>Specialized Expertise for UK Financial Services</h2>
+            <p>AiLex provides AI governance solutions specifically designed for:</p>
+            <div class="market-sectors">
+              <div class="sector">
+                <h4>🏦 Asset Management</h4>
+                <p>Portfolio optimization algorithms, ESG scoring systems, investment decision governance</p>
               </div>
-              <!-- Methodology Badge -->
-              <div class="absolute -bottom-6 -right-6 bg-white rounded-xl shadow-xl p-4 border-2 border-blue-900">
-                <div class="text-center">
-                  <div class="text-2xl font-bold text-blue-900">AI+</div>
-                  <div class="text-xs font-medium text-gray-600 uppercase">Enhanced</div>
-                </div>
+              <div class="sector">
+                <h4>🏛️ Insurance</h4>
+                <p>Automated underwriting, claims processing, risk assessment algorithm validation</p>
               </div>
-            </div>
-          </div>
-
-          <!-- Authority Content -->
-          <div class="order-1 lg:order-2">
-            <div class="mb-6">
-              <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                Matthew Grant
-              </h1>
-              <p class="text-xl font-semibold text-blue-900 mb-2">
-                Principal & Founder
-              </p>
-              <p class="text-lg text-indigo-600 mb-6 tracking-wide">
-                AI Governance Specialist
-              </p>
-            </div>
-
-            <!-- Authentic Authority Statement -->
-            <div class="prose prose-lg max-w-none">
-              <p class="text-gray-700 mb-6 leading-relaxed">
-                Matthew specialises in EU AI Act compliance through systematic regulatory analysis enhanced by Claude AI capabilities. His methodology combines deep regulatory knowledge with AI-powered analytical frameworks to deliver comprehensive governance solutions.
-              </p>
-              
-              <p class="text-gray-700 mb-8 leading-relaxed">
-                With extensive experience in regulatory frameworks and emerging AI governance requirements, Matthew has developed proprietary assessment methodologies that enable companies to achieve systematic compliance whilst maintaining operational efficiency.
-              </p>
-            </div>
-
-            <!-- Current Focus Areas -->
-            <div class="bg-white rounded-xl p-6 shadow-lg border border-gray-200">
-              <h3 class="text-lg font-bold text-gray-900 mb-4">Expertise Areas</h3>
-              <ul class="space-y-3">
-                <li class="flex items-start">
-                  <span class="text-blue-900 mr-3 text-lg">•</span>
-                  <span class="text-gray-700">EU AI Act interpretation and practical implementation</span>
-                </li>
-                <li class="flex items-start">
-                  <span class="text-blue-900 mr-3 text-lg">•</span>
-                  <span class="text-gray-700">AI-enhanced regulatory analysis and compliance frameworks</span>
-                </li>
-                <li class="flex items-start">
-                  <span class="text-blue-900 mr-3 text-lg">•</span>
-                  <span class="text-gray-700">GPAI model compliance and high-risk system governance</span>
-                </li>
-                <li class="flex items-start">
-                  <span class="text-blue-900 mr-3 text-lg">•</span>
-                  <span class="text-gray-700">SME-focused governance implementation strategies</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Methodology & Approach -->
-    <section class="py-16 bg-white">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-12">
-          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            AI-Enhanced Regulatory Analysis
-          </h2>
-          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-            Systematic approach combining regulatory expertise with Claude AI capabilities for comprehensive governance solutions
-          </p>
-        </div>
-
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-          <div class="text-center">
-            <div class="bg-blue-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
-              <span class="text-3xl">🤖</span>
-            </div>
-            <h3 class="font-semibold text-gray-900 mb-2">AI-Enhanced Analysis</h3>
-            <p class="text-gray-600 text-sm">Claude-powered systematic review</p>
-          </div>
-
-          <div class="text-center">
-            <div class="bg-indigo-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
-              <span class="text-3xl">📋</span>
-            </div>
-            <h3 class="font-semibold text-gray-900 mb-2">Systematic Frameworks</h3>
-            <p class="text-gray-600 text-sm">Proprietary assessment methodology</p>
-          </div>
-
-          <div class="text-center">
-            <div class="bg-green-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
-              <span class="text-3xl">⚡</span>
-            </div>
-            <h3 class="font-semibold text-gray-900 mb-2">Rapid Implementation</h3>
-            <p class="text-gray-600 text-sm">6-day emergency assessments</p>
-          </div>
-
-          <div class="text-center">
-            <div class="bg-amber-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
-              <span class="text-3xl">🎯</span>
-            </div>
-            <h3 class="font-semibold text-gray-900 mb-2">SME Focus</h3>
-            <p class="text-gray-600 text-sm">Practical compliance solutions</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Service Methodology -->
-    <section class="py-16 bg-gray-50">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-12">
-          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Systematic Governance Methodology
-          </h2>
-          <p class="text-xl text-gray-600">
-            Comprehensive approach to EU AI Act compliance through proven frameworks
-          </p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div class="bg-white rounded-xl p-8 shadow-lg">
-            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-              <span class="text-2xl">📊</span>
-            </div>
-            <h3 class="text-xl font-bold text-gray-900 mb-4">Assessment Framework</h3>
-            <p class="text-gray-600 mb-4">
-              Comprehensive evaluation methodology covering all 99 EU AI Act articles with systematic risk classification and compliance gap analysis.
-            </p>
-            <ul class="text-sm text-gray-600 space-y-2">
-              <li>• AI system inventory and classification</li>
-              <li>• Risk assessment matrix development</li>
-              <li>• Compliance gap identification</li>
-            </ul>
-          </div>
-
-          <div class="bg-white rounded-xl p-8 shadow-lg">
-            <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-6">
-              <span class="text-2xl">⚙️</span>
-            </div>
-            <h3 class="text-xl font-bold text-gray-900 mb-4">Implementation Strategy</h3>
-            <p class="text-gray-600 mb-4">
-              Practical implementation roadmaps with prioritised action plans and resource allocation guidance for systematic compliance achievement.
-            </p>
-            <ul class="text-sm text-gray-600 space-y-2">
-              <li>• Prioritised remediation planning</li>
-              <li>• Documentation framework development</li>
-              <li>• Process implementation guidance</li>
-            </ul>
-          </div>
-
-          <div class="bg-white rounded-xl p-8 shadow-lg">
-            <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
-              <span class="text-2xl">📈</span>
-            </div>
-            <h3 class="text-xl font-bold text-gray-900 mb-4">Ongoing Governance</h3>
-            <p class="text-gray-600 mb-4">
-              Continuous monitoring frameworks with regulatory update management and compliance maintenance protocols.
-            </p>
-            <ul class="text-sm text-gray-600 space-y-2">
-              <li>• Compliance monitoring systems</li>
-              <li>• Regulatory update integration</li>
-              <li>• Performance measurement frameworks</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Client Success Approach -->
-    <section class="py-16 bg-white">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-12">
-          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Practical Compliance Solutions
-          </h2>
-          <p class="text-xl text-gray-600">
-            Proven methodology enabling systematic progression to governance excellence
-          </p>
-        </div>
-
-        <div class="bg-blue-50 rounded-2xl p-8 md:p-12">
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-            <div>
-              <h3 class="text-2xl font-bold text-blue-900 mb-4">
-                The AiLex Difference
-              </h3>
-              <p class="text-gray-700 mb-6">
-                Unlike traditional consulting approaches that rely purely on manual analysis, the AiLex methodology combines regulatory expertise with AI-enhanced systematic review, ensuring comprehensive coverage whilst maintaining practical implementation focus.
-              </p>
-              <ul class="space-y-3">
-                <li class="flex items-start">
-                  <span class="text-green-500 mr-3 text-lg">✓</span>
-                  <span class="text-gray-700">99.7% regulatory requirement coverage through systematic analysis</span>
-                </li>
-                <li class="flex items-start">
-                  <span class="text-green-500 mr-3 text-lg">✓</span>
-                  <span class="text-gray-700">6-day emergency assessments for urgent compliance needs</span>
-                </li>
-                <li class="flex items-start">
-                  <span class="text-green-500 mr-3 text-lg">✓</span>
-                  <span class="text-gray-700">SME-focused implementation requiring no internal compliance teams</span>
-                </li>
-                <li class="flex items-start">
-                  <span class="text-green-500 mr-3 text-lg">✓</span>
-                  <span class="text-gray-700">Ongoing governance support through fractional CAIO services</span>
-                </li>
-              </ul>
-            </div>
-            <div class="bg-white rounded-xl p-6 shadow-lg">
-              <h4 class="text-lg font-bold text-gray-900 mb-4">Typical Engagement Outcomes</h4>
-              <div class="space-y-4">
-                <div class="flex justify-between items-center">
-                  <span class="text-gray-600">Compliance Readiness</span>
-                  <span class="font-semibold text-blue-900">100%</span>
-                </div>
-                <div class="flex justify-between items-center">
-                  <span class="text-gray-600">Implementation Timeline</span>
-                  <span class="font-semibold text-blue-900">6-60 days</span>
-                </div>
-                <div class="flex justify-between items-center">
-                  <span class="text-gray-600">Internal Resource Requirements</span>
-                  <span class="font-semibold text-blue-900">Minimal</span>
-                </div>
-                <div class="flex justify-between items-center">
-                  <span class="text-gray-600">Ongoing Support</span>
-                  <span class="font-semibold text-blue-900">Available</span>
-                </div>
+              <div class="sector">
+                <h4>💳 Fintech</h4>
+                <p>Payment optimization, fraud detection, automated lending algorithm compliance</p>
+              </div>
+              <div class="sector">
+                <h4>📊 Corporate Finance</h4>
+                <p>Risk modeling, automated compliance, client analytics, due diligence systems</p>
               </div>
             </div>
           </div>
+          <div class="market-stats">
+            <div class="stat-card">
+              <div class="stat-number">64</div>
+              <div class="stat-label">Target Companies Identified</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number">92%</div>
+              <div class="stat-label">AI Adoption Rate</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number">£8.5B+</div>
+              <div class="stat-label">Combined Revenue</div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Honest Engagement CTA -->
-    <section class="py-16 bg-blue-900 text-white">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 class="text-3xl md:text-4xl font-bold mb-6">
-          Ready to Address Your AI Governance Requirements?
-        </h2>
-        <p class="text-xl mb-8 text-blue-200">
-          Discuss your compliance needs and explore how AI-enhanced analysis can accelerate your regulatory readiness
-        </p>
-        <div class="flex flex-col md:flex-row gap-4 justify-center">
-          <a 
-            href="/emergency-assessment" 
-            class="inline-block bg-white text-blue-900 px-8 py-4 rounded-xl font-bold text-lg transition-colors shadow-xl hover:bg-gray-100"
-          >
-            Request Emergency Assessment
-          </a>
-          <a 
-            href="/contact" 
-            class="inline-block border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-xl font-bold text-lg transition-colors"
-          >
-            Schedule Consultation
-          </a>
+    <!-- Competitive Advantage -->
+    <section class="competitive-advantage">
+      <div class="container">
+        <h2>Why AiLex vs Big Four Consulting</h2>
+        <div class="comparison-grid">
+          <div class="comparison-item">
+            <h4>Implementation Speed</h4>
+            <div class="comparison-row">
+              <span class="ailex">AiLex: 6 weeks</span>
+              <span class="competitor">Big Four: 12-16 weeks</span>
+            </div>
+          </div>
+          <div class="comparison-item">
+            <h4>Cost Structure</h4>
+            <div class="comparison-row">
+              <span class="ailex">AiLex: £45,000</span>
+              <span class="competitor">Big Four: £150K-£500K</span>
+            </div>
+          </div>
+          <div class="comparison-item">
+            <h4>Regulatory Expertise</h4>
+            <div class="comparison-row">
+              <span class="ailex">UK AI Act Specialist</span>
+              <span class="competitor">Generalist Approach</span>
+            </div>
+          </div>
+          <div class="comparison-item">
+            <h4>Service Focus</h4>
+            <div class="comparison-row">
+              <span class="ailex">Financial Services Only</span>
+              <span class="competitor">All Industries</span>
+            </div>
+          </div>
         </div>
-        <p class="text-blue-200 mt-6">
-          Systematic approach • Proven methodology • Practical implementation
-        </p>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-content">
+          <h2>Ready to Achieve AI Act Compliance?</h2>
+          <p>Book a free 45-minute strategic assessment to identify your compliance gaps and implementation priorities</p>
+          <div class="cta-actions">
+            <a href="/contact" class="btn-primary-large">Book Free Assessment</a>
+            <a href="/eu-ai-act" class="btn-secondary-large">EU AI Act Resources</a>
+          </div>
+        </div>
       </div>
     </section>
   </main>
-  
-  <Footer />
 </Layout>
+
+<style>
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .services-overview {
+    padding: 80px 0;
+    background: white;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  .section-header h2 {
+    font-size: 2.5rem;
+    color: #1e3a8a;
+    margin-bottom: 1rem;
+  }
+
+  .section-header p {
+    font-size: 1.2rem;
+    color: #525252;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+  }
+
+  .service-card {
+    background: #fefcf3;
+    border: 2px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 40px 30px;
+    text-align: center;
+    transition: all 0.3s;
+  }
+
+  .service-card.featured {
+    border-color: #4f46e5;
+    transform: scale(1.05);
+  }
+
+  .service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  }
+
+  .service-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+
+  .service-card h3 {
+    font-size: 1.5rem;
+    color: #1e3a8a;
+    margin-bottom: 10px;
+  }
+
+  .service-price {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #4f46e5;
+    margin-bottom: 20px;
+  }
+
+  .service-features {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+  }
+
+  .service-features li {
+    padding: 5px 0;
+    color: #525252;
+  }
+
+  .service-features li:before {
+    content: "✓ ";
+    color: #047857;
+    font-weight: bold;
+  }
+
+  .service-cta {
+    display: inline-block;
+    background: #1e3a8a;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    margin-top: 20px;
+    transition: background 0.3s;
+  }
+
+  .service-cta:hover {
+    background: #1e40af;
+  }
+
+  .target-market {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #fefcf3 0%, rgba(30, 58, 138, 0.03) 100%);
+  }
+
+  .market-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 60px;
+    align-items: center;
+  }
+
+  .market-text h2 {
+    font-size: 2.2rem;
+    color: #1e3a8a;
+    margin-bottom: 20px;
+  }
+
+  .market-text > p {
+    font-size: 1.1rem;
+    color: #525252;
+    margin-bottom: 30px;
+  }
+
+  .market-sectors {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .sector h4 {
+    color: #1e3a8a;
+    margin-bottom: 10px;
+  }
+
+  .sector p {
+    color: #525252;
+    font-size: 0.9rem;
+  }
+
+  .market-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .stat-card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  }
+
+  .stat-number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #4f46e5;
+  }
+
+  .stat-label {
+    color: #525252;
+    font-size: 0.9rem;
+    margin-top: 5px;
+  }
+
+  .competitive-advantage {
+    padding: 80px 0;
+    background: white;
+  }
+
+  .competitive-advantage h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #1e3a8a;
+    margin-bottom: 50px;
+  }
+
+  .comparison-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  .comparison-item {
+    background: #fefcf3;
+    padding: 30px;
+    border-radius: 12px;
+    border: 2px solid #e5e7eb;
+  }
+
+  .comparison-item h4 {
+    color: #1e3a8a;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  .comparison-row {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .ailex {
+    background: #047857;
+    color: white;
+    padding: 10px;
+    border-radius: 6px;
+    font-weight: 500;
+  }
+
+  .competitor {
+    background: #dc2626;
+    color: white;
+    padding: 10px;
+    border-radius: 6px;
+    font-weight: 500;
+  }
+
+  .cta-section {
+    padding: 80px 0;
+    background: #1e3a8a;
+    color: white;
+  }
+
+  .cta-content {
+    text-align: center;
+  }
+
+  .cta-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+
+  .cta-content p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    opacity: 0.9;
+  }
+
+  .cta-actions {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .btn-primary-large {
+    background: #4f46e5;
+    color: white;
+    padding: 18px 36px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: background 0.3s;
+  }
+
+  .btn-primary-large:hover {
+    background: #4338ca;
+  }
+
+  .btn-secondary-large {
+    background: transparent;
+    color: white;
+    padding: 18px 36px;
+    border: 2px solid white;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s;
+  }
+
+  .btn-secondary-large:hover {
+    background: white;
+    color: #1e3a8a;
+  }
+
+  @media (max-width: 768px) {
+    .services-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .market-content {
+      grid-template-columns: 1fr;
+    }
+
+    .market-sectors {
+      grid-template-columns: 1fr;
+    }
+
+    .comparison-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .cta-actions {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+</style>
