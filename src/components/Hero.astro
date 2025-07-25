@@ -1,0 +1,204 @@
+---
+// Hero component for financial services positioning
+---
+
+<section class="hero-section">
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1 class="hero-title">
+          UK AI Act Compliance in 6 Weeks
+        </h1>
+        <p class="hero-subtitle">
+          Expert AI Governance for Financial Services
+        </p>
+        <p class="hero-description">
+          Regulatory compliance without Big Four costs. Emergency assessments, rapid implementation, and ongoing governance for London's financial services sector.
+        </p>
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-number">6 weeks</span>
+            <span class="stat-label">vs 12-16 weeks traditional</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">£45K</span>
+            <span class="stat-label">vs £150K-500K Big Four</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">47-point</span>
+            <span class="stat-label">EU AI Act framework</span>
+          </div>
+        </div>
+        <div class="hero-actions">
+          <a href="/contact" class="btn-primary">Book Free Assessment</a>
+          <a href="/services" class="btn-secondary">View Services</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="ailex-logo-large">
+          <div class="logo-square">A</div>
+        </div>
+        <p class="motto">SCIENTIA ET LEX</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero-section {
+    background: linear-gradient(135deg, #fefcf3 0%, rgba(30, 58, 138, 0.05) 100%);
+    padding: 80px 0;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .hero-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 60px;
+    align-items: center;
+  }
+
+  .hero-title {
+    font-size: 3.5rem;
+    font-weight: 500;
+    color: #1e3a8a;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.5rem;
+    color: #4f46e5;
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+  }
+
+  .hero-description {
+    font-size: 1.1rem;
+    color: #525252;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+  }
+
+  .hero-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .stat {
+    text-align: center;
+  }
+
+  .stat-number {
+    display: block;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #1e3a8a;
+  }
+
+  .stat-label {
+    display: block;
+    font-size: 0.9rem;
+    color: #525252;
+    margin-top: 0.5rem;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .btn-primary {
+    background: #1e3a8a;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.3s;
+  }
+
+  .btn-primary:hover {
+    background: #1e40af;
+  }
+
+  .btn-secondary {
+    background: transparent;
+    color: #1e3a8a;
+    padding: 1rem 2rem;
+    border: 2px solid #1e3a8a;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s;
+  }
+
+  .btn-secondary:hover {
+    background: #1e3a8a;
+    color: white;
+  }
+
+  .hero-visual {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ailex-logo-large {
+    margin-bottom: 1rem;
+  }
+
+  .logo-square {
+    width: 120px;
+    height: 120px;
+    background: #1e3a8a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 60px;
+    font-weight: 500;
+    color: #4f46e5;
+    border: 4px solid #1e3a8a;
+  }
+
+  .motto {
+    font-size: 0.9rem;
+    color: #525252;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  @media (max-width: 768px) {
+    .hero-content {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+
+    .hero-title {
+      font-size: 2.5rem;
+    }
+
+    .hero-stats {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    .hero-actions {
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+</style>
