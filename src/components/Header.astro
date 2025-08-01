@@ -1,385 +1,87 @@
-<!-- Optimized Hero Component with Professional Urgency and Brand Integration -->
+<!-- Enhanced Header Navigation for src/components/Header.astro -->
 
-<section class="hero-section">
-  <div class="container">
-    <div class="hero-content">
-      <div class="hero-text">
-        <div class="hero-badge">
-          <span class="badge-text">SCIENTIA ET LEX</span>
-          <span class="badge-subtext">European AI Governance Authority</span>
-        </div>
-        
-        <h1 class="hero-title">
-          EU AI Act Compliance in <span class="highlight-text">6 Days</span>
-        </h1>
-        
-        <p class="hero-subtitle">
-          GPAI Obligations Active — Emergency Assessment Available
-        </p>
-        
-        <p class="hero-description">
-          Professional EU AI Act compliance for UK financial services Chief Risk Officers. Emergency assessment and systematic implementation preventing €35M penalty exposure. <strong>Same-day response</strong> with 6-day comprehensive analysis delivery.
-        </p>
-        
-        <div class="hero-stats">
-          <div class="stat urgent">
-            <span class="stat-number">August 1</span>
-            <span class="stat-label">GPAI obligations active</span>
+<header class="bg-white shadow-sm border-b border-gray-200">
+  <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center py-4">
+      <!-- Authority Logo -->
+      <div class="flex items-center">
+        <a href="/" class="flex items-center space-x-3">
+          <!-- Actual Logo Image -->
+          <img 
+            src="/images/logoHeader.png" 
+            alt="AiLex Consulting - European AI Governance Authority" 
+            class="h-10 w-auto"
+          />
+          <!-- Brand Authority Motto -->
+          <div class="hidden sm:block">
+            <p class="text-xs text-gray-600 tracking-wider font-light">SCIENTIA ET LEX</p>
+            <p class="text-xs text-gray-500">European AI Governance Authority</p>
           </div>
-          <div class="stat">
-            <span class="stat-number">£15,000</span>
-            <span class="stat-label">Emergency assessment</span>
-          </div>
-          <div class="stat">
-            <span class="stat-number">€35M</span>
-            <span class="stat-label">Maximum penalty</span>
-          </div>
-        </div>
-        
-        <div class="hero-actions">
-          <a href="/emergency-assessment" class="btn-emergency">Emergency Assessment — £15,000</a>
-          <a href="/contact" class="btn-secondary">Schedule Consultation</a>
-        </div>
-        
-        <div class="hero-credentials">
-          <p class="credentials-text">
-            <strong>99.7% regulatory coverage</strong> • <strong>85% faster than Big Four</strong> • <strong>Professional CRO guidance</strong>
-          </p>
-        </div>
+        </a>
       </div>
-      
-      <div class="hero-visual">
-        <div class="ailex-logo-large">
-          <div class="logo-square">
-            <span class="logo-letter">A</span>
-          </div>
-        </div>
-        <p class="motto">SCIENTIA ET LEX</p>
-        <div class="urgency-indicator">
-          <div class="pulse-dot"></div>
-          <span class="urgency-text">GPAI Enforcement Active</span>
-        </div>
+
+      <!-- Desktop Navigation - Authority Focused -->
+      <div class="hidden md:flex items-center space-x-8">
+        <a href="/emergency-assessment" class="text-gray-700 hover:text-blue-900 font-medium transition-colors">
+          Emergency Assessment
+        </a>
+        <a href="/methodology" class="text-gray-700 hover:text-blue-900 font-medium transition-colors">
+          Methodology
+        </a>
+        <a href="/resources" class="text-gray-700 hover:text-blue-900 font-medium transition-colors">
+          Intelligence
+        </a>
+        <a href="/about" class="text-gray-700 hover:text-blue-900 font-medium transition-colors">
+          Authority
+        </a>
+        <a href="/contact" class="bg-blue-900 hover:bg-blue-800 text-white px-6 py-2 rounded-lg font-semibold transition-colors">
+          Consultation
+        </a>
+      </div>
+
+      <!-- Mobile menu button -->
+      <div class="md:hidden">
+        <button type="button" class="text-gray-500 hover:text-gray-700 focus:outline-none focus:text-gray-700" id="mobile-menu-button">
+          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
       </div>
     </div>
-  </div>
-</section>
 
-<style>
-  .hero-section {
-    background: linear-gradient(135deg, 
-      rgba(255, 255, 255, 0.95) 0%, 
-      rgba(147, 51, 234, 0.03) 25%,
-      rgba(79, 70, 229, 0.05) 50%,
-      rgba(147, 51, 234, 0.03) 75%,
-      rgba(255, 255, 255, 0.95) 100%
-    );
-    padding: 60px 0 80px;
-    min-height: 600px;
-    display: flex;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .hero-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: linear-gradient(90deg, #7c3aed, #4f46e5, #7c3aed);
-    animation: shimmer 3s ease-in-out infinite;
-  }
-  
-  @keyframes shimmer {
-    0%, 100% { opacity: 0.6; }
-    50% { opacity: 1; }
-  }
+    <!-- Mobile Navigation -->
+    <div class="md:hidden hidden" id="mobile-menu">
+      <div class="px-2 pt-2 pb-3 space-y-1 bg-gray-50 rounded-lg mt-2">
+        <a href="/emergency-assessment" class="block px-3 py-2 text-gray-700 hover:text-blue-900 font-medium">
+          Emergency Assessment
+        </a>
+        <a href="/methodology" class="block px-3 py-2 text-gray-700 hover:text-blue-900 font-medium">
+          Methodology
+        </a>
+        <a href="/resources" class="block px-3 py-2 text-gray-700 hover:text-blue-900 font-medium">
+          Intelligence
+        </a>
+        <a href="/about" class="block px-3 py-2 text-gray-700 hover:text-blue-900 font-medium">
+          Authority
+        </a>
+        <a href="/contact" class="block px-3 py-2 bg-blue-900 text-white rounded-lg font-semibold text-center">
+          Consultation
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>
 
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
-
-  .hero-content {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 60px;
-    align-items: center;
-  }
-  
-  .hero-badge {
-    display: inline-block;
-    background: linear-gradient(135deg, #7c3aed, #4f46e5);
-    color: white;
-    padding: 8px 20px;
-    border-radius: 20px;
-    margin-bottom: 20px;
-    text-align: center;
-  }
-  
-  .badge-text {
-    display: block;
-    font-size: 0.75rem;
-    font-weight: 600;
-    letter-spacing: 0.1em;
-  }
-  
-  .badge-subtext {
-    display: block;
-    font-size: 0.65rem;
-    opacity: 0.9;
-    margin-top: 2px;
-  }
-
-  .hero-title {
-    font-family: Georgia, serif;
-    font-size: 3.5rem;
-    font-weight: 500;
-    color: #1a365d;
-    line-height: 1.1;
-    margin-bottom: 1rem;
-  }
-  
-  .highlight-text {
-    color: #dc2626;
-    font-weight: 600;
-  }
-
-  .hero-subtitle {
-    font-size: 1.25rem;
-    color: #dc2626;
-    margin-bottom: 1rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-  }
-
-  .hero-description {
-    font-size: 1.1rem;
-    color: #4a5568;
-    line-height: 1.6;
-    margin-bottom: 2rem;
-  }
-
-  .hero-stats {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-    margin-bottom: 2.5rem;
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.8);
-    border-radius: 12px;
-    border: 1px solid rgba(147, 51, 234, 0.1);
-  }
-
-  .stat {
-    text-align: center;
-    padding: 10px;
-    border-radius: 8px;
-    background: rgba(255, 255, 255, 0.7);
-  }
-  
-  .stat.urgent {
-    background: rgba(220, 38, 38, 0.1);
-    border: 1px solid rgba(220, 38, 38, 0.2);
-  }
-
-  .stat-number {
-    display: block;
-    font-size: 1.75rem;
-    font-weight: 700;
-    color: #1a365d;
-    margin-bottom: 4px;
-  }
-  
-  .stat.urgent .stat-number {
-    color: #dc2626;
-  }
-
-  .stat-label {
-    display: block;
-    font-size: 0.85rem;
-    color: #64748b;
-    font-weight: 500;
-  }
-
-  .hero-actions {
-    display: flex;
-    gap: 1rem;
-    margin-bottom: 2rem;
-  }
-
-  .btn-emergency {
-    background: linear-gradient(135deg, #dc2626, #b91c1c);
-    color: white;
-    padding: 16px 32px;
-    border-radius: 10px;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 1.1rem;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(220, 38, 38, 0.3);
-    border: none;
-  }
-
-  .btn-emergency:hover {
-    background: linear-gradient(135deg, #b91c1c, #991b1b);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(220, 38, 38, 0.4);
-  }
-
-  .btn-secondary {
-    background: transparent;
-    color: #4f46e5;
-    padding: 16px 32px;
-    border: 2px solid #4f46e5;
-    border-radius: 10px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1.1rem;
-    transition: all 0.3s ease;
-  }
-
-  .btn-secondary:hover {
-    background: #4f46e5;
-    color: white;
-    transform: translateY(-2px);
-  }
-  
-  .hero-credentials {
-    padding: 15px 20px;
-    background: rgba(79, 70, 229, 0.05);
-    border-radius: 8px;
-    border-left: 4px solid #4f46e5;
-  }
-  
-  .credentials-text {
-    font-size: 0.9rem;
-    color: #4a5568;
-    margin: 0;
-  }
-
-  .hero-visual {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-  }
-
-  .ailex-logo-large {
-    margin-bottom: 1rem;
-  }
-
-  .logo-square {
-    width: 120px;
-    height: 120px;
-    background: linear-gradient(135deg, #7c3aed, #4f46e5);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 20px;
-    border: 4px solid #1a365d;
-    box-shadow: 0 10px 30px rgba(124, 58, 237, 0.3);
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .logo-square::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-    transform: rotate(45deg);
-    animation: shine 3s ease-in-out infinite;
-  }
-  
-  @keyframes shine {
-    0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
-    50% { transform: translateX(100%) translateY(100%) rotate(45deg); }
-    100% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
-  }
-
-  .logo-letter {
-    font-size: 60px;
-    font-weight: 500;
-    color: white;
-    font-family: Georgia, serif;
-    z-index: 1;
-  }
-
-  .motto {
-    font-size: 0.85rem;
-    color: #64748b;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    text-align: center;
-    font-weight: 600;
-    margin-bottom: 15px;
-  }
-  
-  .urgency-indicator {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    background: rgba(220, 38, 38, 0.1);
-    padding: 8px 16px;
-    border-radius: 20px;
-    border: 1px solid rgba(220, 38, 38, 0.2);
-  }
-  
-  .pulse-dot {
-    width: 8px;
-    height: 8px;
-    background: #dc2626;
-    border-radius: 50%;
-    animation: pulse 2s ease-in-out infinite;
-  }
-  
-  @keyframes pulse {
-    0%, 100% { opacity: 1; transform: scale(1); }
-    50% { opacity: 0.5; transform: scale(1.2); }
-  }
-  
-  .urgency-text {
-    font-size: 0.75rem;
-    color: #dc2626;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-  }
-
-  @media (max-width: 768px) {
-    .hero-content {
-      grid-template-columns: 1fr;
-      text-align: center;
-      gap: 40px;
-    }
-
-    .hero-title {
-      font-size: 2.5rem;
-    }
-
-    .hero-stats {
-      grid-template-columns: 1fr;
-      gap: 1rem;
-    }
-
-    .hero-actions {
-      justify-content: center;
-      flex-direction: column;
-      align-items: center;
-    }
+<!-- Mobile Menu Toggle Script -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
     
-    .btn-emergency, .btn-secondary {
-      width: 100%;
-      max-width: 300px;
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        mobileMenu.classList.toggle('hidden');
+      });
     }
-  }
-</style>
+  });
+</script>
