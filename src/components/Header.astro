@@ -1,54 +1,47 @@
-<!-- Header.astro - Indigo Background Navigation with GPAI Urgency -->
+<!-- Header.astro - FIXED: Original header with only indigo background change -->
 
-<!-- GPAI Active Alert Banner -->
-<div class="bg-red-700 text-white py-2">
-  <div class="max-w-7xl mx-auto px-4 text-center">
-    <p class="text-sm font-semibold">
-      🚨 GPAI OBLIGATIONS NOW ACTIVE (August 1, 2025) — €35M Penalties Enforceable — Emergency Assessment Available
-    </p>
-  </div>
-</div>
-
-<header class="bg-gradient-to-r from-indigo-900 via-blue-900 to-indigo-800 text-white shadow-lg">
+<header class="bg-gradient-to-r from-indigo-900 to-indigo-800 shadow-sm border-b border-indigo-700">
   <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between items-center py-4">
-      <!-- Authority Logo -->
+      <!-- Authority Logo - RESTORED ORIGINAL -->
       <div class="flex items-center">
         <a href="/" class="flex items-center space-x-3">
-          <!-- Logo with White Treatment for Dark Background -->
-          <div class="w-10 h-10 bg-white rounded-lg flex items-center justify-center">
-            <span class="text-2xl font-bold text-indigo-900">A</span>
-          </div>
-          <!-- Brand Authority Motto -->
+          <!-- ORIGINAL Logo Image RESTORED -->
+          <img 
+            src="/images/logoHeader.png" 
+            alt="AiLex Consulting - European AI Governance Authority" 
+            class="h-10 w-auto"
+          />
+          <!-- ORIGINAL Brand Authority Motto RESTORED -->
           <div class="hidden sm:block">
-            <div class="text-lg font-bold text-white">AiLex</div>
             <p class="text-xs text-indigo-200 tracking-wider font-light">SCIENTIA ET LEX</p>
+            <p class="text-xs text-indigo-300">European AI Governance Authority</p>
           </div>
         </a>
       </div>
 
-      <!-- Desktop Navigation - Professional Urgency -->
-      <div class="hidden md:flex items-center space-x-6">
-        <a href="/emergency-assessment" class="text-yellow-300 hover:text-yellow-200 font-bold transition-colors flex items-center">
-          <span class="mr-1">⚡</span> Emergency Assessment
+      <!-- ORIGINAL Desktop Navigation - Only text colors adjusted for indigo background -->
+      <div class="hidden md:flex items-center space-x-8">
+        <a href="/emergency-assessment" class="text-yellow-300 hover:text-yellow-200 font-medium transition-colors">
+          Emergency Assessment
         </a>
-        <a href="/methodology" class="text-indigo-200 hover:text-white font-medium transition-colors">
+        <a href="/methodology" class="text-white hover:text-indigo-200 font-medium transition-colors">
           Methodology
         </a>
-        <a href="/resources" class="text-indigo-200 hover:text-white font-medium transition-colors">
+        <a href="/resources" class="text-white hover:text-indigo-200 font-medium transition-colors">
           Intelligence
         </a>
-        <a href="/sme-compliance" class="text-indigo-200 hover:text-white font-medium transition-colors">
-          SME Compliance
+        <a href="/about" class="text-white hover:text-indigo-200 font-medium transition-colors">
+          Authority
         </a>
-        <a href="/contact" class="bg-red-600 hover:bg-red-500 text-white px-6 py-2 rounded-lg font-bold transition-colors shadow-lg">
-          Emergency Contact
+        <a href="/contact" class="bg-blue-900 hover:bg-blue-800 text-white px-6 py-2 rounded-lg font-semibold transition-colors">
+          Consultation
         </a>
       </div>
 
-      <!-- Mobile menu button -->
+      <!-- ORIGINAL Mobile menu button - Only color adjusted -->
       <div class="md:hidden">
-        <button type="button" class="text-indigo-200 hover:text-white focus:outline-none focus:text-white" id="mobile-menu-button">
+        <button type="button" class="text-white hover:text-indigo-200 focus:outline-none focus:text-indigo-200" id="mobile-menu-button">
           <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
           </svg>
@@ -56,30 +49,30 @@
       </div>
     </div>
 
-    <!-- Mobile Navigation -->
+    <!-- ORIGINAL Mobile Navigation - Only background color adjusted -->
     <div class="md:hidden hidden" id="mobile-menu">
       <div class="px-2 pt-2 pb-3 space-y-1 bg-indigo-800 rounded-lg mt-2">
-        <a href="/emergency-assessment" class="block px-3 py-2 text-yellow-300 hover:text-yellow-200 font-bold">
-          ⚡ Emergency Assessment
+        <a href="/emergency-assessment" class="block px-3 py-2 text-yellow-300 hover:text-yellow-200 font-medium">
+          Emergency Assessment
         </a>
-        <a href="/methodology" class="block px-3 py-2 text-indigo-200 hover:text-white font-medium">
+        <a href="/methodology" class="block px-3 py-2 text-white hover:text-indigo-200 font-medium">
           Methodology
         </a>
-        <a href="/resources" class="block px-3 py-2 text-indigo-200 hover:text-white font-medium">
+        <a href="/resources" class="block px-3 py-2 text-white hover:text-indigo-200 font-medium">
           Intelligence
         </a>
-        <a href="/sme-compliance" class="block px-3 py-2 text-indigo-200 hover:text-white font-medium">
-          SME Compliance
+        <a href="/about" class="block px-3 py-2 text-white hover:text-indigo-200 font-medium">
+          Authority
         </a>
-        <a href="/contact" class="block px-3 py-2 bg-red-600 text-white rounded-lg font-bold text-center">
-          Emergency Contact
+        <a href="/contact" class="block px-3 py-2 bg-blue-900 text-white rounded-lg font-semibold text-center">
+          Consultation
         </a>
       </div>
     </div>
   </nav>
 </header>
 
-<!-- Mobile Menu Toggle Script -->
+<!-- ORIGINAL Mobile Menu Toggle Script -->
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     const mobileMenuButton = document.getElementById('mobile-menu-button');
